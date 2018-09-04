@@ -24,7 +24,7 @@ namespace NupskouProject.Entities {
 
         protected override void Update (int t) {
             _p = _p0 + t * _v;
-            if (!Geom.CircleOverBox (new Circle(_p, 8), World.Box)) {
+            if (t > 30 && !Geom.CircleOverBox (new Circle(_p, 8), World.Box)) {
                 Despawn ();
             }
         }

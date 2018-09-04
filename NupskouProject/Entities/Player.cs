@@ -8,7 +8,7 @@ using NupskouProject.Rendering;
 
 namespace NupskouProject.Entities {
 
-    public class Player : Entity {
+    public class Player : StdEntity {
 
         private XY   _p;
         private bool _hitboxVisible;
@@ -19,7 +19,7 @@ namespace NupskouProject.Entities {
         }
 
         
-        public Hitbox PlayerHB => new CircleHitbox (_p, 2);
+        public Hitbox PlayerHitbox => new CircleHitbox (_p, 2);
 
 
         public void TakeBulletHit (Entity bullet) {
@@ -29,7 +29,7 @@ namespace NupskouProject.Entities {
         }
 
 
-        public override void Update () {
+        protected override void Update (int t) {
             var keyboard = Keyboard.GetState ();
             bool shift = _hitboxVisible = keyboard.IsKeyDown (Keys.LeftShift);
 
@@ -41,14 +41,24 @@ namespace NupskouProject.Entities {
             _p += new XY (x, y) * (shift ? 2 : 4);
             _p.Clamp (World.PlayerBox);
 
-            // if z pressed, shoot (shift - 2nd mode)
-            /* if (keyboard.IsKeyDown (Keys.Z)) {
-                if (shift) {
-                    ShootShift ();
-                }
-                else {
-                    Shoot ();
-                }*/
+            if (keyboard.IsKeyDown (Keys.Z)) {
+                if (shift) ShootShift (t);
+                else       Shoot (t);
+            }
+        }
+
+
+        private void Shoot (int t) {
+            if (t % 5 != 0) return;
+            foreach (var p in Danmaku.Spray (new XY (0,  30), Mathf.PI / 3, 4))
+            foreach (var q in Danmaku.Spray (new XY (0, -30), Mathf.PI / 3, 4)) {
+                _.World.Spawn (new PlayerBullet (_p + p, (q - p).WithLength (10)));
+            }
+        }
+
+
+        private void ShootShift (int t) {
+            Shoot (t);
         }
 
 

@@ -54,6 +54,7 @@
     <Compile Include="Entities\Clock.cs" />
     <Compile Include="Entities\Entity.cs" />
     <Compile Include="Entities\Player.cs" />
+    <Compile Include="Entities\PlayerBullet.cs" />
     <Compile Include="Entities\RoundBullet.cs" />
     <Compile Include="Entities\StdEntity.cs" />
     <Compile Include="Hitboxes\CircleHitbox.cs" />

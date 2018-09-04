@@ -5,7 +5,7 @@
         public static bool CircleOverCircle (Circle c1, Circle c2) {
             float d2 = XY.SqrDistance (c1.Center, c2.Center);
             float rr = c1.Radius + c2.Radius;
-            return d2 <= rr;
+            return d2 <= rr * rr;
         }
 
 

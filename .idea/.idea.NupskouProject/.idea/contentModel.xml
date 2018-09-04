@@ -15,6 +15,7 @@
           <e p="Clock.cs" t="Include" />
           <e p="Entity.cs" t="Include" />
           <e p="Player.cs" t="Include" />
+          <e p="PlayerBullet.cs" t="Include" />
           <e p="RoundBullet.cs" t="Include" />
           <e p="StdEntity.cs" t="Include" />
         </e>

@@ -22,7 +22,8 @@ namespace NupskouProject.Entities {
         public virtual void Render () {}
 
 
-        public Func<Hitbox> BulletHitbox { get; protected set; }
+        public Func <Hitbox> BulletHitbox       { get; protected set; }
+        public Func <Hitbox> PlayerBulletHitbox { get; protected set; }
 
     }
 

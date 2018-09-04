@@ -12,8 +12,9 @@ namespace NupskouProject.Core {
         public static readonly Box Box       = new Box (30, 25, 470, 575);
         public static readonly Box PlayerBox = new Box (50, 45, 450, 555);
 
-        private List <Entity> _entities = new List <Entity> ();
-        private List <Entity> _bullets  = new List <Entity> ();
+        private List <Entity> _entities      = new List <Entity> ();
+        private List <Entity> _bullets       = new List <Entity> ();
+        private List <Entity> _playerBullets = new List <Entity> ();
         private Player        _player;
 
 
@@ -48,7 +49,7 @@ namespace NupskouProject.Core {
             //  you - bullet
             if (_player != null) {
                 foreach (var b in _bullets) {
-                    if (b.BulletHitbox ().Over (_player.PlayerHB)) {
+                    if (b.BulletHitbox ().Over (_player.PlayerHitbox)) {
                         _player.TakeBulletHit (b);
                         break;
                     }
@@ -72,8 +73,9 @@ namespace NupskouProject.Core {
                 throw new InvalidOperationException ("can not spawn dead entity");
             }
             _entities.Add (e);
-            if (e.BulletHitbox != null) _bullets.Add (e);
-            if (e is Player)            _player = (Player) e;
+            if (e.BulletHitbox       != null) _bullets      .Add (e);
+            if (e.PlayerBulletHitbox != null) _playerBullets.Add (e);
+            if (e is Player)                  _player = (Player) e;
             e.OnSpawn ();
         }
 
