@@ -16,7 +16,7 @@ namespace NupskouProject {
                 PreferredBackBufferHeight = 600,
                 PreferMultiSampling       = true,
                 GraphicsProfile           = GraphicsProfile.Reach,
-                IsFullScreen              = true
+//                IsFullScreen              = true
             };
         }
 

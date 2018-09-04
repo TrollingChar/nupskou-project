@@ -21,7 +21,7 @@ namespace NupskouProject {
 
         protected override void Update (int t) {
             _p = _p0 + t * _v;
-            if (!Geom.CircleInBox (new Circle(_p, 8), World.Box)) {
+            if (!Geom.CircleOverBox (new Circle(_p, 8), World.Box)) {
                 Despawn ();
             }
         }

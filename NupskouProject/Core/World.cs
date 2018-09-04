@@ -7,8 +7,8 @@ using NupskouProject.Math;
 namespace NupskouProject {
 
     public class World {
-        
-        public static readonly Box Box = new Box (30, 25, 470, 575);
+
+        public static readonly Box Box       = new Box (30, 25, 470, 575);
         public static readonly Box PlayerBox = new Box (50, 45, 450, 555);
 
         private List <Entity> _entities = new List <Entity> ();
@@ -17,14 +17,26 @@ namespace NupskouProject {
 
 
         public void Update () {
-            if (_.Time == 0) {
-                Spawn (new Player (new XY (250, 500)));
+            switch (_.Time) {
+                case 0:
+                    Spawn (new Player (new XY (250, 500)));
+                    break;
+                case 120:
+                    Spawn (new Clock (i => Spawn (new RoundBullet (new XY (Box.Left, 100), new XY (3, 0))), 10, 20));
+                    Spawn (new Clock (Console.WriteLine,                                                    10, 20));
+                    break;
+                case 420:
+                    Spawn (new Clock (i => Spawn (new RoundBullet (new XY (Box.Right, 150), new XY (-3, 0))), 10, 20));
+                    break;
+                case 840:
+                    Spawn (new Clock (i => Spawn (new RoundBullet (new XY (Box.Left,  150), new XY ( 3, 0))), 10, 20));
+                    Spawn (new Clock (i => Spawn (new RoundBullet (new XY (Box.Right, 100), new XY (-3, 0))), 10, 20));
+                    break;
+                case 1200:
+                    Spawn (new RoundBullet (new XY(250, World.Box.Top), new XY(0, 2)));
+                    break;
             }
-            if (_.Time % 120 == 60) {
-                foreach (var v in Danmaku.Cloud (2, 500)) {
-                    Spawn (new RoundBullet (new XY (250, 300), v));
-                }
-            }
+            
 
             for (int i = 0; i < _entities.Count; i++) {
                 var e = _entities[i];
