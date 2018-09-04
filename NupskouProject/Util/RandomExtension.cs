@@ -2,7 +2,7 @@
 using NupskouProject.Math;
 
 
-namespace NupskouProject.Utils {
+namespace NupskouProject.Util {
 
     public static class RandomExtension {
 

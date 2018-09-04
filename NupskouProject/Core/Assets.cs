@@ -2,10 +2,12 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using NupskouProject.Rendering;
+using NupskouProject.Util;
 using Un4seen.Bass;
 
 
-namespace NupskouProject {
+namespace NupskouProject.Core {
 
     public class Assets {
 

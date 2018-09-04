@@ -1,7 +1,7 @@
 ﻿using NupskouProject.Math;
 
 
-namespace NupskouProject {
+namespace NupskouProject.Hitboxes {
 
     public class CircleHitbox : Hitbox {
 

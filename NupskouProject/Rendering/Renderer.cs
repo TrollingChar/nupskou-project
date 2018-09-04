@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
 
 
-namespace NupskouProject {
+namespace NupskouProject.Rendering {
 
     public class Renderer {
 

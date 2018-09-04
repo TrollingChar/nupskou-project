@@ -1,8 +1,11 @@
 ﻿using Microsoft.Xna.Framework;
+using NupskouProject.Core;
+using NupskouProject.Hitboxes;
 using NupskouProject.Math;
+using NupskouProject.Rendering;
 
 
-namespace NupskouProject {
+namespace NupskouProject.Entities {
 
     public class RoundBullet : StdEntity {
 

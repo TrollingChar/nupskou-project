@@ -1,7 +1,8 @@
 ﻿using System;
+using NupskouProject.Rendering;
 
 
-namespace NupskouProject {
+namespace NupskouProject.Core {
 
     public static class _ {
 

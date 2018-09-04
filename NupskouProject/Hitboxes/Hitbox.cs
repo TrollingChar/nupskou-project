@@ -1,4 +1,4 @@
-﻿namespace NupskouProject {
+﻿namespace NupskouProject.Hitboxes {
 
     public abstract class Hitbox {
 

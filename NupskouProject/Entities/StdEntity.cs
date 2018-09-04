@@ -1,4 +1,7 @@
-﻿namespace NupskouProject {
+﻿using NupskouProject.Core;
+
+
+namespace NupskouProject.Entities {
 
     public class StdEntity : Entity {
 

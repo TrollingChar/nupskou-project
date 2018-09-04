@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using Microsoft.Xna.Framework;
+using NupskouProject.Entities;
 using NupskouProject.Math;
+using NupskouProject.Rendering;
 
 
-namespace NupskouProject {
+namespace NupskouProject.Core {
 
     public class World {
 

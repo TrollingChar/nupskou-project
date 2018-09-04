@@ -2,7 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 
 
-namespace NupskouProject {
+namespace NupskouProject.Core {
 
     public class Game : Microsoft.Xna.Framework.Game {
 

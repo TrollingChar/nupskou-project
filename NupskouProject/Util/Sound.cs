@@ -1,7 +1,7 @@
 ﻿using Un4seen.Bass;
 
 
-namespace NupskouProject {
+namespace NupskouProject.Util {
 
     public class Sound {
 

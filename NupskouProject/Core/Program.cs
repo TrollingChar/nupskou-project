@@ -1,4 +1,4 @@
-﻿namespace NupskouProject {
+﻿namespace NupskouProject.Core {
 
     internal class Program {
 

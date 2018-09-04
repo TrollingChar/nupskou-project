@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace NupskouProject {
+namespace NupskouProject.Entities {
 
     public class Clock : StdEntity {
 

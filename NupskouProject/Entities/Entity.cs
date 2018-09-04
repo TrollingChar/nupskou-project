@@ -1,7 +1,8 @@
 ﻿using System;
+using NupskouProject.Hitboxes;
 
 
-namespace NupskouProject {
+namespace NupskouProject.Entities {
 
     public class Entity {
 

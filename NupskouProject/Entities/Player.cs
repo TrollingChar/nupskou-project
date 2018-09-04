@@ -1,10 +1,12 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
+using NupskouProject.Core;
+using NupskouProject.Hitboxes;
 using NupskouProject.Math;
-using Un4seen.Bass;
+using NupskouProject.Rendering;
 
 
-namespace NupskouProject {
+namespace NupskouProject.Entities {
 
     public class Player : Entity {
 
