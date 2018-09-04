@@ -18,7 +18,8 @@ namespace NupskouProject.Entities {
             _p = p;
         }
 
-        
+
+        public XY     P            => _p;
         public Hitbox PlayerHitbox => new CircleHitbox (_p, 2);
 
 

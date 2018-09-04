@@ -24,6 +24,7 @@ namespace NupskouProject.Entities {
 
         public Func <Hitbox> BulletHitbox       { get; protected set; }
         public Func <Hitbox> PlayerBulletHitbox { get; protected set; }
+        public Func <Hitbox> EnemyHitbox        { get; protected set; }
 
     }
 

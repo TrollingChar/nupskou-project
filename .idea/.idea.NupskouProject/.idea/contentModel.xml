@@ -13,6 +13,7 @@
         </e>
         <e p="Entities" t="Include">
           <e p="Clock.cs" t="Include" />
+          <e p="Enemy.cs" t="Include" />
           <e p="Entity.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="PlayerBullet.cs" t="Include" />

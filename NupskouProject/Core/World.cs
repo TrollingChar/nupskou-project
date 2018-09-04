@@ -15,7 +15,7 @@ namespace NupskouProject.Core {
         private List <Entity> _entities      = new List <Entity> ();
         private List <Entity> _bullets       = new List <Entity> ();
         private List <Entity> _playerBullets = new List <Entity> ();
-        private Player        _player;
+        public Player Player { get; private set; }
 
 
         public void Update () {
@@ -24,18 +24,17 @@ namespace NupskouProject.Core {
                     Spawn (new Player (new XY (250, 500)));
                     break;
                 case 120:
-                    Spawn (new Clock (i => Spawn (new RoundBullet (new XY (Box.Left, 100), new XY (3, 0))), 10, 20));
-                    Spawn (new Clock (Console.WriteLine,                                                    10, 20));
+                    Spawn (new Clock (i => Spawn (new Enemy (new XY (Box.Left, 100), new XY (3, 0))), 10, 20));
                     break;
                 case 420:
-                    Spawn (new Clock (i => Spawn (new RoundBullet (new XY (Box.Right, 150), new XY (-3, 0))), 10, 20));
+                    Spawn (new Clock (i => Spawn (new Enemy (new XY (Box.Right, 150), new XY (-3, 0))), 10, 20));
                     break;
                 case 840:
-                    Spawn (new Clock (i => Spawn (new RoundBullet (new XY (Box.Left,  150), new XY ( 3, 0))), 10, 20));
-                    Spawn (new Clock (i => Spawn (new RoundBullet (new XY (Box.Right, 100), new XY (-3, 0))), 10, 20));
+                    Spawn (new Clock (i => Spawn (new Enemy (new XY (Box.Left,  150), new XY ( 3, 0))), 10, 20));
+                    Spawn (new Clock (i => Spawn (new Enemy (new XY (Box.Right, 100), new XY (-3, 0))), 10, 20));
                     break;
                 case 1200:
-                    Spawn (new RoundBullet (new XY(250, World.Box.Top), new XY(0, 2)));
+                    Spawn (new Enemy (new XY(250, World.Box.Top), new XY(0, 2)));
                     break;
             }
             
@@ -47,10 +46,10 @@ namespace NupskouProject.Core {
 
             // check hitboxes
             //  you - bullet
-            if (_player != null) {
+            if (Player != null && !Player.Despawned) {
                 foreach (var b in _bullets) {
-                    if (b.BulletHitbox ().Over (_player.PlayerHitbox)) {
-                        _player.TakeBulletHit (b);
+                    if (!b.Despawned && b.BulletHitbox ().Over (Player.PlayerHitbox)) {
+                        Player.TakeBulletHit (b);
                         break;
                     }
                 }
@@ -64,7 +63,7 @@ namespace NupskouProject.Core {
 
             _entities.RemoveAll (e => e.Despawned);
             _bullets .RemoveAll (e => e.Despawned);
-            if (_player != null && _player.Despawned) _player = null;
+            if (Player != null && Player.Despawned) Player = null;
         }
 
 
@@ -75,7 +74,7 @@ namespace NupskouProject.Core {
             _entities.Add (e);
             if (e.BulletHitbox       != null) _bullets      .Add (e);
             if (e.PlayerBulletHitbox != null) _playerBullets.Add (e);
-            if (e is Player)                  _player = (Player) e;
+            if (e is Player)                  Player = (Player) e;
             e.OnSpawn ();
         }
 
