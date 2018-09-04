@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/.Rider2018.1/system/resharper-host/local/Transient/ReSharperHost/v12/SolutionCaches/_NupskouProject.654550275.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="NupskouProject" t="IncludeRecursive">
+        <e p="Core" t="Include">
+          <e p="Assets.cs" t="Include" />
+          <e p="Game.cs" t="Include" />
+          <e p="Program.cs" t="Include" />
+          <e p="World.cs" t="Include" />
+          <e p="_.cs" t="Include" />
+        </e>
+        <e p="Entities" t="Include">
+          <e p="Entity.cs" t="Include" />
+          <e p="Player.cs" t="Include" />
+          <e p="RoundBullet.cs" t="Include" />
+          <e p="StdEntity.cs" t="Include" />
+        </e>
+        <e p="Help" t="Include">
+          <e p="BassNet.chm" t="Include" />
+        </e>
+        <e p="Hitboxes" t="Include">
+          <e p="CircleHitbox.cs" t="Include" />
+          <e p="Hitbox.cs" t="Include" />
+        </e>
+        <e p="Math" t="Include">
+          <e p="Box.cs" t="Include" />
+          <e p="Circle.cs" t="Include" />
+          <e p="Danmaku.cs" t="Include" />
+          <e p="Geom.cs" t="Include" />
+          <e p="Mathf.cs" t="Include" />
+          <e p="XY.cs" t="Include" />
+        </e>
+        <e p="MonoGame.Framework.dll.config" t="Include" />
+        <e p="NupskouProject.csproj" t="IncludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Raden" t="Include" />
+        <e p="Rashka" t="Include" />
+        <e p="Rendering" t="Include">
+          <e p="Layer.cs" t="Include" />
+          <e p="Renderer.cs" t="Include" />
+          <e p="Sprite.cs" t="Include" />
+          <e p="SpriteInstance.cs" t="Include" />
+        </e>
+        <e p="Util" t="Include">
+          <e p="RandomExtension.cs" t="Include" />
+          <e p="Sound.cs" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="x64" t="Include" />
+        <e p="x86" t="Include" />
+      </e>
+      <e p="NupskouProject.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive">
+        <e p="BASS.ASIO.1.3.1.2/build/native/x64/bassasio.dll" t="Include" />
+        <e p="BASS.ASIO.1.3.1.2/build/native/x86/bassasio.dll" t="Include" />
+      </e>
+    </e>
+  </component>
+</project>
