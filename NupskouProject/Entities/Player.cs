@@ -56,7 +56,7 @@ namespace NupskouProject {
             );
             if (!_hitboxVisible) return;
             _.Renderer.Hitbox.Add (
-                new SpriteInstance (_.Assets.Circle) {Position = _p, Color = Color.Maroon, Scale = new Vector2 (3f)}
+                new SpriteInstance (_.Assets.Circle) {Position = _p, Color = Color.Maroon, Scale = new Vector2 (3)}
             );
             _.Renderer.Hitbox.Add (
                 new SpriteInstance (_.Assets.Circle) {Position = _p, Color = Color.White, Scale = new Vector2 (2)}

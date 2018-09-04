@@ -11,6 +11,7 @@ namespace NupskouProject {
         public void Despawn () {
             if (Despawned) throw new InvalidOperationException ("object already despawned");
             Despawned = true;
+            OnDespawn ();
         }
 
 
