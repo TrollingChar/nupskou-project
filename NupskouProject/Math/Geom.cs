@@ -21,13 +21,6 @@
                 && c.Center.Y >= b.Top + r && c.Center.Y <= b.Bottom - r;
         }
 
-        public static bool CircleInVerticalBorders(Circle c, Box b)
-        {
-            float r = c.Radius;
-            return c.Center.X >= b.Left + r && c.Center.X <= b.Right - r;
-        }
-
-
     }
 
 }

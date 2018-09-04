@@ -37,7 +37,7 @@ namespace NupskouProject {
                     (keyboard.IsKeyDown (Keys.Up)    ? 1 : 0);
 
             _p += new XY (x, y) * (shift ? 2 : 4);
-            _p.Clamp (new Box (30, 25, 470, 575));
+            _p.Clamp (World.PlayerBox);
 
             // if z pressed, shoot (shift - 2nd mode)
             /* if (keyboard.IsKeyDown (Keys.Z)) {

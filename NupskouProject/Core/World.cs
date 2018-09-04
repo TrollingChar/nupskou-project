@@ -7,6 +7,9 @@ using NupskouProject.Math;
 namespace NupskouProject {
 
     public class World {
+        
+        public static readonly Box Box = new Box (30, 25, 470, 575);
+        public static readonly Box PlayerBox = new Box (50, 45, 450, 555);
 
         private List <Entity> _entities = new List <Entity> ();
         private List <Entity> _bullets  = new List <Entity> ();
