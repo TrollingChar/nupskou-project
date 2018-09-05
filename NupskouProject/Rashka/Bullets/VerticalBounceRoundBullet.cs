@@ -30,8 +30,9 @@ namespace NupskouProject.Rashka.Bullets {
 
         protected override void Update (int t) {
             _p   = _p0 + t * _v;
-            _p.X = Mathf.PingPong (_p.X, World.Box.Right - 30) + 30;
-            if (_p.Y > World.Box.Bottom + 6) {
+            var box = World.Box;
+            _p.X = Mathf.PingPong (_p.X, box.Right - box.Left) + box.Left;
+            if (_p.Y > box.Bottom + 6) {
                 Despawn ();
             }
         }
