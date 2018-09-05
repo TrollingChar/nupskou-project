@@ -15,7 +15,7 @@ namespace NupskouProject.Core {
         public static readonly Box Box       = new Box (30, 25, 470, 575);
         public static readonly Box PlayerBox = new Box (50, 45, 450, 555);
 
-        private List <Entity> _entities      = new List <Entity> ();
+        private List <Entity> _entities = new List <Entity> ();
         public Player Player { get; private set; }
 
 
@@ -25,7 +25,15 @@ namespace NupskouProject.Core {
                     Spawn (Player = new Player (new XY (250, 500)));
                     break;
                 case 120:
-                    Spawn (new SmileSpawner ());
+                    Action <int> f = i => Spawn (
+                        new LinearRoundBullet (
+                            new XY (Box.Left + i * 20, -10),
+                            new XY (0, 4 + 4 * i / 45f),
+                            Color.Blue,
+                            Color.DarkBlue
+                        )
+                    );
+                    Spawn (new Clock (f, 23, 3));
                     break;
             }
             

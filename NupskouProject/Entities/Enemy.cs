@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System;
+using Microsoft.Xna.Framework;
 using NupskouProject.Core;
 using NupskouProject.Hitboxes;
 using NupskouProject.Math;
@@ -36,7 +37,7 @@ namespace NupskouProject.Entities {
             var player = _.World.Player;
             if (t % 13 == 0 && player != null && !player.Despawned) {
                 foreach (var v in Danmaku.Line ((player.P - _p).Normalized, 2, 4, 3)) {
-                    _.World.Spawn (new RoundBullet (_p, v));
+                    _.World.Spawn (new LinearRoundBullet(_p, v, Color.Lime, Color.Green));
                 }
             }
         }

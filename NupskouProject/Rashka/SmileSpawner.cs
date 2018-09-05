@@ -1,9 +1,9 @@
-﻿using NupskouProject.Core;
-using NupskouProject.Util;
-using NupskouProject.Rashka.Bullets;
+﻿using Microsoft.Xna.Framework;
+using NupskouProject.Core;
 using NupskouProject.Entities;
 using NupskouProject.Math;
-using Microsoft.Xna.Framework;
+using NupskouProject.Rashka.Bullets;
+using NupskouProject.Util;
 
 
 namespace NupskouProject.Rashka {

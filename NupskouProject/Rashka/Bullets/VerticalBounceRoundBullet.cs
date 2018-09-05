@@ -5,6 +5,7 @@ using NupskouProject.Hitboxes;
 using NupskouProject.Math;
 using NupskouProject.Rendering;
 
+
 namespace NupskouProject.Rashka.Bullets {
 
     public class VerticalBounceRoundBullet : StdEntity {

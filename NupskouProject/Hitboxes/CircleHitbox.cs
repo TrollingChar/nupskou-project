@@ -1,5 +1,4 @@
-﻿using System;
-using NupskouProject.Math;
+﻿using NupskouProject.Math;
 
 
 namespace NupskouProject.Hitboxes {
