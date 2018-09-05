@@ -51,6 +51,7 @@
     <Compile Include="Core\Program.cs" />
     <Compile Include="Core\World.cs" />
     <Compile Include="Core\_.cs" />
+    <Compile Include="Entities\Boss.cs" />
     <Compile Include="Entities\Clock.cs" />
     <Compile Include="Entities\Enemy.cs" />
     <Compile Include="Entities\Entity.cs" />
