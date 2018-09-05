@@ -36,12 +36,8 @@ namespace NupskouProject.Entities {
 
         public override void Render () {
             _.Renderer.TestForeground.Add (
-                new SpriteInstance (_.Assets.Circle) {Position = _p, Color = Color.Green, Scale = new Vector2 (6)}
-            );
-            _.Renderer.TestForeground.Add (
-                new SpriteInstance (_.Assets.Circle) {Position = _p, Color = Color.Lime, Scale = new Vector2 (5.5f)}
-            );
-            _.Renderer.TestForeground.Add (
+                new SpriteInstance (_.Assets.Circle) {Position = _p, Color = Color.Green, Scale = new Vector2 (6)},
+                new SpriteInstance (_.Assets.Circle) {Position = _p, Color = Color.Lime,  Scale = new Vector2 (5.5f)},
                 new SpriteInstance (_.Assets.Circle) {Position = _p, Color = Color.White, Scale = new Vector2 (5)}
             );
         }

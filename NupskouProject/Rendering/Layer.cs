@@ -25,6 +25,11 @@ namespace NupskouProject.Rendering {
             _sprites.Add (sprite);
         }
 
+
+        public void Add (params SpriteInstance[] sprites) {
+            _sprites.AddRange (sprites);
+        }
+
     }
 
 }

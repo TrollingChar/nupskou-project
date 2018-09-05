@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Microsoft.Xna.Framework;
 using NupskouProject.Entities;
 using NupskouProject.Hitboxes;
 using NupskouProject.Math;
@@ -23,22 +24,8 @@ namespace NupskouProject.Core {
                 case 0:
                     Spawn (Player = new Player (new XY (250, 500)));
                     break;
-                /*
                 case 120:
-                    Spawn (new Clock (i => Spawn (new Enemy (new XY (Box.Left, 100), new XY (3, 0))), 10, 20));
-                    break;
-                case 420:
-                    Spawn (new Clock (i => Spawn (new Enemy (new XY (Box.Right, 150), new XY (-3, 0))), 10, 20));
-                    break;
-                case 840:
-                    Spawn (new Clock (i => Spawn (new Enemy (new XY (Box.Left,  150), new XY ( 3, 0))), 10, 20));
-                    Spawn (new Clock (i => Spawn (new Enemy (new XY (Box.Right, 100), new XY (-3, 0))), 10, 20));
-                    break;
-                case 1200:
-                    Spawn (new Enemy (new XY(250, World.Box.Top), new XY(0, 2)));
-                    break;*/
-                case 120: 
-                    Spawn(new SmileSpawner());
+                    Spawn (new SmileSpawner ());
                     break;
             }
             
@@ -76,14 +63,6 @@ namespace NupskouProject.Core {
             }
 
             //  you - enemy
-//            if (Player != null && !Player.Despawned) {
-//                foreach (var e in _enemies) {
-//                    if (e.Despawned || !e.EnemyHitbox ().Over (Player.PlayerHitbox)) continue;
-//                    Player.OnImpact (e);
-//                    break;
-//                }
-//            }
-            
             //  bomb - enemy
             //  bomb - bullet
             
@@ -111,10 +90,6 @@ namespace NupskouProject.Core {
                 throw new InvalidOperationException ("can not spawn dead entity");
             }
             _entities.Add (e);
-//            if (e.BulletHitbox       != null) _bullets      .Add (e);
-//            if (e.EnemyHitbox        != null) _enemies      .Add (e);
-//            if (e.PlayerBulletHitbox != null) _playerBullets.Add (e);
-//            if (e is Player)                  Player = (Player) e;
             e.OnSpawn ();
         }
 

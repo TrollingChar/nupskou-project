@@ -40,13 +40,8 @@ namespace NupskouProject.Rashka.Bullets {
 
         public override void Render () {
             _.Renderer.TestForeground.Add (
-                new SpriteInstance (_.Assets.Circle) {Position = _p, Color = _color, Scale = new Vector2 (8)}
-            );
-            
-            _.Renderer.TestForeground.Add (
-                new SpriteInstance (_.Assets.Circle) {Position = _p, Color = Color.Black, Scale = new Vector2 (6)}
-            );
-            _.Renderer.TestForeground.Add (
+                new SpriteInstance (_.Assets.Circle) {Position = _p, Color = _color,      Scale = new Vector2 (8)},
+                new SpriteInstance (_.Assets.Circle) {Position = _p, Color = Color.Black, Scale = new Vector2 (6)},
                 new SpriteInstance (_.Assets.Circle) {Position = _p, Color = Color.White, Scale = new Vector2 (4)}
             );
         }
