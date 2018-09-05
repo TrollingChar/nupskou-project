@@ -11,7 +11,7 @@ namespace NupskouProject.Rashka {
     public class SmileSpawner : StdEntity {
 
         protected override void Update (int t) {
-            if (t % 30 == 0) {
+            if (t % 35 == 0) {
                 var box = World.Box;
                 SpawnSmile (
                     new XY (_.Random.Float (box.Left , box.Right/2), -100),

@@ -30,7 +30,7 @@ namespace NupskouProject.Rashka.Bullets {
 
         protected override void Update (int t) {
             _p = _p0 + t * _v;
-            _p.X = Mathf.PingPong (_p.X, World.Box.Right);
+            _p.X = Mathf.PingPong (_p.X, World.Box.Right -30)+30;
             if (_p.Y > World.Box.Bottom + 6) {
                 Despawn ();
             }
@@ -39,13 +39,14 @@ namespace NupskouProject.Rashka.Bullets {
 
         public override void Render () {
             _.Renderer.TestForeground.Add (
-                new SpriteInstance (_.Assets.Circle) {Position = _p, Color = Color.White, Scale = new Vector2 (8)}
+                new SpriteInstance (_.Assets.Circle) {Position = _p, Color = _color, Scale = new Vector2 (8)}
             );
+            
             _.Renderer.TestForeground.Add (
                 new SpriteInstance (_.Assets.Circle) {Position = _p, Color = Color.Black, Scale = new Vector2 (6)}
             );
             _.Renderer.TestForeground.Add (
-                new SpriteInstance (_.Assets.Circle) {Position = _p, Color = _color, Scale = new Vector2 (4)}
+                new SpriteInstance (_.Assets.Circle) {Position = _p, Color = Color.White, Scale = new Vector2 (4)}
             );
         }
 
