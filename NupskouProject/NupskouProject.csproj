@@ -60,6 +60,8 @@
     <Compile Include="Entities\StdEntity.cs" />
     <Compile Include="Hitboxes\CircleHitbox.cs" />
     <Compile Include="Hitboxes\Hitbox.cs" />
+    <Compile Include="Rashka\Bullets\VerticalBounceRoundBullet.cs" />
+    <Compile Include="Rashka\SmileSpawner.cs" />
     <Compile Include="Rendering\Layer.cs" />
     <Compile Include="Rendering\Renderer.cs" />
     <Compile Include="Rendering\Sprite.cs" />
@@ -81,7 +83,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Raden" />
-    <Folder Include="Rashka" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

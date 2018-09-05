@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using NupskouProject.Entities;
 using NupskouProject.Hitboxes;
 using NupskouProject.Math;
+using NupskouProject.Rashka;
 using NupskouProject.Rendering;
 
 
@@ -22,6 +23,7 @@ namespace NupskouProject.Core {
                 case 0:
                     Spawn (Player = new Player (new XY (250, 500)));
                     break;
+                /*
                 case 120:
                     Spawn (new Clock (i => Spawn (new Enemy (new XY (Box.Left, 100), new XY (3, 0))), 10, 20));
                     break;
@@ -34,6 +36,9 @@ namespace NupskouProject.Core {
                     break;
                 case 1200:
                     Spawn (new Enemy (new XY(250, World.Box.Top), new XY(0, 2)));
+                    break;*/
+                case 120: 
+                    Spawn(new SmileSpawner());
                     break;
             }
             
