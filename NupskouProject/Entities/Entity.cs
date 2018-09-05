@@ -20,6 +20,7 @@ namespace NupskouProject.Entities {
         public virtual void OnDespawn () {}
         public virtual void Update () {}
         public virtual void Render () {}
+        public virtual void OnImpact (Entity entity) {}
 
 
         public Func <Hitbox> BulletHitbox       { get; protected set; }

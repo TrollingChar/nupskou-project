@@ -14,6 +14,7 @@ namespace NupskouProject.Core {
 
         private List <Entity> _entities      = new List <Entity> ();
         private List <Entity> _bullets       = new List <Entity> ();
+        private List <Entity> _enemies       = new List <Entity> ();
         private List <Entity> _playerBullets = new List <Entity> ();
         public Player Player { get; private set; }
 
@@ -48,21 +49,41 @@ namespace NupskouProject.Core {
             //  you - bullet
             if (Player != null && !Player.Despawned) {
                 foreach (var b in _bullets) {
-                    if (!b.Despawned && b.BulletHitbox ().Over (Player.PlayerHitbox)) {
-                        Player.TakeBulletHit (b);
-                        break;
-                    }
+                    if (b.Despawned || !b.BulletHitbox ().Over (Player.PlayerHitbox)) continue;
+                    Player.OnImpact (b);
+                    b.Despawn ();
+                    break;
                 }
             }
 
             //  you - enemy
+            if (Player != null && !Player.Despawned) {
+                foreach (var e in _enemies) {
+                    if (e.Despawned || !e.EnemyHitbox ().Over (Player.PlayerHitbox)) continue;
+                    Player.OnImpact (e);
+                    break;
+                }
+            }
+            
             //  bomb - enemy
             //  bomb - bullet
+            
             //  enemy - your bullet
+            foreach (var b in _playerBullets) {
+                if (b.Despawned) continue;
+                foreach (var e in _enemies) {
+                    if (e.Despawned || !b.PlayerBulletHitbox ().Over (e.EnemyHitbox ())) continue;
+                    e.OnImpact (b);
+                    b.Despawn ();
+                    break;
+                }
+            }
+            
             //  graze - bullet
 
             _entities.RemoveAll (e => e.Despawned);
             _bullets .RemoveAll (e => e.Despawned);
+            _enemies .RemoveAll (e => e.Despawned);
             if (Player != null && Player.Despawned) Player = null;
         }
 
@@ -73,6 +94,7 @@ namespace NupskouProject.Core {
             }
             _entities.Add (e);
             if (e.BulletHitbox       != null) _bullets      .Add (e);
+            if (e.EnemyHitbox        != null) _enemies      .Add (e);
             if (e.PlayerBulletHitbox != null) _playerBullets.Add (e);
             if (e is Player)                  Player = (Player) e;
             e.OnSpawn ();

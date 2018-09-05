@@ -23,10 +23,9 @@ namespace NupskouProject.Entities {
         public Hitbox PlayerHitbox => new CircleHitbox (_p, 2);
 
 
-        public void TakeBulletHit (Entity bullet) {
+        public override void OnImpact (Entity entity) {
             _.Assets.Pjiu.Play ();
             Despawn ();
-            bullet.Despawn ();
         }
 
 

@@ -22,6 +22,11 @@ namespace NupskouProject.Entities {
         }
 
 
+        public override void OnImpact (Entity entity) {
+            Despawn ();
+        }
+
+
         protected override void Update (int t) {
             _p = _p0 + t * _v;
             if (t > 30 && !Geom.CircleOverBox (new Circle(_p, 15), World.Box)) {
@@ -36,10 +41,7 @@ namespace NupskouProject.Entities {
         }
 
 
-        public override void Render () {
-            _.Renderer.TestForeground.Add (
-                new SpriteInstance (_.Assets.Circle) {Position = _p, Color = Color.Green, Scale = new Vector2 (12)}
-            );
+        public override void Render () { 
             _.Renderer.TestForeground.Add (
                 new SpriteInstance (_.Assets.Circle) {Position = _p, Color = Color.Lime, Scale = new Vector2 (10)}
             );
