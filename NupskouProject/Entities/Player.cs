@@ -13,17 +13,16 @@ namespace NupskouProject.Entities {
         private XY   _p;
         private bool _hitboxVisible;
 
+        public          XY     P            => _p;
+        public override Hitbox PlayerHitbox => new CircleHitbox (_p, 2);
+
 
         public Player (XY p) {
             _p = p;
         }
 
 
-        public XY     P            => _p;
-        public Hitbox PlayerHitbox => new CircleHitbox (_p, 2);
-
-
-        public override void OnImpact (Entity entity) {
+        public override void OnStruck (Entity entity) {
             _.Assets.Pjiu.Play ();
             Despawn ();
         }

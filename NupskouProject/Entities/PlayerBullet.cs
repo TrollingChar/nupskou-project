@@ -14,11 +14,12 @@ namespace NupskouProject.Entities {
         private          XY _p;
 
 
+        public override Hitbox EnemyDamagerHitbox => new CircleHitbox (_p, 5);
+
+
         public PlayerBullet (XY p0, XY v) {
             _p = _p0 = p0;
             _v = v;
-
-            PlayerBulletHitbox = () => new CircleHitbox (_p, 5);
         }
 
 

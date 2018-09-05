@@ -20,12 +20,15 @@ namespace NupskouProject.Entities {
         public virtual void OnDespawn () {}
         public virtual void Update () {}
         public virtual void Render () {}
-        public virtual void OnImpact (Entity entity) {}
+        public virtual void OnStrike (Entity entity) {}
+        public virtual void OnStruck (Entity entity) {}
 
 
-        public Func <Hitbox> BulletHitbox       { get; protected set; }
-        public Func <Hitbox> PlayerBulletHitbox { get; protected set; }
-        public Func <Hitbox> EnemyHitbox        { get; protected set; }
+        public virtual Hitbox PlayerHitbox        => null;
+        public virtual Hitbox PlayerDamagerHitbox => EnemyHitbox;
+        public virtual Hitbox EnemyHitbox         => null;
+        public virtual Hitbox EnemyDamagerHitbox  => null;
+        public virtual Hitbox GrazeHitbox         => null;
 
     }
 

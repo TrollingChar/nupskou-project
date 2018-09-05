@@ -14,12 +14,16 @@ namespace NupskouProject.Entities {
         private          XY _p;
 
 
+        public override Hitbox PlayerDamagerHitbox => new CircleHitbox (_p, 5);
+
+
         public RoundBullet (XY p0, XY v) {
             _p = _p0 = p0;
             _v = v;
-
-            BulletHitbox = () => new CircleHitbox (_p, 5);
         }
+
+
+        public override void OnStrike (Entity entity) => Despawn ();
 
 
         protected override void Update (int t) {
