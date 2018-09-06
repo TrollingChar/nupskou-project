@@ -12,7 +12,6 @@
           <e p="_.cs" t="Include" />
         </e>
         <e p="Entities" t="Include">
-          <e p="Boss.cs" t="Include" />
           <e p="Clock.cs" t="Include" />
           <e p="Enemy.cs" t="Include" />
           <e p="Entity.cs" t="Include" />
@@ -54,6 +53,9 @@
           <e p="Renderer.cs" t="Include" />
           <e p="Sprite.cs" t="Include" />
           <e p="SpriteInstance.cs" t="Include" />
+        </e>
+        <e p="Stages" t="Include">
+          <e p="Stage1.cs" t="Include" />
         </e>
         <e p="Util" t="Include">
           <e p="RandomExtension.cs" t="Include" />

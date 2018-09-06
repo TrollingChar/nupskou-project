@@ -6,6 +6,7 @@ using NupskouProject.Hitboxes;
 using NupskouProject.Math;
 using NupskouProject.Rashka;
 using NupskouProject.Rendering;
+using NupskouProject.Stages;
 
 
 namespace NupskouProject.Core {
@@ -20,23 +21,10 @@ namespace NupskouProject.Core {
 
 
         public void Update () {
-            switch (_.Time) {
-                case 0:
-                    Spawn (Player = new Player (new XY (250, 500)));
-                    break;
-                case 120:
-                    Action <int> f = i => Spawn (
-                        new LinearRoundBullet (
-                            new XY (Box.Left + i * 20, -10),
-                            new XY (0, 4 + 4 * i / 45f),
-                            Color.Blue,
-                            Color.DarkBlue
-                        )
-                    );
-                    Spawn (new Clock (f, 23, 3));
-                    break;
+            if (_.Time == 0) {
+                Spawn (Player = new Player (new XY (250, 500)));
+                Spawn (new Stage1 ());
             }
-            
 
             for (int i = 0; i < _entities.Count; i++) {
                 var e = _entities[i];
