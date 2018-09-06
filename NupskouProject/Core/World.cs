@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading;
 using Microsoft.Xna.Framework;
 using NupskouProject.Entities;
 using NupskouProject.Hitboxes;
@@ -23,7 +24,8 @@ namespace NupskouProject.Core {
         public void Update () {
             if (_.Time == 0) {
                 Spawn (Player = new Player (new XY (250, 500)));
-                Spawn (new Stage1 ());
+                //Spawn (new Stage1 ());
+                Spawn(new SmileSpawner());
             }
 
             for (int i = 0; i < _entities.Count; i++) {
