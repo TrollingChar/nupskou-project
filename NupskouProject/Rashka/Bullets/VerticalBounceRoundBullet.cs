@@ -22,19 +22,19 @@ namespace NupskouProject.Rashka.Bullets {
             BorderColor = borderColor;
             R           = r;
         }
+
+
         protected override void Update (int t) {
-            P = _p0 + t * _v;            
+            P = _p0 + t * _v;
             var box = World.Box;
-            P.X = Mathf.PingPong (P.X - box.Left, box.Right - box.Left) + box.Left;
             if (P.Y > box.Bottom + 6) {
                 Despawn ();
+                return;
             }
+            P.X = Mathf.PingPong (P.X - box.Left, box.Right - box.Left) + box.Left;
         }
-        
 
 
     }
+
 }
-
-
-
