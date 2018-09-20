@@ -1,4 +1,5 @@
 ﻿using System.Data;
+using System.Runtime.InteropServices.ComTypes;
 using NupskouProject.Core;
 using NupskouProject.Entities;
 using NupskouProject.Math;
@@ -9,19 +10,58 @@ namespace NupskouProject.Rashka
 {
     public class DemomanSignDelayedExplosionSpawner : StdEntity
     {
-        private XY _prevSpawn = new XY(250, 500);
+
+        private int _r = 75;
+        private int _n = 12;
+        private XY[] coordinate = new XY[12];
+
+
 
         protected override void Update(int t)
         {
-            if (t % 240 <= 8) {
-                
-                    var a = _.Random.Point (World.Box);
-                    var b = _.Random.Point (World.Box);
-                    _prevSpawn = XY.SqrDistance (a, _prevSpawn) > XY.SqrDistance (b, _prevSpawn) ? a : b;
-                    _.World.Spawn (new DemomanCircle (_prevSpawn, 100,10,90));
-                
+            if (t % 240 == 0)
+            {
+                for (int i = 0; i < _n; i++)
+                {
+                    coordinate[i] = new XY(-9000, -9000);
+                }
 
+                for (int i = 0; i < _n; i++)
+                {
+                    bool g = false;
+                    int attempts = 0;
+                    while (g == false && attempts < 100)
+                    {
+                        var a = _.Random.Point(World.Box);
+                        g = Check(a, i);
+                        attempts++;
+                    }
+
+                }
+
+                for (int j = 0; j < _n; j++)
+                {
+                    _.World.Spawn(new DemomanCircle(coordinate[j], _r, 10, 90));
+                }
             }
+
+
+
+        }
+
+        private bool Check(XY a, int index)
+        {
+            for (int i = 0; i < _n; i++)
+            {
+                if (XY.Distance(a, coordinate[i]) < 2 * _r)
+                {
+                    return false;
+                }
+            }
+
+            coordinate[index] = a;
+            return true;
+
         }
     }
 }
