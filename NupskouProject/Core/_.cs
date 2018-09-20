@@ -1,4 +1,5 @@
 ﻿using System;
+using NupskouProject.Entities;
 using NupskouProject.Rendering;
 
 
@@ -11,6 +12,9 @@ namespace NupskouProject.Core {
         public static Renderer Renderer = new Renderer ();
         public static Assets   Assets   = new Assets ();
         public static Random   Random   = new Random ();
+        
+        public static Player Player;
+
 
     }
 

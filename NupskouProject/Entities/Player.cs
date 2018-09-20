@@ -15,6 +15,7 @@ namespace NupskouProject.Entities {
 
         public          XY     P            => _p;
         public override Hitbox PlayerHitbox => new CircleHitbox (_p, 2);
+        public XY Position => _p;
 
 
         public Player (XY p) {

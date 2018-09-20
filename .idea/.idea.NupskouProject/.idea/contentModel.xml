@@ -44,8 +44,12 @@
         <e p="Raden" t="Include" />
         <e p="Rashka" t="Include">
           <e p="Bullets" t="Include">
+            <e p="DelayedLinearRoundBullet.cs" t="Include" />
+            <e p="DemomanCircle.cs" t="Include" />
+            <e p="DemomanExplosion.cs" t="Include" />
             <e p="VerticalBounceRoundBullet.cs" t="Include" />
           </e>
+          <e p="DemomanSignDelayedExplosionSpawner.cs" t="Include" />
           <e p="SmileSpawner.cs" t="Include" />
         </e>
         <e p="Rendering" t="Include">

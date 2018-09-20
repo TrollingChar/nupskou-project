@@ -23,9 +23,9 @@ namespace NupskouProject.Core {
 
         public void Update () {
             if (_.Time == 0) {
-                Spawn (Player = new Player (new XY (250, 500)));
+                Spawn (_.Player = new Player (new XY (250, 500)));
                 //Spawn (new Stage1 ());
-                Spawn(new SmileSpawner());
+                Spawn(new DemomanSignDelayedExplosionSpawner());
             }
 
             for (int i = 0; i < _entities.Count; i++) {

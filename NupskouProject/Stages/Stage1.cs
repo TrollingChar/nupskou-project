@@ -5,7 +5,6 @@ using NupskouProject.Entities;
 namespace NupskouProject.Stages {
 
     public class Stage1 : StdEntity {
-
         protected override void Update (int t) {
             switch (t) {
                 case 300:

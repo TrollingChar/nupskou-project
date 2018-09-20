@@ -61,8 +61,12 @@
     <Compile Include="Entities\StdEntity.cs" />
     <Compile Include="Hitboxes\CircleHitbox.cs" />
     <Compile Include="Hitboxes\Hitbox.cs" />
+    <Compile Include="Rashka\Bullets\DelayedLinearRoundBullet.cs" />
+    <Compile Include="Rashka\Bullets\DemomanCircle.cs" />
+    <Compile Include="Rashka\Bullets\DemomanExplosion.cs" />
     <Compile Include="Rashka\Bullets\VerticalBounceRoundBullet.cs" />
     <Compile Include="Rashka\SmileSpawner.cs" />
+    <Compile Include="Rashka\DemomanSignDelayedExplosionSpawner.cs" />
     <Compile Include="Rendering\Layer.cs" />
     <Compile Include="Rendering\Renderer.cs" />
     <Compile Include="Rendering\Sprite.cs" />
