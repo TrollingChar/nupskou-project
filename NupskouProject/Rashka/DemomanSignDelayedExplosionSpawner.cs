@@ -41,7 +41,7 @@ namespace NupskouProject.Rashka
 
                 for (int j = 0; j < _n; j++)
                 {
-                    _.World.Spawn(new DemomanCircle(coordinate[j], _r, 10, 90));
+                    _.World.Spawn(new DemomanCircle(coordinate[j], _r, 15, 90));
                 }
             }
 
