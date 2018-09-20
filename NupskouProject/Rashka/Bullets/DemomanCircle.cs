@@ -34,7 +34,7 @@ namespace NupskouProject.Rashka.Bullets
             {
                 for (int i = 0; i <= _n; i++)
                 {
-                    if (XY.Distance(_p, _.Player.Position) > 10){
+                    if (XY.Distance(new XY(_p.X+ Mathf.Cos(i * 2 * Mathf.PI/_n + _random) *_r, _p.Y+ Mathf.Sin(i * 2 * Mathf.PI/_n + _random)*_r), _.Player.Position) > 12){
                     _.World.Spawn(
                         new DelayedLinearRoundBullet(
                             new XY(_p.X+ Mathf.Cos(i * 2 * Mathf.PI/_n + _random) *_r, _p.Y+ Mathf.Sin(i * 2 * Mathf.PI/_n + _random)*_r),

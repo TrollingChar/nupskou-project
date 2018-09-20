@@ -13,14 +13,13 @@ namespace NupskouProject.Rashka
 
         protected override void Update(int t)
         {
-            if (t % 240 == 0) {
-                for (int i = 0; i < 8; i++)
-                {
+            if (t % 240 <= 8) {
+                
                     var a = _.Random.Point (World.Box);
                     var b = _.Random.Point (World.Box);
                     _prevSpawn = XY.SqrDistance (a, _prevSpawn) > XY.SqrDistance (b, _prevSpawn) ? a : b;
                     _.World.Spawn (new DemomanCircle (_prevSpawn, 100,10,90));
-                }
+                
 
             }
         }
