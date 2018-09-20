@@ -2,6 +2,7 @@
 using NupskouProject.Core;
 using NupskouProject.Entities;
 using NupskouProject.Math;
+using Un4seen.Bass.AddOn.DShow;
 using Un4seen.Bass.Misc;
 
 namespace NupskouProject.Rashka.Bullets {
@@ -25,6 +26,12 @@ namespace NupskouProject.Rashka.Bullets {
         protected override void Update (int t)
         {
             if (t == 0){P = _p0;}
+
+            if (t == _delay)
+            {
+                MainColor = Color.Red;
+                BorderColor = Color.Red;
+            }
             if (t >= _delay)
             {
                 P = _p0 + (t - _delay) * _v;

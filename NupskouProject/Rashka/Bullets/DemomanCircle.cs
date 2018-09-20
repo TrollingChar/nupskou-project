@@ -39,8 +39,8 @@ namespace NupskouProject.Rashka.Bullets
                         new DelayedLinearRoundBullet(
                             new XY(_p.X+ Mathf.Cos(i * 2 * Mathf.PI/_n + _random) *_r, _p.Y+ Mathf.Sin(i * 2 * Mathf.PI/_n + _random)*_r),
                             new XY(Mathf.Cos(i * (2 * Mathf.PI/_n )+ _random),Mathf.Sin(i * (2 * Mathf.PI/_n) + _random))        , 
-                            Color.Red,
-                            Color.Red,
+                            Color.Blue,
+                            Color.Blue,
                             5,
                             _delay
                         )
