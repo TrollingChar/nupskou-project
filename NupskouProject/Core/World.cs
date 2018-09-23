@@ -30,7 +30,7 @@ namespace NupskouProject.Core {
             }
             if (_.Time == 120)
             {
-                Spawn(new SphereBullets(Box.Center, 150, 16,  Mathf.PI/1.5f));
+                Spawn(new SphereBullets(Box.Center, 150, 16, Mathf.PI / 3.5f));
             }
 
             for (int i = 0; i < _entities.Count; i++) {

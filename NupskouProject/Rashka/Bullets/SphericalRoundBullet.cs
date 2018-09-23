@@ -43,7 +43,7 @@ namespace NupskouProject.Rashka.Bullets {
 
 
         void __Update (int t) {
-            P = __offset + __v * t + __r * __v * Mathf.Cos (__angle0 + t / (Mathf.PI * 6));
+            P = __offset + __v * t + __r * __v * Mathf.Cos ( __angle0 + 0.125f * t / (Mathf.PI ));
         }
 
 
