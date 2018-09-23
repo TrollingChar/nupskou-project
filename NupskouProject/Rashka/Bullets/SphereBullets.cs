@@ -31,7 +31,7 @@ namespace NupskouProject.Rashka.Bullets
                     for (int j = 0; j < _n; j++)
                     {
                         _.World.Spawn(new SphericalRoundBullet(
-                            new XY(_r * Mathf.Cos(i) * Mathf.Sin(j),_r * Mathf.Sin(i) * Mathf.Sin(j) ), 
+                            new XY(_r*Mathf.Cos(i * 2 * Mathf.PI / _n)*Mathf.Sin(j * Mathf.PI / _n),_p.Y+_r*Mathf.Sin(i * 2 * Mathf.PI / _n)*Mathf.Sin(j * Mathf.PI / _n)) ,
                             _r * Mathf.Cos(j * Mathf.PI / _n),
                             _r,
                             new XY(_dir),
