@@ -29,6 +29,9 @@ namespace NupskouProject.Rashka.Bullets {
             var axisOffset = XY.Project (offset0, v.Rotated90CW ());
             __offset       = o0 + axisOffset;
             __r            = Mathf.Sqrt (r * r - axisOffset.SqrLength);
+            BorderColor = Color.Red;
+            MainColor = Color.Red;
+            R = 5;
         }
 
 
