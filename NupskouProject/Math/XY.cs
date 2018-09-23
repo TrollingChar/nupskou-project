@@ -196,6 +196,9 @@ namespace NupskouProject.Math {
         public override bool   Equals (object obj)      => obj is XY && this == (XY) obj;
         public override int    GetHashCode ()           => X.GetHashCode () ^ Y.GetHashCode () << 2;
 
+
+        public static XY Project (XY v, XY w) => XY.Dot (v, w) / w.SqrLength * w;
+
     }
 
 }
