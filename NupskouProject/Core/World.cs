@@ -6,6 +6,7 @@ using NupskouProject.Entities;
 using NupskouProject.Hitboxes;
 using NupskouProject.Math;
 using NupskouProject.Rashka;
+using NupskouProject.Rashka.Bullets;
 using NupskouProject.Rendering;
 using NupskouProject.Stages;
 
@@ -25,7 +26,11 @@ namespace NupskouProject.Core {
             if (_.Time == 0) {
                 Spawn (_.Player = new Player (new XY (250, 500)));
                 //Spawn (new Stage1 ());
-                Spawn(new DemomanSignDelayedExplosionSpawner());
+                //Spawn(new DemomanSignDelayedExplosionSpawner());
+            }
+            if (_.Time == 120)
+            {
+                Spawn(new SphereBullets(Box.Center, 150, 10,  Mathf.PI/5f));
             }
 
             for (int i = 0; i < _entities.Count; i++) {

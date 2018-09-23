@@ -47,6 +47,8 @@
             <e p="DelayedLinearRoundBullet.cs" t="Include" />
             <e p="DemomanCircle.cs" t="Include" />
             <e p="DemomanExplosion.cs" t="Include" />
+            <e p="SphereBullets.cs" t="Include" />
+            <e p="SphericalRoundBullet.cs" t="Include" />
             <e p="VerticalBounceRoundBullet.cs" t="Include" />
           </e>
           <e p="DemomanSignDelayedExplosionSpawner.cs" t="Include" />
