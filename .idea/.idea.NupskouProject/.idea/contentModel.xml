@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$USER_HOME$/.Rider2018.1/system/resharper-host/local/Transient/ReSharperHost/v12/SolutionCaches/_NupskouProject.1940266572.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/.Rider2018.1/system/resharper-host/local/Transient/ReSharperHost/v12/SolutionCaches/_NupskouProject.691011809.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="NupskouProject" t="IncludeRecursive">
         <e p="Core" t="Include">
@@ -11,6 +11,7 @@
           <e p="World.cs" t="Include" />
           <e p="_.cs" t="Include" />
         </e>
+        <e p="Difficulty.cs" t="Include" />
         <e p="Entities" t="Include">
           <e p="Clock.cs" t="Include" />
           <e p="Enemy.cs" t="Include" />
@@ -61,6 +62,9 @@
           <e p="SpriteInstance.cs" t="Include" />
         </e>
         <e p="Stages" t="Include">
+          <e p="Enemy" t="Include">
+            <e p="EnemyMastirStage1Encounter1.cs" t="Include" />
+          </e>
           <e p="Stage1.cs" t="Include" />
         </e>
         <e p="Util" t="Include">

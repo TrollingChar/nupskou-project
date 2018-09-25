@@ -10,7 +10,7 @@ namespace NupskouProject.Entities {
 
     public class Enemy : StdEntity {
 
-        private int _hp;
+        public int HP;
         public XY P { get; protected set; }
 
 
@@ -18,7 +18,7 @@ namespace NupskouProject.Entities {
 
 
         public override void OnStruck (Entity entity) {
-            if (--_hp == 0) Despawn ();
+            if (--HP == 0) Despawn ();
         }
 
 
