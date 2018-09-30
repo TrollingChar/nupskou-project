@@ -27,6 +27,7 @@
         <e p="Hitboxes" t="Include">
           <e p="CircleHitbox.cs" t="Include" />
           <e p="Hitbox.cs" t="Include" />
+          <e p="PetalHitbox.cs" t="Include" />
         </e>
         <e p="Math" t="Include">
           <e p="Box.cs" t="Include" />

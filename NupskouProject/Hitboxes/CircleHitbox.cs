@@ -21,6 +21,13 @@ namespace NupskouProject.Hitboxes {
         public override bool Over (Hitbox other)       => other.Over (this);
         public override bool Over (CircleHitbox other) => Geom.CircleOverCircle (Circle, other.Circle);
 
+
+        public override bool Over (PetalHitbox other) => Geom.Overlap (
+            new Circle (other.Center1, other.Radius),
+            new Circle (other.Center2, other.Radius),
+            Circle
+        );
+
     }
 
 }

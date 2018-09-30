@@ -14,6 +14,7 @@ namespace NupskouProject.Core {
         private const string SoundPrefix = "../../Assets/";
 
         public Sprite Circle;
+        public Sprite Petal;
         public Sprite UI;
 
         public Sound Pjiu;
@@ -21,6 +22,7 @@ namespace NupskouProject.Core {
 
         public void Load (ContentManager content) {
             Circle = Sprite.Load (content.Load <Texture2D> ("Assets/circle"), 64);
+            Petal  = Sprite.Load (content.Load <Texture2D> ("Assets/petal"),  32);
             UI     = Sprite.Load (content.Load <Texture2D> ("Assets/ui"),     1, Vector2.Zero);
 
             Bass.BASS_Init (-1, 44100, BASSInit.BASS_DEVICE_DEFAULT, IntPtr.Zero);

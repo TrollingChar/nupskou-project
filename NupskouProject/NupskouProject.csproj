@@ -61,6 +61,7 @@
     <Compile Include="Entities\StdEntity.cs" />
     <Compile Include="Hitboxes\CircleHitbox.cs" />
     <Compile Include="Hitboxes\Hitbox.cs" />
+    <Compile Include="Hitboxes\PetalHitbox.cs" />
     <Compile Include="Rashka\Bullets\DelayedLinearRoundBullet.cs" />
     <Compile Include="Rashka\Bullets\DemomanCircle.cs" />
     <Compile Include="Rashka\Bullets\DemomanExplosion.cs" />
