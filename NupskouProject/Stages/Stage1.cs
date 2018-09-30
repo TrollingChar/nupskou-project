@@ -2,6 +2,7 @@
 using NupskouProject.Entities;
 using NupskouProject.Math;
 using NupskouProject.Stages.Enemy;
+using NupskouProject.Util;
 
 
 namespace NupskouProject.Stages {
@@ -14,6 +15,7 @@ namespace NupskouProject.Stages {
                             i => _.World.Spawn(new EnemyMastirStage1Encounter1(
                                 new XY(World.Box.Left, World.Box.Bottom * 0.1f),  XY.Right, i _.Difficulty.Choose(25, 12, 12, 12); == 0, -1)),
                             12,
+                            // ты ⑨
                             30,
                             0
                         )
