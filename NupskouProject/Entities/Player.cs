@@ -50,8 +50,8 @@ namespace NupskouProject.Entities {
 
         private void Shoot (int t) {
             if (t % 5 != 0) return;
-            foreach (var p in Danmaku.Spray (new XY (0,  30), Mathf.PI / 3, 4))
-            foreach (var q in Danmaku.Spray (new XY (0, -30), Mathf.PI / 3, 4)) {
+            foreach (var p in Danmaku.Spray (new XY (0,  30), Mathf.PI / 3, 3))
+            foreach (var q in Danmaku.Spray (new XY (0, -30), Mathf.PI / 3, 3)) {
                 _.World.Spawn (new PlayerBullet (_p + p, (q - p).WithLength (10)));
             }
         }

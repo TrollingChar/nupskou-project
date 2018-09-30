@@ -25,12 +25,12 @@ namespace NupskouProject.Core {
         public void Update () {
             if (_.Time == 0) {
                 Spawn (_.Player = new Player (new XY (250, 500)));
-                //Spawn (new Stage1 ());
+                Spawn (new Stage1 ());
                 //Spawn(new DemomanSignDelayedExplosionSpawner());
             }
             if (_.Time == 120)
             {
-                Spawn(new SphereBullets(Box.Center, 150, 10,  Mathf.PI/5f));
+     //           Spawn(new SphereBullets(Box.Center, 125, 8, Mathf.PI / 2.5f));
             }
 
             for (int i = 0; i < _entities.Count; i++) {

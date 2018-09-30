@@ -29,6 +29,9 @@ namespace NupskouProject.Rashka.Bullets {
             var axisOffset = XY.Project (offset0, v.Rotated90CW ());
             __offset       = o0 + axisOffset;
             __r            = Mathf.Sqrt (r * r - axisOffset.SqrLength);
+            BorderColor = Color.Red;
+            MainColor = Color.Red;
+            R = 5;
         }
 
 
@@ -40,7 +43,7 @@ namespace NupskouProject.Rashka.Bullets {
 
 
         void __Update (int t) {
-            P = __offset + __v * t + __r * __v * Mathf.Cos (__angle0 + t / Mathf.PI);
+            P = __offset + __v * t + __r * __v * Mathf.Cos ( __angle0 + 0.125f * t / (Mathf.PI ));
         }
 
 
