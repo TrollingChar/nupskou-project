@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>/home/sanekrash/Gamedev/GAMEZ/nupskou-project/NupskouProject/Assets/circle.png</SourceFile>
-  <SourceTime>2018-09-04T20:18:10+03:00</SourceTime>
-  <DestFile>/home/sanekrash/Gamedev/GAMEZ/nupskou-project/NupskouProject/bin/Debug/Assets/circle.xnb</DestFile>
+  <SourceFile>/home/sanekrash/Gamedev/GAMEZ/nupskou-project/NupskouProject/Assets/petal.png</SourceFile>
+  <SourceTime>2018-10-01T17:42:28+03:00</SourceTime>
+  <DestFile>/home/sanekrash/Gamedev/GAMEZ/nupskou-project/NupskouProject/bin/Debug/Assets/petal.xnb</DestFile>
   <DestTime>2018-10-01T18:01:23+03:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-09-22T17:52:46+03:00</ImporterTime>
@@ -18,7 +18,7 @@
   </Parameters>
   <Parameters>
     <Key>GenerateMipmaps</Key>
-    <Value>True</Value>
+    <Value>False</Value>
   </Parameters>
   <Parameters>
     <Key>PremultiplyAlpha</Key>

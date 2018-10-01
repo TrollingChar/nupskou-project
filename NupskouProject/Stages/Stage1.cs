@@ -13,7 +13,7 @@ namespace NupskouProject.Stages {
                 case 300:
                     _.World.Spawn(new Clock(
                             i => _.World.Spawn(new EnemyMastirStage1Encounter1(
-                                new XY(World.Box.Left, World.Box.Bottom * 0.1f),  XY.Right, i _.Difficulty.Choose(25, 12, 12, 12); == 0, -1)),
+                                new XY(World.Box.Left, World.Box.Bottom * 0.1f), XY.Right, i % 3 == 0, -1)),
                             12,
                             // ты ⑨
                             30,

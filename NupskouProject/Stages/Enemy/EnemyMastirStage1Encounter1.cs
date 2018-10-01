@@ -57,7 +57,7 @@ namespace NupskouProject.Stages.Enemy {
 
             if (_shoot && t % 90 == 0) {
                 _.World.Spawn (
-                    new LinearRoundBullet (
+                    new LinearPetalBullet (
                         P,
                         new XY (XY.DirectionAngle (P, _.Player.Position)),
                         Color.Red,
