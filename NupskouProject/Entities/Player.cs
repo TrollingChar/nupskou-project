@@ -25,7 +25,7 @@ namespace NupskouProject.Entities {
 
         public override void OnStruck (Entity entity) {
             _.Assets.Pjiu.Play ();
-            Despawn ();
+            _p = new XY(250, 500);
         }
 
 

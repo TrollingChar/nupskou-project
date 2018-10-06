@@ -18,7 +18,7 @@ namespace NupskouProject.Entities {
         public override Hitbox PlayerDamagerHitbox => new PetalHitbox(P, V.Angle, R); 
 
 
-        public override void OnStrike (Entity entity) => Despawn ();
+ //       public override void OnStrike (Entity entity) => Despawn ();
 
 
         public override void Render () {

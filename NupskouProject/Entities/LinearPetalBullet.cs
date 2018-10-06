@@ -10,7 +10,7 @@ namespace NupskouProject.Entities {
         private readonly XY _p0;
 
 
-        public LinearPetalBullet (XY p0, XY v, Color mainColor, Color borderColor, float r = 5) {
+        public LinearPetalBullet (XY p0, XY v, Color mainColor, Color borderColor, float r) {
             _p0         = p0;
             V         = v;
             MainColor   = mainColor;
