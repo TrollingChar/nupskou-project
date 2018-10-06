@@ -46,7 +46,7 @@ namespace NupskouProject.Math {
             XY    o1 = c1.Center, o2 = c2.Center, o3 = c3.Center;
             float rr1 = r1 * r1;
             float dist = XY.Distance (o1, o2);
-            float a = (rr1 - r2*r2 + 1) * 0.5f / dist;
+            float a = 0.5f * ((rr1 - r2*r2) / dist + dist);
             float h = Mathf.Sqrt (rr1 - a*a);
             var i = (o2 - o1) / dist;
             var o = o1 + i * a;

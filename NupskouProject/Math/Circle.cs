@@ -25,6 +25,10 @@
 
 
         public Circle (float x, float y, float r) : this (new XY (x, y), r) {}
+        
+        
+        public override string ToString ()              => $"({Center}, {Radius:F1})";
+        public          string ToString (string format) => $"({Center.ToString (format)}, {Radius.ToString (format)})";
 
     }
 
