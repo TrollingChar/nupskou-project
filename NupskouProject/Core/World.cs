@@ -27,12 +27,7 @@ namespace NupskouProject.Core {
                 Spawn (_.Player = new Player (new XY (250, 500)));
             //    Spawn (new Stage1 ());
                 //Spawn(new DemomanSignDelayedExplosionSpawner());
-                Spawn(new LinearPetalBullet(
-                    World.Box.Center,
-                    new XY(0,0), 
-                    Color.Red,
-                    Color.Orange,
-                    30));
+                Spawn(new DemomanSignWormblasterTheFirst(World.Box.Center));
             }
             if (_.Time == 120)
             {

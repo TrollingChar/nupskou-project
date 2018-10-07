@@ -19,6 +19,7 @@ namespace NupskouProject.Rashka
 
         protected override void Update(int t)
         {
+            var world = _.World;
             if (t % 240 == 0)
             {
                 for (int i = 0; i < _n; i++)
@@ -41,7 +42,7 @@ namespace NupskouProject.Rashka
 
                 for (int j = 0; j < _n; j++)
                 {
-                    _.World.Spawn(new DemomanCircle(coordinate[j], _r, 15, 90));
+                    world.Spawn(new DemomanCircle(coordinate[j], _r, 15, 90));
                 }
             }
 
