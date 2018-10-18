@@ -28,7 +28,7 @@ namespace NupskouProject.Core {
             //    Spawn (new Stage1 ());
                 //Spawn(new DemomanSignDelayedExplosionSpawner());
                 //Spawn(new DemomanSignWormblasterTheFirst(World.Box.Center));
-
+                   Spawn(new LinearPetalBeamBullet(Box.Center, new XY(0,0), Color.Blue, Color.Aqua, 15 ));
 
                 
             }

@@ -4,9 +4,9 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>/home/trollingchar/rider/NupskouProjects/0.1/NupskouProject/Assets/circle.png</File>
-    <File>/home/trollingchar/rider/NupskouProjects/0.1/NupskouProject/Assets/ui.png</File>
-    <File>/home/trollingchar/rider/NupskouProjects/0.1/NupskouProject/Assets/petal.png</File>
-    <File>/home/trollingchar/rider/NupskouProjects/0.1/NupskouProject/Assets/petalbeam.png</File>
+    <File>/home/sanekrash/Gamedev/GAMEZ/nupskou-project/NupskouProject/Assets/circle.png</File>
+    <File>/home/sanekrash/Gamedev/GAMEZ/nupskou-project/NupskouProject/Assets/ui.png</File>
+    <File>/home/sanekrash/Gamedev/GAMEZ/nupskou-project/NupskouProject/Assets/petal.png</File>
+    <File>/home/sanekrash/Gamedev/GAMEZ/nupskou-project/NupskouProject/Assets/petalbeam.png</File>
   </SourceFiles>
 </SourceFileCollection>
