@@ -24,8 +24,8 @@ namespace NupskouProject.Entities {
         public override void Render () {
             float angle = V.Angle;
             _.Renderer.TestForeground.Add (
-                new Sprite (_.Assets.PetalBeam) {Position = P, Rotation = angle, Color = BorderColor, Scale = new Vector2 (R + 0.5f)},
-                new Sprite (_.Assets.PetalBeam) {Position = P, Rotation = angle, Color = MainColor,   Scale = new Vector2 (R + 0.25f)},
+                new Sprite (_.Assets.PetalBeam) {Position = P, Rotation = angle, Color = BorderColor, Scale = new Vector2 (R + 1f)},
+                new Sprite (_.Assets.PetalBeam) {Position = P, Rotation = angle, Color = MainColor,   Scale = new Vector2 (R + 0.5f)},
                 new Sprite (_.Assets.PetalBeam) {Position = P, Rotation = angle, Color = Color.White, Scale = new Vector2 (R)}
             );
         }
