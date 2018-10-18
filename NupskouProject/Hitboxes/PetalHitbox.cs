@@ -26,6 +26,15 @@ namespace NupskouProject.Hitboxes {
         }
 
 
+        public static PetalHitbox Beam (XY o, float a, float size) {
+            var offset = 63 * size * new XY (a).Rotated90CW ();
+            var o1 = o + offset;
+            var o2 = o - offset;
+            float r = 64 * size;
+            return new PetalHitbox (o1, o2, r);
+        }
+
+
         public override bool Over (Hitbox other) => other.Over (this);
 
 

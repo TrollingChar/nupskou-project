@@ -15,15 +15,17 @@ namespace NupskouProject.Core {
 
         public Sprite Circle;
         public Sprite Petal;
+        public Sprite PetalBeam;
         public Sprite UI;
 
         public Sound Pjiu;
 
 
         public void Load (ContentManager content) {
-            Circle = Sprite.Load (content.Load <Texture2D> ("Assets/circle"), 64);
-            Petal  = Sprite.Load (content.Load <Texture2D> ("Assets/petal"),  32);
-            UI     = Sprite.Load (content.Load <Texture2D> ("Assets/ui"),     1, Vector2.Zero);
+            Circle    = Sprite.Load (content.Load <Texture2D> ("Assets/circle"),    64);
+            Petal     = Sprite.Load (content.Load <Texture2D> ("Assets/petal"),     32);
+            PetalBeam = Sprite.Load (content.Load <Texture2D> ("Assets/petalbeam"), 16);
+            UI        = Sprite.Load (content.Load <Texture2D> ("Assets/ui"),        1, Vector2.Zero);
 
             Bass.BASS_Init (-1, 44100, BASSInit.BASS_DEVICE_DEFAULT, IntPtr.Zero);
 
