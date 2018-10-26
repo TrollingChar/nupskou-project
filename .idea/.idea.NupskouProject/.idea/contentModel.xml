@@ -59,6 +59,7 @@
           </e>
           <e p="DemomanSignDelayedExplosionSpawner.cs" t="Include" />
           <e p="DemomanSignWormblasterTheFirst.cs" t="Include" />
+          <e p="SmallSpells" t="Include" />
           <e p="SmileSpawner.cs" t="Include" />
         </e>
         <e p="Rendering" t="Include">

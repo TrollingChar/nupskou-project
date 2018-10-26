@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework;
 using NupskouProject.Core;
 using NupskouProject.Entities;
 using NupskouProject.Math;
+using NupskouProject.Util;
 
 
 namespace NupskouProject.Stages.Enemy {
@@ -11,6 +12,7 @@ namespace NupskouProject.Stages.Enemy {
 
         private          XY   _p;
         private readonly XY   _v;
+        private XY _mark;
         private readonly bool _shoot;
         private          int  _t;
         private          int  _side;
@@ -24,7 +26,7 @@ namespace NupskouProject.Stages.Enemy {
             _shoot     = shoot;
             _t         = Convert.ToInt32 (World.Box.Right) / 2;
             _side      = side;
-            _spindelay = 90;
+            _spindelay = 120;
 
         }
 
@@ -55,19 +57,43 @@ namespace NupskouProject.Stages.Enemy {
             if (t > _t + _spindelay)
                 P = _p - _v * (t - _t - _spindelay);
 
-            if (_shoot && t % 90 == 0) {
-                _.World.Spawn (
-                    new LinearPetalBullet (
+            if (_shoot && t % _.Difficulty.Choose(120, 60, 45, 45) == 0)
+            {
+                _.World.Spawn(
+                    new LinearPetalBullet(
                         P,
-                        new XY (XY.DirectionAngle (P, _.Player.Position)),
+                        _.Difficulty.Choose(1.5f, 2f, 3f, 4f) * new XY(XY.DirectionAngle(P, _.Player.Position)),
                         Color.Red,
                         Color.Orange,
-                        5
+                        3f
                     )
                 );
 
+
             }
 
+            if (_shoot == false && _.Difficulty >= Difficulty.Hard &&
+                 t % _.Difficulty.Choose(9999, 9999, 180, 120) == 0)
+                AlternateShoot(t);
+
+        }
+
+        private void AlternateShoot(int t)
+        {
+        {
+            var w = (_.Player.Position - P).Normalized ;
+            var line  = Danmaku.Line (w, 1, 2, _.Difficulty.Choose(9999, 9999, 3, 4));
+            foreach (var v in line) {
+                _.World.Spawn(
+                    new LinearRoundBullet(
+                        P,
+                        v,
+                        Color.Blue,
+                        Color.Blue
+                    )
+                );
+            }
+        }
         }
 
     }

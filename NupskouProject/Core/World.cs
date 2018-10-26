@@ -25,10 +25,11 @@ namespace NupskouProject.Core {
         public void Update () {
             if (_.Time == 0) {
                 Spawn (_.Player = new Player (new XY (250, 500)));
-            //    Spawn (new Stage1 ());
+                Spawn (new Stage1 ());
                 //Spawn(new DemomanSignDelayedExplosionSpawner());
                 //Spawn(new DemomanSignWormblasterTheFirst(World.Box.Center));
-                   Spawn(new LinearPetalBeamBullet(Box.Center, new XY(0,0), Color.Blue, Color.Aqua, 5 ));
+                //Spawn(new LinearPetalBeamBullet(Box.Center, new XY(0,0), Color.Blue, Color.Aqua, 5 ));
+                //Spawn(new SmileSpawner());
 
                 
             }
