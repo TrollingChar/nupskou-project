@@ -1,4 +1,5 @@
-﻿using NupskouProject.Core;
+﻿using System;
+using NupskouProject.Core;
 using NupskouProject.Entities;
 using NupskouProject.Math;
 using NupskouProject.Stages.Enemy;
@@ -60,6 +61,8 @@ namespace NupskouProject.Stages {
                     //босс
                     break;
             }
+
+            if (t == 180) Console.WriteLine(t / 60);
         }
 
     }
