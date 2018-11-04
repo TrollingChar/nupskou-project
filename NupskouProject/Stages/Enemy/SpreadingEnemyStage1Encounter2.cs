@@ -10,7 +10,6 @@ namespace NupskouProject.Stages.Enemy
     {
         private XY _p;
         private XY _v;
-        private float _random;
 
 
         public SpreadingEnemyStage1Encounter2(XY p, XY v)

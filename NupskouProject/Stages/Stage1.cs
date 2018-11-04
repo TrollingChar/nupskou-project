@@ -57,12 +57,27 @@ namespace NupskouProject.Stages {
                         )
                     );
                     break;
+                case 1440:
+                    _.World.Spawn(new Clock(
+                        i => _.World.Spawn(
+                            new DropperEnemyStage1Encounter3(new XY(World.Box.Left, World.Box.Bottom * 0.2f),
+                                XY.Right * 3)),
+                        6,
+                        120));
+                    break;
+                case 1470:
+                    _.World.Spawn(new Clock(
+                        i => _.World.Spawn(
+                            new DropperEnemyStage1Encounter3(new XY(World.Box.Right, World.Box.Bottom * 0.2f),
+                                XY.Left * 3)),
+                        6,
+                        120));
+                    break;
                 case 3600:
                     //босс
                     break;
             }
 
-            if (t == 180) Console.WriteLine(t / 60);
         }
 
     }

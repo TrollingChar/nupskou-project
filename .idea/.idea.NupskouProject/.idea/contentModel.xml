@@ -72,6 +72,7 @@
           <e p="Bullets" t="Include" />
           <e p="Enemy" t="Include">
             <e p="CircleEnemyStage1Encounter2.cs" t="Include" />
+            <e p="DropperEnemyStage1Encouner3.cs" t="Include" />
             <e p="EnemyMastirStage1Encounter1.cs" t="Include" />
             <e p="SpreadingEnemyStage1Encounter2.cs" t="Include" />
           </e>

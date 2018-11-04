@@ -89,6 +89,7 @@
     <Compile Include="Math\XY.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Stages\Enemy\CircleEnemyStage1Encounter2.cs" />
+    <Compile Include="Stages\Enemy\DropperEnemyStage1Encouner3.cs" />
     <Compile Include="Stages\Enemy\EnemyMastirStage1Encounter1.cs" />
     <Compile Include="Stages\Enemy\SpreadingEnemyStage1Encounter2.cs" />
     <Compile Include="Stages\Stage1.cs" />
