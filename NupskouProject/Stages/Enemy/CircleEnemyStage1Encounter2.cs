@@ -15,7 +15,7 @@ namespace NupskouProject.Stages.Enemy
 
         public CircleEnemyStage1Encounter2(XY p, XY v)
         {
-            HP = 50;
+            HP = 75;
             _p = p;
             _v = v;
 
@@ -57,11 +57,12 @@ namespace NupskouProject.Stages.Enemy
                 foreach (var v in circle)
                 {
                     _.World.Spawn(
-                        new LinearRoundBullet(
+                        new LinearPetalBullet(
                             P,
                             v * _.Difficulty.Choose(2f, 2f, 2f, 3f),
                             Color.Blue,
-                            Color.Blue
+                            Color.Blue,
+                            3f
                         )
                     );
                 }

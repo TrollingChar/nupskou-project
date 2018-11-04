@@ -15,7 +15,7 @@ namespace NupskouProject.Stages.Enemy
 
         public SpreadingEnemyStage1Encounter2(XY p, XY v)
         {
-            HP = 25;
+            HP = 30;
             _p = p;
             _v = v;
 

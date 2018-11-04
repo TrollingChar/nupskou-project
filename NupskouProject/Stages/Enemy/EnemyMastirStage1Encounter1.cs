@@ -61,7 +61,7 @@ namespace NupskouProject.Stages.Enemy {
                 _.World.Spawn(
                     new LinearPetalBullet(
                         P,
-                        _.Difficulty.Choose(1.5f, 2f, 3f, 4f) * new XY(XY.DirectionAngle(P, _.Player.Position)),
+                        _.Difficulty.Choose(2f, 2f, 3f, 4f) * new XY(XY.DirectionAngle(P, _.Player.Position)),
                         Color.Red,
                         Color.Orange,
                         3f
