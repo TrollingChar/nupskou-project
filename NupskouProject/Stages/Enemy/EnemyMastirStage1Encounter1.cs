@@ -12,7 +12,6 @@ namespace NupskouProject.Stages.Enemy {
 
         private          XY   _p;
         private readonly XY   _v;
-        private XY _mark;
         private readonly bool _shoot;
         private          int  _t;
         private          int  _side;
@@ -20,7 +19,7 @@ namespace NupskouProject.Stages.Enemy {
 
 
         public EnemyMastirStage1Encounter1 (XY p, XY v, bool shoot, int side) {
-            HP         = 20;
+            HP         = 15;
             _p         = p;
             _v         = v;
             _shoot     = shoot;
@@ -75,6 +74,9 @@ namespace NupskouProject.Stages.Enemy {
             if (_shoot == false && _.Difficulty >= Difficulty.Hard &&
                  t % _.Difficulty.Choose(9999, 9999, 180, 120) == 0)
                 AlternateShoot(t);
+            if (t > 30 && !Geom.CircleOverBox (new Circle (P, 10 + 2), World.Box)) {
+                Despawn ();
+            }
 
         }
 

@@ -24,7 +24,7 @@ namespace NupskouProject.Entities {
 
 
         public override void OnStruck (Entity entity) {
-            _.Assets.Pjiu.Play ();
+            _.Assets.Pjiu.Play (0.5f);
             _p = new XY(250, 500);
         }
 
@@ -50,8 +50,8 @@ namespace NupskouProject.Entities {
 
         private void Shoot (int t) {
             if (t % 5 != 0) return;
-            foreach (var p in Danmaku.Spray (new XY (0,  30), Mathf.PI / 3, 3))
-            foreach (var q in Danmaku.Spray (new XY (0, -30), Mathf.PI / 3, 3)) {
+            foreach (var p in Danmaku.Spray (new XY (0,  30), Mathf.PI / 3, 2))
+            foreach (var q in Danmaku.Spray (new XY (0, -30), Mathf.PI / 3, 2)) {
                 _.World.Spawn (new PlayerBullet (_p + p, (q - p).WithLength (10)));
             }
         }

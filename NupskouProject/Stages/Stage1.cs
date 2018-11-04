@@ -31,9 +31,33 @@ namespace NupskouProject.Stages {
                         )
                     );
                     break;
-                case 900:
+                case 780:
+                   //здесь должна быть табличка, да
                     break;
-                case 1200:
+                case 960:
+                    _.World.Spawn(new CircleEnemyStage1Encounter2
+                    (
+                        new XY(World.Box.Right * 0.5f, 0),
+                        XY.Down
+                    )
+                    );
+                    break;
+                case 1020:
+                    _.World.Spawn(new SpreadingEnemyStage1Encounter2
+                        (
+                            new XY(World.Box.Left, World.Box.Bottom * 0.2f), XY.Right
+                        )
+                    );
+                    break;
+                case 1080:
+                    _.World.Spawn(new SpreadingEnemyStage1Encounter2
+                        (
+                            new XY(World.Box.Right, World.Box.Bottom * 0.2f),   XY.Left
+                        )
+                    );
+                    break;
+                case 3600:
+                    //босс
                     break;
             }
         }
