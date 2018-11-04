@@ -18,8 +18,10 @@ namespace NupskouProject.Util {
         }
 
 
-        public void Play () {
-            Bass.BASS_ChannelPlay (Bass.BASS_SampleGetChannel (_sample, false), false);
+        public void Play (float volume = 100) {
+            int channel = Bass.BASS_SampleGetChannel (_sample, false);
+            Bass.BASS_ChannelPlay (channel, false);
+            Bass.BASS_ChannelSetAttribute (channel, BASSAttribute.BASS_ATTRIB_VOL, volume);
         }
 
 
