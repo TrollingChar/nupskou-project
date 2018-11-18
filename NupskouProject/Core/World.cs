@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework;
 using NupskouProject.Entities;
 using NupskouProject.Hitboxes;
 using NupskouProject.Math;
+using NupskouProject.Raden.Airstrike;
 using NupskouProject.Rashka;
 using NupskouProject.Rashka.Bullets;
 using NupskouProject.Rendering;
@@ -25,7 +26,7 @@ namespace NupskouProject.Core {
         public void Update () {
             if (_.Time == 0) {
                 Spawn (_.Player = new Player (new XY (250, 500)));
-                Spawn (new Stage1 ());
+//                Spawn (new Stage1 ());
                 //Spawn(new DemomanSignDelayedExplosionSpawner());
                 //Spawn(new DemomanSignWormblasterTheFirst(World.Box.Center));
                 //Spawn(new LinearPetalBeamBullet(Box.Center, new XY(0,0), Color.Blue, Color.Aqua, 5 ));
@@ -33,8 +34,8 @@ namespace NupskouProject.Core {
 
                 
             }
-            if (_.Time == 120)
-            {
+            if (_.Time == 120) {
+                Spawn (new Airstrike ());
      //           Spawn(new SphereBullets(Box.Center, 125, 8, Mathf.PI / 2.5f));
             }
 

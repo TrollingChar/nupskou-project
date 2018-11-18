@@ -68,6 +68,11 @@
     <Compile Include="Hitboxes\CircleHitbox.cs" />
     <Compile Include="Hitboxes\Hitbox.cs" />
     <Compile Include="Hitboxes\PetalHitbox.cs" />
+    <Compile Include="Raden\Airstrike\Airstrike.cs" />
+    <Compile Include="Raden\Airstrike\Bomb.cs" />
+    <Compile Include="Raden\Airstrike\Bomber.cs" />
+    <Compile Include="Raden\Airstrike\Fire.cs" />
+    <Compile Include="Raden\Airstrike\NapalmBomb.cs" />
     <Compile Include="Rashka\Bullets\DelayedLinearRoundBullet.cs" />
     <Compile Include="Rashka\Bullets\DemomanCircle.cs" />
     <Compile Include="Rashka\Bullets\DemomanExplosion.cs" />
@@ -102,7 +107,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Raden" />
     <Folder Include="Rashka\SmallSpells" />
     <Folder Include="Stages\Bullets" />
   </ItemGroup>
