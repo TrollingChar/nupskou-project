@@ -27,8 +27,9 @@ namespace NupskouProject.Raden.Airstrike {
         protected override void Update (int t) {
             base.Update (t);
             if (t % Cooldown == _t) {
-                if (_.Difficulty < Difficulty.Hard) _.World.Spawn (new Bomb       (P, _bv0));
-                else                                _.World.Spawn (new NapalmBomb (P, _bv0));
+                _.World.Spawn (new Bomb (P, _bv0));
+                //if (_.Difficulty < Difficulty.Hard) _.World.Spawn (new Bomb       (P, _bv0));
+                //else                                _.World.Spawn (new NapalmBomb (P, _bv0));
             }
         }
 

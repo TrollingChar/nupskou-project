@@ -71,8 +71,7 @@
     <Compile Include="Raden\Airstrike\Airstrike.cs" />
     <Compile Include="Raden\Airstrike\Bomb.cs" />
     <Compile Include="Raden\Airstrike\Bomber.cs" />
-    <Compile Include="Raden\Airstrike\Fire.cs" />
-    <Compile Include="Raden\Airstrike\NapalmBomb.cs" />
+    <Compile Include="Raden\Airstrike\Smoke.cs" />
     <Compile Include="Rashka\Bullets\DelayedLinearRoundBullet.cs" />
     <Compile Include="Rashka\Bullets\DemomanCircle.cs" />
     <Compile Include="Rashka\Bullets\DemomanExplosion.cs" />

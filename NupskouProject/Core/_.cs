@@ -12,7 +12,7 @@ namespace NupskouProject.Core {
         public static Renderer   Renderer   = new Renderer ();
         public static Assets     Assets     = new Assets ();
         public static Random     Random     = new Random ();
-        public static Difficulty Difficulty = Difficulty.Easy;
+        public static Difficulty Difficulty = Difficulty.Lunatic;
 
         public static Player Player;
 

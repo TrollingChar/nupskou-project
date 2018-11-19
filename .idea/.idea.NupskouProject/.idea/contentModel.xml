@@ -52,8 +52,7 @@
             <e p="Airstrike.cs" t="Include" />
             <e p="Bomb.cs" t="Include" />
             <e p="Bomber.cs" t="Include" />
-            <e p="Fire.cs" t="Include" />
-            <e p="NapalmBomb.cs" t="Include" />
+            <e p="Smoke.cs" t="Include" />
           </e>
         </e>
         <e p="Rashka" t="Include">

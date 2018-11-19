@@ -25,9 +25,22 @@ namespace NupskouProject.Raden.Airstrike {
             V = _v0 + new XY (0, t * 0.025f);
             P = _p0 + t * _v0 + new XY (0, t * t * 0.025f);
             if (P.Y + R > World.Box.Bottom) {
-                Despawn ();
+                Explode (P.WithY (World.Box.Bottom));
             }
         }
+
+
+        private void Explode (XY p) {
+            Despawn ();
+//            foreach (var s in Danmaku.Cloud (100, 50)) {
+//                _.World.Spawn (new Smoke (p, s, 15));
+//            }
+        }
+
+
+//        public override void OnStrike (Entity entity) {
+//            Explode (P);
+//        }
 
     }
 
