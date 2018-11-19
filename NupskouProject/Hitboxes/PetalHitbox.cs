@@ -38,11 +38,6 @@ namespace NupskouProject.Hitboxes {
         public override bool Over (Hitbox other) => other.Over (this);
 
 
-        public override bool Over (PetalHitbox other) {
-            throw new System.NotImplementedException ();
-        }
-
-
         public override bool Over (CircleHitbox other) {
             bool result = Geom.Overlap (
                 new Circle (Center1, Radius),
@@ -57,6 +52,10 @@ namespace NupskouProject.Hitboxes {
             }*/
             return result;
         }
+
+
+        public override bool Over (PetalHitbox   other) { throw new NotImplementedException (); }
+        public override bool Over (PolygonHitbox other) { throw new NotImplementedException (); }
 
 
     }

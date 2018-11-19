@@ -13,7 +13,7 @@ namespace NupskouProject.Raden.Airstrike {
 //                Mathf.LerpUnclamped (World.Box.Top, World.Box.Bottom, 0.33f * _.Random.Float ()) :
 //                World.Box.Top;
     
-            int cooldown = _.Difficulty.Choose (60, 40, 60, 40);
+            int cooldown = _.Difficulty.Choose (60, 30, 50, 40);
 
             if (_.Difficulty < Difficulty.Hard) {
                 float y = Mathf.LerpUnclamped (World.Box.Top, World.Box.Bottom, 0.3f * _.Random.Float ());

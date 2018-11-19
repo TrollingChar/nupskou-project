@@ -16,6 +16,7 @@ namespace NupskouProject.Core {
         public Sprite Circle;
         public Sprite Petal;
         public Sprite PetalBeam;
+        public Sprite RedStar;
         public Sprite UI;
 
         public Sound Pjiu;
@@ -25,6 +26,7 @@ namespace NupskouProject.Core {
             Circle    = Sprite.Load (content.Load <Texture2D> ("Assets/circle"),    64);
             Petal     = Sprite.Load (content.Load <Texture2D> ("Assets/petal"),     32);
             PetalBeam = Sprite.Load (content.Load <Texture2D> ("Assets/petalbeam"), 16);
+            RedStar   = Sprite.Load (content.Load <Texture2D> ("Assets/redstar"),   192);
             UI        = Sprite.Load (content.Load <Texture2D> ("Assets/ui"),        1, Vector2.Zero);
 
             Bass.BASS_Init (-1, 44100, BASSInit.BASS_DEVICE_DEFAULT, IntPtr.Zero);

@@ -63,6 +63,21 @@ namespace NupskouProject.Math {
             return CircleOverCircle (c1, c3) && CircleOverCircle (c2, c3);
         }
 
+
+        public static bool CircleOverConvexPolygon (Circle c, ConvexPolygon p) {
+            if (p.ContainsPoint (c.Center)) return true;
+            float r2 = c.Radius * c.Radius;
+            for (int i = 0, j = p.Vertices.Length - 1; i < p.Vertices.Length; j = i++) {
+                if (XY.SqrDistance (c.Center, p.Vertices [i]) < r2) return true;
+                if (
+                    XY.Dot (c.Center - p.Vertices [i], p.Vertices [j] - p.Vertices [i]) >= 0 &&
+                    XY.Dot (c.Center - p.Vertices [j], p.Vertices [i] - p.Vertices [j]) >= 0 &&
+                    DistancePointToLine (c.Center, p.Vertices [i], p.Vertices [j]) < c.Radius
+                ) return true;
+            }
+            return false;
+        }
+
     }
 
 }
