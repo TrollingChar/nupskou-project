@@ -20,7 +20,7 @@ namespace NupskouProject.Raden.Revolt {
         private static readonly XY V3 = V5.Rotated (1.6f * Mathf.PI);
         
 
-        public const float Size = 200;
+        public const float Size = 215;
 
         private XY    _p, _p0, _v;
         private float _a, _a0, _av;
