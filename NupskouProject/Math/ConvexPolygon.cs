@@ -16,7 +16,7 @@ namespace NupskouProject.Math {
 
         public bool ContainsPoint (XY p) {
             for (int i = 0, j = Vertices.Length - 1; i < Vertices.Length; j = i++) {
-                if (XY.Cross (Vertices [i] - Vertices [j], p - Vertices [i]) > 0) return false;
+                if (XY.Cross (Vertices [i] - Vertices [j], p - Vertices [i]) < 0) return false;
             }
             return true;
         }
