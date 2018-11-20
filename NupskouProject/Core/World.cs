@@ -37,7 +37,7 @@ namespace NupskouProject.Core {
             if (_.Time == 120) {
 //                Spawn (new Airstrike ());
                 Spawn (new Revolt ());
-//                Spawn (new SunflowerSpawner (Box.Center, 30));
+//                Spawn (new SunflowerSpawner (Box.Center, 60));
      //           Spawn(new SphereBullets(Box.Center, 125, 8, Mathf.PI / 2.5f));
             }
 
