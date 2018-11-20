@@ -28,6 +28,9 @@ namespace NupskouProject.Hitboxes {
             Circle
         );
 
+
+        public override bool Over (PolygonHitbox other) => Geom.CircleOverConvexPolygon (Circle, other.Polygon);
+
     }
 
 }

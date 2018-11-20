@@ -31,12 +31,15 @@
         </e>
         <e p="Hitboxes" t="Include">
           <e p="CircleHitbox.cs" t="Include" />
+          <e p="CompoundHitbox.cs" t="Include" />
           <e p="Hitbox.cs" t="Include" />
           <e p="PetalHitbox.cs" t="Include" />
+          <e p="PolygonHitbox.cs" t="Include" />
         </e>
         <e p="Math" t="Include">
           <e p="Box.cs" t="Include" />
           <e p="Circle.cs" t="Include" />
+          <e p="ConvexPolygon.cs" t="Include" />
           <e p="Danmaku.cs" t="Include" />
           <e p="Geom.cs" t="Include" />
           <e p="Mathf.cs" t="Include" />
@@ -53,6 +56,16 @@
             <e p="Bomb.cs" t="Include" />
             <e p="Bomber.cs" t="Include" />
             <e p="Smoke.cs" t="Include" />
+          </e>
+          <e p="Revolt" t="Include">
+            <e p="HugeStar.cs" t="Include" />
+            <e p="Revolt.cs" t="Include" />
+          </e>
+          <e p="SunflowerRockets" t="Include">
+            <e p="SunflowerRocket.cs" t="Include" />
+            <e p="SunflowerRockets.cs" t="Include" />
+            <e p="SunflowerSeed.cs" t="Include" />
+            <e p="SunflowerSpawner.cs" t="Include" />
           </e>
         </e>
         <e p="Rashka" t="Include">
