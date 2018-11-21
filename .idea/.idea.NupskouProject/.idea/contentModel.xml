@@ -57,6 +57,9 @@
             <e p="Bomber.cs" t="Include" />
             <e p="Smoke.cs" t="Include" />
           </e>
+          <e p="Enemies" t="Include">
+            <e p="PurbleBlueShooter.cs" t="Include" />
+          </e>
           <e p="Revolt" t="Include">
             <e p="HugeStar.cs" t="Include" />
             <e p="Revolt.cs" t="Include" />

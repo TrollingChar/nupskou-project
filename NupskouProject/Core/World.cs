@@ -6,6 +6,7 @@ using NupskouProject.Entities;
 using NupskouProject.Hitboxes;
 using NupskouProject.Math;
 using NupskouProject.Raden.Airstrike;
+using NupskouProject.Raden.Enemies;
 using NupskouProject.Raden.Revolt;
 using NupskouProject.Raden.SunflowerRockets;
 using NupskouProject.Rashka;
@@ -35,10 +36,23 @@ namespace NupskouProject.Core {
 //                Spawn(new SmileSpawner());
             }
             if (_.Time == 120) {
-                Spawn (new HugeStar (World.Box.Center, XY.Zero, 0, 0));
+//                Spawn (new HugeStar (World.Box.Center, XY.Zero, 0, 0));
 //                Spawn (new Airstrike ());
 //                Spawn (new Revolt ());
 //                Spawn (new SunflowerSpawner (Box.Center, 60));
+                Spawn (
+                    new Clock (
+                        i => {
+                            var enemy = new PurbleBlueShooter () {
+                                HP = 100,
+                                P = new XY (Mathf.Lerp (Box.Left, Box.Right, (i + 1) * 0.25f), Box.Top + 100)
+                            };
+                            _.World.Spawn (enemy);
+                        },
+                        3,
+                        60
+                    )
+                );
      //           Spawn(new SphereBullets(Box.Center, 125, 8, Mathf.PI / 2.5f));
             }
 
