@@ -15,11 +15,11 @@ namespace NupskouProject.Raden.Enemies {
                     _.World.Spawn (new LinearPetalBullet(P, v, Color.Magenta, Color.DarkMagenta, 3));
                 }
             }
-            if (t % 30 == 0 && _.Player != null && !_.Player.Despawned) {
+            if (t % 20 == 0 && _.Player != null && !_.Player.Despawned) {
                 _.World.Spawn (
                     new LinearRoundBullet (
                         P,
-                        (_.Player.P - P).WithLength (2),
+                        (_.Player.P - P).WithLength (2).Rotated (_.Random.SignedFloat () * 0.2f),
                         Color.Blue,
                         Color.Blue,
                         10
