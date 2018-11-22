@@ -22,14 +22,14 @@ namespace NupskouProject.Rashka.SmallSpells
         protected override void Update(int t)
         { 
             if (t % 60 == 0)
-                _p = new XY(_p.X+_.Random.Float(-25,25),_p.Y);
+                _p = new XY(_p.X+_.Random.Float(-40,40),_p.Y);
             if (t % 3 == 0){
             var world = _.World;
             _angle = _angle + _deltaAngle;
             _angle2 = _angle2 - _deltaAngle;
             world.Spawn(new LinearPetalBeamBullet(
                 _p,
-                new XY(_angle).WithLength(3),
+                new XY(_angle).WithLength(2.5f),
                 Color.Red,
                 Color.Yellow,
                 5                

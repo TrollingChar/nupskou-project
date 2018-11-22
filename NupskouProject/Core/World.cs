@@ -41,7 +41,7 @@ namespace NupskouProject.Core {
 //                Spawn (new Airstrike ());
 //                Spawn (new Revolt ());
 //                Spawn (new SunflowerSpawner (Box.Center, 60));
-                Spawn (
+                /*Spawn (
                     new Clock (
                         i => {
                             var enemy = new PurbleBlueShooter () {
@@ -53,7 +53,7 @@ namespace NupskouProject.Core {
                         3,
                         60
                     )
-                );
+                );*/
      //           Spawn(new SphereBullets(Box.Center, 125, 8, Mathf.PI / 2.5f));
                 Spawn(new RashkaOpenerNonspell(Box.Center));
             }
