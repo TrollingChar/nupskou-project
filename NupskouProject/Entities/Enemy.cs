@@ -11,7 +11,7 @@ namespace NupskouProject.Entities {
     public class Enemy : StdEntity {
 
         public int HP;
-        public XY P { get; protected set; }
+        public XY P;
 
 
         public override Hitbox EnemyHitbox => new CircleHitbox (P, 10);
