@@ -88,6 +88,7 @@
     <Compile Include="Rashka\Bullets\SphericalRoundBullet.cs" />
     <Compile Include="Rashka\Bullets\VerticalBounceRoundBullet.cs" />
     <Compile Include="Rashka\DemomanSignWormblasterTheFirst.cs" />
+    <Compile Include="Rashka\SmallSpells\RashkaOpenerNonspell.cs" />
     <Compile Include="Rashka\SmileSpawner.cs" />
     <Compile Include="Rashka\DemomanSignDelayedExplosionSpawner.cs" />
     <Compile Include="Rendering\Layer.cs" />
@@ -116,7 +117,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Rashka\SmallSpells" />
     <Folder Include="Stages\Bullets" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -10,6 +10,7 @@ using NupskouProject.Raden.Revolt;
 using NupskouProject.Raden.SunflowerRockets;
 using NupskouProject.Rashka;
 using NupskouProject.Rashka.Bullets;
+using NupskouProject.Rashka.SmallSpells;
 using NupskouProject.Rendering;
 using NupskouProject.Stages;
 
@@ -35,11 +36,12 @@ namespace NupskouProject.Core {
 //                Spawn(new SmileSpawner());
             }
             if (_.Time == 120) {
-                Spawn (new HugeStar (World.Box.Center, XY.Zero, 0, 0));
+//                Spawn (new HugeStar (World.Box.Center, XY.Zero, 0, 0));
 //                Spawn (new Airstrike ());
 //                Spawn (new Revolt ());
 //                Spawn (new SunflowerSpawner (Box.Center, 60));
      //           Spawn(new SphereBullets(Box.Center, 125, 8, Mathf.PI / 2.5f));
+                Spawn(new RashkaOpenerNonspell(Box.Center));
             }
 
             for (int i = 0; i < _entities.Count; i++) {
