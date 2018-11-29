@@ -73,3 +73,10 @@
 /processorParam:TextureFormat=Color
 /build:Assets/redstar.png
 
+#begin Assets/font_arial.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Assets/font_arial.spritefont
+

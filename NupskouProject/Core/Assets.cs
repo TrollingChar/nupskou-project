@@ -18,8 +18,9 @@ namespace NupskouProject.Core {
         public Sprite PetalBeam;
         public Sprite RedStar;
         public Sprite UI;
+        public SpriteFont UItext;
 
-        public Sound Pjiu;
+        public Sound Pjiu;              
 
 
         public void Load (ContentManager content) {
@@ -29,9 +30,11 @@ namespace NupskouProject.Core {
             RedStar   = Sprite.Load (content.Load <Texture2D> ("Assets/redstar"),   192);
             UI        = Sprite.Load (content.Load <Texture2D> ("Assets/ui"),        1, Vector2.Zero);
 
+            UItext    = content.Load<SpriteFont>("Assets/font_arial") ;
             Bass.BASS_Init (-1, 44100, BASSInit.BASS_DEVICE_DEFAULT, IntPtr.Zero);
 
             Pjiu = Sound.Load (SoundPrefix + "pjiu.wav", 32);
+            
         }
 
 
