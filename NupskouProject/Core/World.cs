@@ -125,6 +125,8 @@ namespace NupskouProject.Core {
 
         public void Render () {
             _.Renderer.UI.Add (new SpriteInstance (_.Assets.UI));
+            _.Renderer.UItext.Add (SpriteBatch.DrawString(_.Assets.InterfaceText, "kak text krutit", new XY(0,0), Color.White));
+
             foreach (var e in _entities) {
                 if (!e.Despawned) e.Render ();
             }

@@ -5,7 +5,7 @@ namespace NupskouProject.Rendering {
 
     public class Renderer {
 
-        public Layer   Player, TestBackground, TestForeground, Hitbox, UI;
+        public Layer   Player, TestBackground, TestForeground, Hitbox, UI, UItext;
         public Layer[] Layers;
 
 
@@ -15,7 +15,8 @@ namespace NupskouProject.Rendering {
                 TestBackground = new Layer (),
                 TestForeground = new Layer (),
                 Hitbox         = new Layer (),
-                UI             = new Layer ()
+                UI             = new Layer (),
+                UItext         = new Layer (),
             };
         }
 
