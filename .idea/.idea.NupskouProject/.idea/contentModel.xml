@@ -78,10 +78,12 @@
             <e p="DemomanExplosion.cs" t="Include" />
             <e p="SphereBullets.cs" t="Include" />
             <e p="SphericalRoundBullet.cs" t="Include" />
+            <e p="StoppingLinearRoundBullet.cs" t="Include" />
             <e p="VerticalBounceRoundBullet.cs" t="Include" />
           </e>
           <e p="DemomanSignDelayedExplosionSpawner.cs" t="Include" />
           <e p="DemomanSignWormblasterTheFirst.cs" t="Include" />
+          <e p="LazinessAttackSurvival.cs" t="Include" />
           <e p="SmallSpells" t="Include">
             <e p="RashkaOpenerNonspell.cs" t="Include" />
           </e>

@@ -1,21 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using NupskouProject.Entities;
 using NupskouProject.Hitboxes;
 using NupskouProject.Math;
-using NupskouProject.Raden.Airstrike;
-using NupskouProject.Raden.Enemies;
-using NupskouProject.Raden.Revolt;
-using NupskouProject.Raden.SunflowerRockets;
 using NupskouProject.Rashka;
-using NupskouProject.Rashka.Bullets;
-using NupskouProject.Rashka.SmallSpells;
 using NupskouProject.Rendering;
-using NupskouProject.Stages;
-
 
 namespace NupskouProject.Core {
 
@@ -38,6 +28,10 @@ namespace NupskouProject.Core {
 //                Spawn(new SmileSpawner());
             }
             if (_.Time == 120) {
+                Spawn(new LazinessAttackSurvival());
+            }
+                
+
 //                Spawn (new HugeStar (World.Box.Center, XY.Zero, 0, 0));
 //                Spawn (new Airstrike ());
 //                Spawn (new Revolt ());
@@ -56,8 +50,8 @@ namespace NupskouProject.Core {
                     )
                 );*/
      //           Spawn(new SphereBullets(Box.Center, 125, 8, Mathf.PI / 2.5f));
-                Spawn(new RashkaOpenerNonspell(Box.Center));
-            }
+              //  Spawn(new RashkaOpenerNonspell(Box.Center));
+            
 
             for (int i = 0; i < _entities.Count; i++) {
                 var e = _entities[i];
@@ -125,7 +119,6 @@ namespace NupskouProject.Core {
 
         public void Render () {
             _.Renderer.UI.Add (new SpriteInstance (_.Assets.UI));
-            _.Renderer.UItext.Add (SpriteBatch.DrawString(_.Assets.InterfaceText, "kak text krutit", new XY(0,0), Color.White));
 
             foreach (var e in _entities) {
                 if (!e.Despawned) e.Render ();

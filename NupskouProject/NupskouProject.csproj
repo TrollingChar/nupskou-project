@@ -87,8 +87,10 @@
     <Compile Include="Rashka\Bullets\DemomanExplosion.cs" />
     <Compile Include="Rashka\Bullets\SphereBullets.cs" />
     <Compile Include="Rashka\Bullets\SphericalRoundBullet.cs" />
+    <Compile Include="Rashka\Bullets\StoppingLinearRoundBullet.cs" />
     <Compile Include="Rashka\Bullets\VerticalBounceRoundBullet.cs" />
     <Compile Include="Rashka\DemomanSignWormblasterTheFirst.cs" />
+    <Compile Include="Rashka\LazinessAttackSurvival.cs" />
     <Compile Include="Rashka\SmallSpells\RashkaOpenerNonspell.cs" />
     <Compile Include="Rashka\SmileSpawner.cs" />
     <Compile Include="Rashka\DemomanSignDelayedExplosionSpawner.cs" />
