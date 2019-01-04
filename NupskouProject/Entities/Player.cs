@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System.Data.SqlClient;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using NupskouProject.Core;
 using NupskouProject.Hitboxes;
@@ -12,7 +13,9 @@ namespace NupskouProject.Entities {
 
         private XY   _p;
         private bool _hitboxVisible;
+        private bool _Xpressed = false;
 
+        
         public          XY     P            => _p;
         public override Hitbox PlayerHitbox => new CircleHitbox (_p, 2);
         public XY Position => _p;
@@ -26,6 +29,8 @@ namespace NupskouProject.Entities {
         public override void OnStruck (Entity entity) {
             _.Assets.Pjiu.Play (0.25f);
             _p = new XY(250, 500);
+            _.LifeCount = _.LifeCount - 1;
+            System.Console.WriteLine("Life ="+_.LifeCount);
         }
 
 
@@ -45,6 +50,15 @@ namespace NupskouProject.Entities {
                 if (shift) ShootShift (t);
                 else       Shoot (t);
             }
+
+            if (keyboard.IsKeyDown (Keys.X) && _Xpressed == false)
+            {
+                _Xpressed = true;
+                _.BombCount = _.BombCount - 1;
+                System.Console.WriteLine("Bombs ="+_.BombCount);
+            }
+            if (keyboard.IsKeyUp (Keys.X) && _Xpressed == true)_Xpressed = false;
+
         }
 
 

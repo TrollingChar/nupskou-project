@@ -1,5 +1,4 @@
-﻿using System.Data;
-using System.Runtime.InteropServices.ComTypes;
+﻿using System.Runtime.InteropServices.ComTypes;
 using NupskouProject.Core;
 using NupskouProject.Entities;
 using NupskouProject.Math;
@@ -36,7 +35,7 @@ namespace NupskouProject.Rashka
                         var a = _.Random.Point(World.Box);
                         g = Check(a, i);
                         attempts++;
-                    }
+                     }
 
                 }
 

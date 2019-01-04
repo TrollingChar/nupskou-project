@@ -25,10 +25,10 @@ namespace NupskouProject.Core {
 //                Spawn(new DemomanSignDelayedExplosionSpawner());
 //                Spawn(new DemomanSignWormblasterTheFirst(World.Box.Center));
 //                Spawn(new LinearPetalBeamBullet(Box.Center, new XY(0,0), Color.Blue, Color.Aqua, 5 ));
-//                Spawn(new SmileSpawner());
+                  Spawn(new SmileSpawner());
             }
             if (_.Time == 120) {
-                Spawn(new LazinessAttackSurvival());
+//                Spawn(new LazinessAttackSurvival());
             }
                 
 
