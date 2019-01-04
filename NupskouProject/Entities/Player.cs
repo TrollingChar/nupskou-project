@@ -32,9 +32,13 @@ namespace NupskouProject.Entities {
 
         public override void OnStruck (Entity entity) {
             if (_invulnerable == false ){
-                if(_death == false) _.Assets.Pjiu.Play(0.25f);
+                if(_death == false) 
+                {
+                _.Assets.Pjiu.Play(0.25f);
                 _death = true;
                 _deathWindow = 15;
+                    
+                }
             }
         }
 
