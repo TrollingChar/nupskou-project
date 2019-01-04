@@ -1,4 +1,5 @@
-﻿using System.Data.SqlClient;
+﻿using System;
+using System.Data.SqlClient;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using NupskouProject.Core;
@@ -13,8 +14,11 @@ namespace NupskouProject.Entities {
 
         private XY   _p;
         private bool _hitboxVisible;
-        private bool _Xpressed = false;
-
+        private bool _xpressed;
+        private bool _invulnerable = false;
+        private bool _death = false;
+        private int _deathWindow = 0;
+        private int _invulnerableWindow = 0;
         
         public          XY     P            => _p;
         public override Hitbox PlayerHitbox => new CircleHitbox (_p, 2);
@@ -27,10 +31,11 @@ namespace NupskouProject.Entities {
 
 
         public override void OnStruck (Entity entity) {
-            _.Assets.Pjiu.Play (0.25f);
-            _p = new XY(250, 500);
-            _.LifeCount = _.LifeCount - 1;
-            System.Console.WriteLine("Life ="+_.LifeCount);
+            if (_invulnerable == false ){
+                if(_death == false) _.Assets.Pjiu.Play(0.25f);
+                _death = true;
+                _deathWindow = 15;
+            }
         }
 
 
@@ -51,13 +56,20 @@ namespace NupskouProject.Entities {
                 else       Shoot (t);
             }
 
-            if (keyboard.IsKeyDown (Keys.X) && _Xpressed == false)
+            if (keyboard.IsKeyDown (Keys.X) && _xpressed == false)
             {
-                _Xpressed = true;
-                _.BombCount = _.BombCount - 1;
-                System.Console.WriteLine("Bombs ="+_.BombCount);
+                _xpressed = true;
+                _.BombCount--;
+                _invulnerable = true;
+                _invulnerableWindow = 300;
+                Console.WriteLine("Bombs ="+_.BombCount);
             }
-            if (keyboard.IsKeyUp (Keys.X) && _Xpressed == true)_Xpressed = false;
+            if (keyboard.IsKeyUp (Keys.X) && _xpressed)_xpressed = false;
+            if (_death && _deathWindow > 0) _deathWindow--;
+            if (_death && _deathWindow == 0) Death();
+            if (_invulnerable && _invulnerableWindow > 0) _invulnerableWindow--;
+            if (_invulnerable && _invulnerableWindow == 0) _invulnerable = false;
+
 
         }
 
@@ -73,6 +85,18 @@ namespace NupskouProject.Entities {
 
         private void ShootShift (int t) {
             Shoot (t);
+        }
+
+        private void Death()
+        {
+            _death = false;
+            if (_invulnerable == false){
+            _invulnerable = true;
+            _invulnerableWindow = 300;
+            _p = new XY(250, 500);
+            _.LifeCount--;
+            Console.WriteLine("Miss, lifes now: "+_.LifeCount);
+            }
         }
 
 
