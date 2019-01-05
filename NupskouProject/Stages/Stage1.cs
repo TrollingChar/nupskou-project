@@ -73,6 +73,20 @@ namespace NupskouProject.Stages {
                         6,
                         120));
                     break;
+                case 1750:
+                    _.World.Spawn(new SpreadingEnemyStage1Encounter2
+                        (
+                            new XY(World.Box.Left, World.Box.Bottom * 0.4f), XY.Right
+                        )
+                    );
+                    break;
+                case 1870:
+                    _.World.Spawn(new SpreadingEnemyStage1Encounter2
+                        (
+                            new XY(World.Box.Right, World.Box.Bottom * 0.4f),   XY.Left
+                        )
+                    );
+                    break;
                 case 3600:
                     //босс
                     break;

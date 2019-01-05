@@ -15,10 +15,10 @@ namespace NupskouProject.Entities {
         private XY   _p;
         private bool _hitboxVisible;
         private bool _xpressed;
-        private bool _invulnerable = false;
-        private bool _death = false;
-        private int _deathWindow = 0;
-        private int _invulnerableWindow = 0;
+        private bool _invulnerable;
+        private bool _death;
+        private int _deathWindow;
+        private int _invulnerableWindow;
         
         public          XY     P            => _p;
         public override Hitbox PlayerHitbox => new CircleHitbox (_p, 2);
