@@ -12,6 +12,7 @@ namespace NupskouProject.Entities {
         private readonly XY _p0;
         private readonly XY _v;
         private          XY _p;
+        private readonly int _damage;
 
 
         public override Hitbox EnemyDamagerHitbox => new CircleHitbox (_p, 5);
@@ -20,6 +21,7 @@ namespace NupskouProject.Entities {
         public PlayerBullet (XY p0, XY v) {
             _p = _p0 = p0;
             _v = v;
+            _damage = 2;
         }
 
 

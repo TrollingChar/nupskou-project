@@ -22,6 +22,8 @@ namespace NupskouProject.Entities {
         
         public          XY     P            => _p;
         public override Hitbox PlayerHitbox => new CircleHitbox (_p, 2);
+        public override Hitbox GrazeHitbox => new CircleHitbox (_p, 10);
+
         public XY Position => _p;
 
 
@@ -67,6 +69,8 @@ namespace NupskouProject.Entities {
                 _invulnerable = true;
                 _invulnerableWindow = 300;
                 Console.WriteLine("Bombs ="+_.BombCount);
+                Console.WriteLine("Graze ="+_.Graze);
+
             }
             if (keyboard.IsKeyUp (Keys.X) && _xpressed)_xpressed = false;
             if (_death && _deathWindow > 0) _deathWindow--;

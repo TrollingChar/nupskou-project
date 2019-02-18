@@ -12,6 +12,7 @@ namespace NupskouProject.Entities {
         protected XY    P;
         protected float R;
         protected Color MainColor, BorderColor;
+        protected bool  grazed = false;
 
 
         public override Hitbox PlayerDamagerHitbox => new CircleHitbox (P, R);

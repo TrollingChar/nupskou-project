@@ -22,7 +22,8 @@ namespace NupskouProject.Core {
         public void Update () {
             if (_.Time == 0) {
                 Spawn (_.Player = new Player (new XY (250, 500)));
-                Spawn (new Stage1 ());
+//                  Spawn(new LinearRoundBullet(new XY(275, 450),new XY(0,0), Color.Red,Color.Red,5 ));
+                  Spawn (new Stage1 ());
 //                Spawn(new DemomanSignDelayedExplosionSpawner());
 //                Spawn(new DemomanSignWormblasterTheFirst(World.Box.Center));
 //                Spawn(new LinearPetalBeamBullet(Box.Center, new XY(0,0), Color.Blue, Color.Aqua, 5 ));
@@ -64,12 +65,15 @@ namespace NupskouProject.Core {
             var playerDamagers = new List <Pair> ();
             var enemies        = new List <Pair> ();
             var enemyDamagers  = new List <Pair> ();
+            var playerGraze  = new List <Pair> ();
             foreach (var e in _entities) {
                 Hitbox hb;
                 hb = e.PlayerHitbox       ; if (hb != null) players       .Add (new Pair(e, hb));
                 hb = e.PlayerDamagerHitbox; if (hb != null) playerDamagers.Add (new Pair(e, hb));
                 hb = e.EnemyHitbox        ; if (hb != null) enemies       .Add (new Pair(e, hb));
                 hb = e.EnemyDamagerHitbox ; if (hb != null) enemyDamagers. Add (new Pair(e, hb));
+                hb = e.GrazeHitbox  ; if (hb != null) playerGraze. Add (new Pair(e, hb));
+
             }
 
             // check hitboxes
@@ -104,6 +108,18 @@ namespace NupskouProject.Core {
             }
             
             //  graze - bullet
+
+            foreach (var pg in playerGraze) {
+                if (pg.Entity.Despawned) continue;
+                foreach (var pd in playerDamagers) {
+                    if (pd.Entity.Despawned) continue;
+                    if (pg.Hitbox.Over (pd.Hitbox)) {
+                        pd.Entity.OnGrazed (pg.Entity);
+                        pg.Entity.OnGraze (pd.Entity);
+                        break;
+                    }
+                }
+            }
 
             _entities.RemoveAll (e => e.Despawned);
         }

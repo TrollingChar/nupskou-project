@@ -13,6 +13,8 @@ namespace NupskouProject.Entities {
         protected XY    V;
         protected float R;
         protected Color MainColor, BorderColor;
+        protected bool  grazed = false;
+
 
 
         public override Hitbox PlayerDamagerHitbox => PetalHitbox.Beam (P, V.Angle, R);

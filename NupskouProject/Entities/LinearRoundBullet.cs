@@ -1,5 +1,7 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System;
+using Microsoft.Xna.Framework;
 using NupskouProject.Core;
+using NupskouProject.Hitboxes;
 using NupskouProject.Math;
 
 
@@ -9,6 +11,15 @@ namespace NupskouProject.Entities {
 
         private readonly XY _p0;
         private readonly XY _v;
+
+        public override void OnGrazed(Entity entity)
+        {
+            if (grazed == false)
+            {
+                grazed = true;
+                _.Graze++;
+            }
+        }
 
 
         public LinearRoundBullet (XY p0, XY v, Color mainColor, Color borderColor, float r = 5) {
