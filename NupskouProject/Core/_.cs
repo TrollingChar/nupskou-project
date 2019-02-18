@@ -18,7 +18,7 @@ namespace NupskouProject.Core {
         public static Assets     Assets     = new Assets ();
         public static Random     Random     = new Random ();
         public static Difficulty Difficulty = Difficulty.Normal;
-
+        public static PlayerCharacter PlayerCharacter = PlayerCharacter.Rashka;
         public static Player Player;
 
 

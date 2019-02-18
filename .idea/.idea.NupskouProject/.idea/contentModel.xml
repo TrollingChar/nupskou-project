@@ -13,6 +13,13 @@
         </e>
         <e p="Difficulty.cs" t="Include" />
         <e p="Entities" t="Include">
+          <e p="Bomb" t="Include">
+            <e p="DelayedExplosion.cs" t="Include" />
+            <e p="Projectiles" t="Include">
+              <e p="DDE.cs" t="Include" />
+              <e p="DDEBullet.cs" t="Include" />
+            </e>
+          </e>
           <e p="Clock.cs" t="Include" />
           <e p="Enemy.cs" t="Include" />
           <e p="Entity.cs" t="Include" />
@@ -47,6 +54,7 @@
         </e>
         <e p="MonoGame.Framework.dll.config" t="Include" />
         <e p="NupskouProject.csproj" t="IncludeRecursive" />
+        <e p="PlayerCharacter.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />
         </e>

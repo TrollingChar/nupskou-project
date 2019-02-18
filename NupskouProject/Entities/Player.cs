@@ -3,6 +3,7 @@ using System.Data.SqlClient;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using NupskouProject.Core;
+using NupskouProject.Entities.Bomb;
 using NupskouProject.Hitboxes;
 using NupskouProject.Math;
 using NupskouProject.Rendering;
@@ -62,14 +63,14 @@ namespace NupskouProject.Entities {
                 else       Shoot (t);
             }
 
-            if (keyboard.IsKeyDown (Keys.X) && _xpressed == false)
+            if (keyboard.IsKeyDown (Keys.X) && _xpressed == false && _invulnerable == false)
             {
                 _xpressed = true;
+                if (_.PlayerCharacter == PlayerCharacter.Rashka) _.World.Spawn(new DelayedExplosin());
                 _.BombCount--;
                 _invulnerable = true;
-                _invulnerableWindow = 300;
+                _invulnerableWindow = 240;
                 Console.WriteLine("Bombs ="+_.BombCount);
-                Console.WriteLine("Graze ="+_.Graze);
 
             }
             if (keyboard.IsKeyUp (Keys.X) && _xpressed)_xpressed = false;

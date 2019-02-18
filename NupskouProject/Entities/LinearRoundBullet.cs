@@ -18,6 +18,8 @@ namespace NupskouProject.Entities {
             {
                 grazed = true;
                 _.Graze++;
+                Console.WriteLine("Graze ="+_.Graze);
+
             }
         }
 

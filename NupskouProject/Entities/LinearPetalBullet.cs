@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System;
+using Microsoft.Xna.Framework;
 using NupskouProject.Core;
 using NupskouProject.Math;
 
@@ -15,6 +16,8 @@ namespace NupskouProject.Entities {
             {
                 grazed = true;
                 _.Graze++;
+                Console.WriteLine("Graze ="+_.Graze);
+
             }
         }
 

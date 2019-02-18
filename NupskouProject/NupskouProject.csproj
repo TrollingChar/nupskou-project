@@ -53,6 +53,9 @@
     <Compile Include="Core\World.cs" />
     <Compile Include="Core\_.cs" />
     <Compile Include="Difficulty.cs" />
+    <Compile Include="Entities\Bomb\DelayedExplosion.cs" />
+    <Compile Include="Entities\Bomb\Projectiles\DDE.cs" />
+    <Compile Include="Entities\Bomb\Projectiles\DDEBullet.cs" />
     <Compile Include="Entities\Clock.cs" />
     <Compile Include="Entities\Enemy.cs" />
     <Compile Include="Entities\Entity.cs" />
@@ -71,6 +74,7 @@
     <Compile Include="Hitboxes\PetalHitbox.cs" />
     <Compile Include="Hitboxes\PolygonHitbox.cs" />
     <Compile Include="Math\ConvexPolygon.cs" />
+    <Compile Include="PlayerCharacter.cs" />
     <Compile Include="Raden\Airstrike\Airstrike.cs" />
     <Compile Include="Raden\Airstrike\Bomb.cs" />
     <Compile Include="Raden\Airstrike\Bomber.cs" />
