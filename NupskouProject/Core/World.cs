@@ -22,12 +22,13 @@ namespace NupskouProject.Core {
         public void Update () {
             if (_.Time == 0) {
                 Spawn (_.Player = new Player (new XY (250, 500)));
+                Spawn(new FlickerStrike(new XY(100, 100), new XY(1, 1)));
 //                  Spawn(new LinearRoundBullet(new XY(275, 450),new XY(0,0), Color.Red,Color.Red,5 ));
-                  Spawn (new Stage1 ());
+//                  Spawn (new Stage1 ());
 //                Spawn(new DemomanSignDelayedExplosionSpawner());
 //                Spawn(new DemomanSignWormblasterTheFirst(World.Box.Center));
-//                Spawn(new LinearPetalBeamBullet(Box.Center, new XY(0,0), Color.Blue, Color.Aqua, 5 ));
-                  //Spawn(new SmileSpawner());
+//                Spawn(new LinearPetalBeamBuszzllet(Box.Center, new XY(0,0), Color.Blue, Color.Aqua, 5 ));
+                //Spawn(new SmileSpawner());
             }
             if (_.Time == 120) {
 //                Spawn(new LazinessAttackSurvival());

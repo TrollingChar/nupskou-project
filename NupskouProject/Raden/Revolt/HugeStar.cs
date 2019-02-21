@@ -21,6 +21,7 @@ namespace NupskouProject.Raden.Revolt {
         
 
         public const float Size = 215;
+        
 
         private XY    _p, _p0, _v;
         private float _a, _a0, _av;
