@@ -12,7 +12,7 @@ namespace NupskouProject.Entities
         private readonly int _magicnumber = 55;
         private readonly int _delay;
 
-        
+
         public override void OnGrazed(Entity entity)
         {
             if (grazed == false)
@@ -23,18 +23,19 @@ namespace NupskouProject.Entities
         }
 
 
-        public SwordLongPetal (XY p0, float angle, Color mainColor, Color borderColor, float r, int delay) {
-            V         = new XY(angle);
-            _p0         = p0;
-            _angle = angle-Mathf.PI/2;
-            MainColor   = mainColor;
+        public SwordLongPetal(XY p0, float angle, Color mainColor, Color borderColor, float r, int delay)
+        {
+            V = new XY(angle);
+            _p0 = p0;
+            _angle = angle - Mathf.PI / 2;
+            MainColor = mainColor;
             BorderColor = borderColor;
-            R           = r;
-            _delay      = delay;
+            R = r;
+            _delay = delay;
         }
 
 
-        protected override void Update (int t)
+        protected override void Update(int t)
         {
             if (t == _delay + 60)
             {
@@ -42,8 +43,8 @@ namespace NupskouProject.Entities
             }
 
 
-                P = new XY(_p0.X + Mathf.Cos(_angle) * _magicnumber, _p0.Y + Mathf.Sin(_angle) * _magicnumber);
-                V = new XY(_angle);
+            P = new XY(_p0.X + Mathf.Cos(_angle) * _magicnumber, _p0.Y + Mathf.Sin(_angle) * _magicnumber);
+            V = new XY(_angle);
             if (t > 60)
             {
                 _angle = _angle + Mathf.PI / _delay;

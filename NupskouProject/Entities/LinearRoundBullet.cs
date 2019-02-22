@@ -12,16 +12,7 @@ namespace NupskouProject.Entities {
         private readonly XY _p0;
         private readonly XY _v;
 
-        public override void OnGrazed(Entity entity)
-        {
-            if (grazed == false)
-            {
-                grazed = true;
-                _.Graze++;
-                Console.WriteLine("Graze ="+_.Graze);
 
-            }
-        }
 
 
         public LinearRoundBullet (XY p0, XY v, Color mainColor, Color borderColor, float r = 5) {
