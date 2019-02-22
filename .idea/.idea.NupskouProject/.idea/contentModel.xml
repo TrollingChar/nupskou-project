@@ -65,12 +65,17 @@
             <e p="Bomber.cs" t="Include" />
             <e p="Smoke.cs" t="Include" />
           </e>
+          <e p="Bullets" t="Include">
+            <e p="HugeStar.cs" t="Include" />
+          </e>
           <e p="Enemies" t="Include">
             <e p="PurbleBlueShooter.cs" t="Include" />
           </e>
           <e p="Revolt" t="Include">
-            <e p="HugeStar.cs" t="Include" />
             <e p="Revolt.cs" t="Include" />
+          </e>
+          <e p="Revolt2" t="Include">
+            <e p="Revolt2.cs" t="Include" />
           </e>
           <e p="SunflowerRockets" t="Include">
             <e p="SunflowerRocket.cs" t="Include" />

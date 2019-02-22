@@ -6,7 +6,7 @@ using NupskouProject.Math;
 using Sprite = NupskouProject.Rendering.SpriteInstance;
 
 
-namespace NupskouProject.Raden.Revolt {
+namespace NupskouProject.Raden.Bullets {
 
     public class HugeStar : StdEntity {
         

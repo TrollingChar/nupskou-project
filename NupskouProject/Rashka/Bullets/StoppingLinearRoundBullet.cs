@@ -1,9 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
-using NupskouProject.Core;
+using NupskouProject.Entities;
 using NupskouProject.Math;
 
 
-namespace NupskouProject.Entities {
+namespace NupskouProject.Rashka.Bullets {
 
     public class StoppingLinearRoundBullet : RoundBullet {
 

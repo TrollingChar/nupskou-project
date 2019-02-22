@@ -79,8 +79,9 @@
     <Compile Include="Raden\Airstrike\Bomb.cs" />
     <Compile Include="Raden\Airstrike\Bomber.cs" />
     <Compile Include="Raden\Airstrike\Smoke.cs" />
+    <Compile Include="Raden\Bullets\HugeStar.cs" />
     <Compile Include="Raden\Enemies\PurbleBlueShooter.cs" />
-    <Compile Include="Raden\Revolt\HugeStar.cs" />
+    <Compile Include="Raden\Revolt2\Revolt2.cs" />
     <Compile Include="Raden\Revolt\Revolt.cs" />
     <Compile Include="Raden\SunflowerRockets\SunflowerRocket.cs" />
     <Compile Include="Raden\SunflowerRockets\SunflowerRockets.cs" />
