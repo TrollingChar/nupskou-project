@@ -17,12 +17,45 @@ namespace NupskouProject.Raden.Revolt {
 
 
         protected override void Update (int t) {
-            if (t % 180 == 0) {
-                SpawnHugeStars ();
+            switch (t % 600) {
+                case 0:
+                    SpawnLeftHugeStar ();
+                    break;
+                case 300:
+                    SpawnRightHugeStar ();
+                    break;
             }
+//            if (t % 180 == 0) {
+//                SpawnHugeStars ();
+//            }
         }
 
 
+        private void SpawnLeftHugeStar () {
+            _.World.Spawn (
+                new HugeStar (
+                    new XY (World.Box.Left + 80, World.Box.Top - HugeStar.Size),
+                    1.5f * XY.Down,
+                    0,
+                    Mathf.PI / 300
+                )
+            );
+        }
+
+
+        private void SpawnRightHugeStar () {
+            _.World.Spawn (
+                new HugeStar (
+                    new XY (World.Box.Right - 80, World.Box.Top - HugeStar.Size),
+                    1.5f * XY.Down,
+                    0,
+                    -Mathf.PI / 300
+                )
+            );
+        }
+
+
+/*
         private void SpawnHugeStars () {
             float x1 = World.Box.Left + 35;
             float x2 = World.Box.Right - 35;
@@ -31,6 +64,7 @@ namespace NupskouProject.Raden.Revolt {
             _.World.Spawn (new HugeStar (new XY (x1, y1), 1.5f * XY.Down, 0, +Mathf.PI / 300));
             _.World.Spawn (new HugeStar (new XY (x2, y1), 1.5f * XY.Down, 0, -Mathf.PI / 300));
         }
+*/
 
     }
 

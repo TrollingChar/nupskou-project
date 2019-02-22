@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework;
 using NupskouProject.Entities;
 using NupskouProject.Hitboxes;
 using NupskouProject.Math;
+using NupskouProject.Raden.Revolt;
 using NupskouProject.Raden.TestSpellcard;
 using NupskouProject.Rashka;
 using NupskouProject.Rendering;
@@ -36,7 +37,7 @@ namespace NupskouProject.Core {
                 //Spawn(new SmileSpawner());
             }
             if (_.Time == 120) {
-                Spawn (new TestSpellcard ());
+                Spawn (new Revolt ());
 //                Spawn(new LazinessAttackSurvival());
             }
                 

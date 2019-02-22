@@ -10,7 +10,6 @@ namespace NupskouProject.Raden.TestSpellcard {
 
         protected override void Update (int t) {
             var v = new XY (t * Mathf.phiAngle);
-//            foreach (var w in Danmaku.Ring (v, 2)) {
             _.World.Spawn (
                 new LinearRoundBullet (
                     World.BossPlace,
@@ -38,7 +37,6 @@ namespace NupskouProject.Raden.TestSpellcard {
                     8
                 )
             );
-//            }
         }
 
     }
