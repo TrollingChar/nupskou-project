@@ -8,50 +8,55 @@ namespace NupskouProject.Raden.Revolt {
 
     public class Revolt : StdEntity {
 
+        private int   _dt;
+        private float _v;
+        private float _av;
+        private float _leftSpawn;
+        private float _rightSpawn;
+        private float _ySpawn;
+
+
         /* пусть остается, раз уж нарисовал
          *    /\
          * --'  `--
          *  (>  <)
          *  / ^  \
          */
+        public Revolt () {
+            _dt         = 300;
+            _v          = 1.5f;
+            _av         = Mathf.PI / _dt;
+            float dx    = _v * _dt * Mathf.Tan (Mathf.Deg2Rad * 36);
+            _leftSpawn  = (World.Box.Left + World.Box.Right - dx) * 0.5f;
+            _rightSpawn = _leftSpawn + dx;
+            _ySpawn     = World.Box.Top - HugeStar.Size;
+        }
 
 
         protected override void Update (int t) {
-            switch (t % 600) {
-                case 0:
-                    SpawnLeftHugeStar ();
-                    break;
-                case 300:
-                    SpawnRightHugeStar ();
-                    break;
+            t = t % (2 * _dt);
+            if (t == 0) {
+                SpawnLeftHugeStar ();
             }
-//            if (t % 180 == 0) {
-//                SpawnHugeStars ();
-//            }
+            else if (t == _dt) {
+                SpawnRightHugeStar ();
+            }
         }
 
 
         private void SpawnLeftHugeStar () {
-            _.World.Spawn (
-                new HugeStar (
-                    new XY (World.Box.Left + 80, World.Box.Top - HugeStar.Size),
-                    1.5f * XY.Down,
-                    0,
-                    Mathf.PI / 300
-                )
-            );
+            _.World.Spawn (new HugeStar (new XY (_leftSpawn, World.Box.Top - HugeStar.Size), new XY (0, _v), 0, _av));
         }
 
 
+        // расстояние между звездами по X равно 470 - 30 - 70 - 70 = 300
+        // а должно быть 450 * tg (pi/5) = 326 примерно
+        // звезды спавнятся с интервалом 300 поэтому по Y расстояние будет 450
+        // скорость вращения это 180 градусов поделить на t хм там как раз так и есть
+
+
         private void SpawnRightHugeStar () {
-            _.World.Spawn (
-                new HugeStar (
-                    new XY (World.Box.Right - 80, World.Box.Top - HugeStar.Size),
-                    1.5f * XY.Down,
-                    0,
-                    -Mathf.PI / 300
-                )
-            );
+            _.World.Spawn (new HugeStar (new XY (_rightSpawn, _ySpawn), new XY (0, _v), 0, -_av));
         }
 
 
