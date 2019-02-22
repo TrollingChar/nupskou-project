@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework;
 using NupskouProject.Entities;
 using NupskouProject.Hitboxes;
 using NupskouProject.Math;
+using NupskouProject.Raden.TestSpellcard;
 using NupskouProject.Rashka;
 using NupskouProject.Rendering;
 using NupskouProject.Stages;
@@ -14,6 +15,10 @@ namespace NupskouProject.Core {
 
         public static readonly Box Box       = new Box (30, 25, 470, 575);
         public static readonly Box PlayerBox = new Box (50, 45, 450, 555);
+        public static readonly XY  BossPlace = new XY (
+            0.5f * (Box.Left + Box.Right),
+            Mathf.Lerp (Box.Top, Box.Bottom, 0.25f)
+        );
 
         private List <Entity> _entities = new List <Entity> ();
         public Player Player { get; private set; }
@@ -22,7 +27,7 @@ namespace NupskouProject.Core {
         public void Update () {
             if (_.Time == 0) {
                 Spawn (_.Player = new Player (new XY (250, 500)));
-                Spawn(new FlickerStrike(new XY(100, 100), new XY(1, 1)));
+//                Spawn(new FlickerStrike(new XY(100, 100), new XY(1, 1)));
 //                  Spawn(new LinearRoundBullet(new XY(275, 450),new XY(0,0), Color.Red,Color.Red,5 ));
 //                  Spawn (new Stage1 ());
 //                Spawn(new DemomanSignDelayedExplosionSpawner());
@@ -31,6 +36,7 @@ namespace NupskouProject.Core {
                 //Spawn(new SmileSpawner());
             }
             if (_.Time == 120) {
+                Spawn (new TestSpellcard ());
 //                Spawn(new LazinessAttackSurvival());
             }
                 

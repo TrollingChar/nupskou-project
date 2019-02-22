@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$USER_HOME$/.Rider2018.1/system/resharper-host/local/Transient/ReSharperHost/v12/SolutionCaches/_NupskouProject.691011809.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/.Rider2018.1/system/resharper-host/local/Transient/ReSharperHost/v12/SolutionCaches/_NupskouProject.1940266572.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="NupskouProject" t="IncludeRecursive">
         <e p="Core" t="Include">
@@ -77,6 +77,11 @@
             <e p="SunflowerRockets.cs" t="Include" />
             <e p="SunflowerSeed.cs" t="Include" />
             <e p="SunflowerSpawner.cs" t="Include" />
+          </e>
+          <e p="TestSpellcard" t="Include">
+            <e p="AcceleratingRoundBullet.cs" t="Include" />
+            <e p="SqrtRoundBullet.cs" t="Include" />
+            <e p="TestSpellcard.cs" t="Include" />
           </e>
         </e>
         <e p="Rashka" t="Include">

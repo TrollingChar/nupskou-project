@@ -86,6 +86,9 @@
     <Compile Include="Raden\SunflowerRockets\SunflowerRockets.cs" />
     <Compile Include="Raden\SunflowerRockets\SunflowerSeed.cs" />
     <Compile Include="Raden\SunflowerRockets\SunflowerSpawner.cs" />
+    <Compile Include="Raden\TestSpellcard\AcceleratingRoundBullet.cs" />
+    <Compile Include="Raden\TestSpellcard\SqrtRoundBullet.cs" />
+    <Compile Include="Raden\TestSpellcard\TestSpellcard.cs" />
     <Compile Include="Rashka\Bullets\DelayedLinearRoundBullet.cs" />
     <Compile Include="Rashka\Bullets\DemomanCircle.cs" />
     <Compile Include="Rashka\Bullets\DemomanExplosion.cs" />
