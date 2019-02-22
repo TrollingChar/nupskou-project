@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System;
+using Microsoft.Xna.Framework;
 using NupskouProject.Core;
 using NupskouProject.Hitboxes;
 using NupskouProject.Math;
@@ -14,6 +15,16 @@ namespace NupskouProject.Entities {
         protected float R;
         protected Color MainColor, BorderColor;
         protected bool  grazed = false;
+        public override void OnGrazed(Entity entity)
+        {
+            if (grazed == false)
+            {
+                grazed = true;
+                _.Graze++;
+                Console.WriteLine("Graze ="+_.Graze);
+
+            }
+        }
 
 
 

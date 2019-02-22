@@ -8,14 +8,6 @@ namespace NupskouProject.Entities
     {
         private readonly XY _p0;
         
-        public override void OnGrazed(Entity entity)
-        {
-            if (grazed == false)
-            {
-                grazed = true;
-                _.Graze++;
-            }
-        }
 
 
         public LinearPetalBeamBullet (XY p0, XY v, Color mainColor, Color borderColor, float r) {
