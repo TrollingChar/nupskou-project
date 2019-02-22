@@ -30,10 +30,11 @@ namespace NupskouProject.Rashka
             {
                 _.World.Spawn(new SwordLongPetal(
                      new XY(_p.X,_p.Y), 
-                     Mathf.PI/2,
-                     Color.Red,
-                     Color.Black,
-                     5
+                     0,
+                     Color.GreenYellow,
+                     Color.Green,
+                     6,
+                     60
                 )
                 );
             }
