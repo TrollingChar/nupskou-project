@@ -39,7 +39,7 @@ namespace NupskouProject.Core {
                 //Spawn(new SmileSpawner());
             }
             if (_.Time == 120) {
-                Spawn (new Revolt ());
+                Spawn (new Revolt2 ());
 //                Spawn(new LazinessAttackSurvival());
             }
                 
