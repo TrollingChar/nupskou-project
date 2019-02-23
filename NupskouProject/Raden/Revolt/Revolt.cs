@@ -1,4 +1,5 @@
-﻿using NupskouProject.Core;
+﻿using Microsoft.Xna.Framework;
+using NupskouProject.Core;
 using NupskouProject.Entities;
 using NupskouProject.Math;
 using NupskouProject.Raden.Bullets;
@@ -41,6 +42,19 @@ namespace NupskouProject.Raden.Revolt {
             }
             else if (t == _dt) {
                 SpawnRightHugeStar ();
+            }
+
+//            10 easy 5 normal
+            if (t % 5 == 0) {
+                var spawnPoint = new XY (Mathf.Lerp (World.Box.Left, World.Box.Right, _.Random.Float ()), World.Box.Top);
+                _.World.Spawn (
+                    new LinearRoundBullet (
+                        spawnPoint,
+                        (_.Player.Position - spawnPoint).WithLength (3),
+                        Color.Red,
+                        Color.Red
+                    )
+                );
             }
         }
 
