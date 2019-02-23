@@ -4,17 +4,17 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace NupskouProject.Rendering {
 
-    public class Layer {
+    public class Layer : AbstractLayer {
 
         private List <SpriteInstance> _sprites = new List <SpriteInstance> ();
 
 
-        public void Clear () {
+        public override void Clear () {
             _sprites.Clear ();
         }
 
 
-        public void Render (SpriteBatch batch) {
+        public override void Render (SpriteBatch batch) {
             foreach (var sprite in _sprites) {
                 sprite.Render (batch);
             }

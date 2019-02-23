@@ -5,18 +5,19 @@ namespace NupskouProject.Rendering {
 
     public class Renderer {
 
-        public Layer   Player, TestBackground, TestForeground, Hitbox, UI, UItext;
-        public Layer[] Layers;
+        public Layer            Player, TestBackground, TestForeground, Hitbox, UI;
+        public TextLayer        Text,   UIText;
+        public AbstractLayer [] Layers;
 
 
         public Renderer () {
-            Layers = new[] {
+            Layers = new [] {
                 Player         = new Layer (),
                 TestBackground = new Layer (),
                 TestForeground = new Layer (),
                 Hitbox         = new Layer (),
                 UI             = new Layer (),
-                UItext         = new Layer (),
+//                UItext         = new Layer (),
             };
         }
 

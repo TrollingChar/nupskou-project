@@ -104,6 +104,7 @@
     <Compile Include="Rashka\SmallSpells\RashkaOpenerNonspell.cs" />
     <Compile Include="Rashka\SmileSpawner.cs" />
     <Compile Include="Rashka\DemomanSignDelayedExplosionSpawner.cs" />
+    <Compile Include="Rendering\AbstractLayer.cs" />
     <Compile Include="Rendering\Layer.cs" />
     <Compile Include="Rendering\Renderer.cs" />
     <Compile Include="Rendering\Sprite.cs" />
@@ -115,6 +116,7 @@
     <Compile Include="Math\Mathf.cs" />
     <Compile Include="Math\XY.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rendering\TextLayer.cs" />
     <Compile Include="Stages\Enemy\CircleEnemyStage1Encounter2.cs" />
     <Compile Include="Stages\Enemy\DropperEnemyStage1Encouner3.cs" />
     <Compile Include="Stages\Enemy\EnemyMastirStage1Encounter1.cs" />
