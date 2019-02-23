@@ -9,8 +9,8 @@ namespace NupskouProject.Core {
 
         public static World           World           = new World ();
         public static int             Time            = 0;
-        public static int             Scope           = 0;
-        public static int             ScopeValue      = 10000;
+        public static int             Score           = 0;
+        public static int             ScoreValue      = 10000;
         public static int             Graze           = 0;
         public static int             LifeCount       = 3;
         public static int             BombCount       = 3;
@@ -20,7 +20,6 @@ namespace NupskouProject.Core {
         public static Difficulty      Difficulty      = Difficulty.Normal;
         public static PlayerCharacter PlayerCharacter = PlayerCharacter.Rashka;
         public static Player          Player;
-
 
     }
 
