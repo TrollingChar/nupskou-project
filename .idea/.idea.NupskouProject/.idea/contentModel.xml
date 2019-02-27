@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$USER_HOME$/.Rider2018.1/system/resharper-host/local/Transient/ReSharperHost/v12/SolutionCaches/_NupskouProject.1940266572.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/.Rider2018.1/system/resharper-host/local/Transient/ReSharperHost/v12/SolutionCaches/_NupskouProject.691011809.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="NupskouProject" t="IncludeRecursive">
         <e p="Core" t="Include">
@@ -91,9 +91,11 @@
         </e>
         <e p="Rashka" t="Include">
           <e p="Bullets" t="Include">
+            <e p="DelayedLinearPetalBullet.cs" t="Include" />
             <e p="DelayedLinearRoundBullet.cs" t="Include" />
             <e p="DemomanCircle.cs" t="Include" />
             <e p="DemomanExplosion.cs" t="Include" />
+            <e p="GrenadeBullet.cs" t="Include" />
             <e p="SphereBullets.cs" t="Include" />
             <e p="SphericalRoundBullet.cs" t="Include" />
             <e p="StoppingLinearRoundBullet.cs" t="Include" />
@@ -104,6 +106,7 @@
           <e p="DemomanSignWormblasterTheFirst.cs" t="Include" />
           <e p="FlickerStrike.cs" t="Include" />
           <e p="LazinessAttackSurvival.cs" t="Include" />
+          <e p="ScarletSignBunchOfGrenadesSpawner.cs" t="Include" />
           <e p="SmallSpells" t="Include">
             <e p="RashkaOpenerNonspell.cs" t="Include" />
           </e>

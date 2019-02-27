@@ -90,9 +90,11 @@
     <Compile Include="Raden\TestSpellcard\AcceleratingRoundBullet.cs" />
     <Compile Include="Raden\TestSpellcard\SqrtRoundBullet.cs" />
     <Compile Include="Raden\TestSpellcard\TestSpellcard.cs" />
+    <Compile Include="Rashka\Bullets\DelayedLinearPetalBullet.cs" />
     <Compile Include="Rashka\Bullets\DelayedLinearRoundBullet.cs" />
     <Compile Include="Rashka\Bullets\DemomanCircle.cs" />
     <Compile Include="Rashka\Bullets\DemomanExplosion.cs" />
+    <Compile Include="Rashka\Bullets\GrenadeBullet.cs" />
     <Compile Include="Rashka\Bullets\SphereBullets.cs" />
     <Compile Include="Rashka\Bullets\SphericalRoundBullet.cs" />
     <Compile Include="Rashka\Bullets\StoppingLinearRoundBullet.cs" />
@@ -101,6 +103,7 @@
     <Compile Include="Rashka\DemomanSignWormblasterTheFirst.cs" />
     <Compile Include="Rashka\FlickerStrike.cs" />
     <Compile Include="Rashka\LazinessAttackSurvival.cs" />
+    <Compile Include="Rashka\ScarletSignBunchOfGrenadesSpawner.cs" />
     <Compile Include="Rashka\SmallSpells\RashkaOpenerNonspell.cs" />
     <Compile Include="Rashka\SmileSpawner.cs" />
     <Compile Include="Rashka\DemomanSignDelayedExplosionSpawner.cs" />

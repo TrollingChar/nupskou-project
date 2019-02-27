@@ -30,7 +30,7 @@ namespace NupskouProject.Core {
         public void Update () {
             if (_.Time == 0) {
                 Spawn (_.Player = new Player (new XY (250, 500)));
-//                Spawn(new FlickerStrike(new XY(100, 100), new XY(1, 1)));
+                Spawn(new ScarletSignBunchOfGrenadesSpawner(BossPlace));
 //                  Spawn(new LinearRoundBullet(new XY(275, 450),new XY(0,0), Color.Red,Color.Red,5 ));
 //                  Spawn (new Stage1 ());
 //                Spawn(new DemomanSignDelayedExplosionSpawner());
@@ -38,10 +38,10 @@ namespace NupskouProject.Core {
 //                Spawn(new LinearPetalBeamBuszzllet(Box.Center, new XY(0,0), Color.Blue, Color.Aqua, 5 ));
                 //Spawn(new SmileSpawner());
             }
-            if (_.Time == 120) {
-                Spawn (new Revolt2 ());
+ //           if (_.Time == 120) {
+ //               Spawn (new Revolt2 ());
 //                Spawn(new LazinessAttackSurvival());
-            }
+ //           }
                 
 
 //                Spawn (new HugeStar (World.Box.Center, XY.Zero, 0, 0));

@@ -13,7 +13,7 @@ namespace NupskouProject.Rashka
     {
         private float _r;
         private float _radius = 35;
-        private readonly XY _p;
+        private  XY _p;
         private float _angle = -Mathf.PI / 2;
         private float _deltaAngle = Mathf.PI / 150;
 
