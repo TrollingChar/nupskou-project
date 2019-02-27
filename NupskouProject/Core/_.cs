@@ -9,11 +9,15 @@ namespace NupskouProject.Core {
 
         public static World           World           = new World ();
         public static int             Time            = 0;
+        
+        // todo: public static GameData GameData и в нее убрать вот эти переменные
+        // также rекомендовано заменить LifeCount на Lives и BombCount на Bombs
         public static int             Score           = 0;
         public static int             ScoreValue      = 10000;
         public static int             Graze           = 0;
         public static int             LifeCount       = 3;
         public static int             BombCount       = 3;
+        
         public static Renderer        Renderer        = new Renderer ();
         public static Assets          Assets          = new Assets ();
         public static Random          Random          = new Random ();
