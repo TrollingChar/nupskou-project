@@ -65,11 +65,12 @@ namespace NupskouProject.Rashka
         {
             for (int i = 0; i < N; i++)
             {
-                if (XY.Distance(a, coordinate[i]) < 15)
+                if (XY.Distance(a, coordinate[i]) < 10)
                 {
                     return false;
                 }
             }
+            if (a.Y < World.PlayerBox.Bottom*0.95)
 
             coordinate[index] = a;
             return true;
