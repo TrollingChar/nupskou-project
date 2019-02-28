@@ -38,14 +38,32 @@ namespace NupskouProject.Rashka.Bullets {
                 {
                     _.World.Spawn(
                         new DelayedLinearPetalBullet(
-                            new XY(P.X+v.X*5, P.Y+v.Y*5), 
+                            new XY(P.X+v.X*7, P.Y+v.Y*7), 
                             v,
-                            Color.Red,
+                            Color.DarkRed,
                             Color.Red,
                             3f,
                             120
                         ));
                 }
+
+                if (_.Difficulty >= Difficulty.Hard)
+                {
+                    circle = Danmaku.Ring(new XY(_random), 3);
+                    foreach (var v in circle)
+                    {
+                        _.World.Spawn(
+                            new DelayedLinearPetalBullet(
+                                new XY(P.X + v.X * 5, P.Y + v.Y * 5),
+                                v,
+                                Color.Yellow,
+                                Color.Red,
+                                3f,
+                                30
+                            ));
+                    }
+                }
+
 
                 Despawn();
             }

@@ -9,8 +9,8 @@ namespace NupskouProject.Rashka
 {
     public class ScarletSignBunchOfGrenadesSpawner : StdEntity
     {
-        private int N = _.Difficulty.Choose(18,30,30,30);
-        private XY[] coordinate = new XY[_.Difficulty.Choose(18,30,30,30)];
+        private int N = _.Difficulty.Choose(18,30,30,42);
+        private XY[] coordinate = new XY[_.Difficulty.Choose(18,30,30,42)];
         private XY _p;
 
 
@@ -65,7 +65,7 @@ namespace NupskouProject.Rashka
         {
             for (int i = 0; i < N; i++)
             {
-                if (XY.Distance(a, coordinate[i]) < 10)
+                if (XY.Distance(a, coordinate[i]) < 15)
                 {
                     return false;
                 }
