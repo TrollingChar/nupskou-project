@@ -67,10 +67,10 @@ namespace NupskouProject.Entities {
             {
                 _xpressed = true;
                 if (_.PlayerCharacter == PlayerCharacter.Rashka) _.World.Spawn(new DelayedExplosin());
-                _.BombCount--;
+                _.Bombs--;
                 _invulnerable = true;
                 _invulnerableWindow = 240;
-                Console.WriteLine("Bombs ="+_.BombCount);
+                Console.WriteLine("Bombs ="+_.Bombs);
 
             }
             if (keyboard.IsKeyUp (Keys.X) && _xpressed)_xpressed = false;
@@ -103,8 +103,8 @@ namespace NupskouProject.Entities {
             _invulnerable = true;
             _invulnerableWindow = 300;
             _p = new XY(250, 500);
-            _.LifeCount--;
-            Console.WriteLine("Miss, lifes now: "+_.LifeCount);
+            _.Lives--;
+            Console.WriteLine("Miss, lifes now: "+_.Lives);
             }
         }
 
