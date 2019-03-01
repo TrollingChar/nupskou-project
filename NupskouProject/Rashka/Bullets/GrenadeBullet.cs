@@ -49,7 +49,7 @@ namespace NupskouProject.Rashka.Bullets {
 
                 if (_.Difficulty >= Difficulty.Hard)
                 {
-                    circle = Danmaku.Ring(new XY(_random), 3);
+                    circle = Danmaku.Ring(new XY(_random), _.Difficulty.Choose(0,0,3,5));
                     foreach (var v in circle)
                     {
                         _.World.Spawn(
