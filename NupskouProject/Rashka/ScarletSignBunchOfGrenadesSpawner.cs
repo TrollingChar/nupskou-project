@@ -26,7 +26,7 @@ namespace NupskouProject.Rashka {
 
             var list = new List <XY> ();
             for (int i = 0, n = _.Difficulty.Choose (18, 30, 36, 42); i < n; i++) {
-                list.Add (Danmaku.FarFrom (list, () => _.Random.Point (World.Box), XY.SqrDistance, 3));
+                list.Add (Danmaku.FarFrom (list, () => _.Random.Point (World.Box), 3));
             }
 
             foreach (var p in list) {

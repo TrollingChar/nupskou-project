@@ -76,6 +76,11 @@ namespace NupskouProject.Math {
         }
 
 
+        public static XY FarFrom (IEnumerable <XY> existing, Func <XY> generator, int rerolls = 2) {
+            return FarFrom (existing, generator, XY.SqrDistance, rerolls);
+        }
+
+
         public static T FarFrom <T> (
             IEnumerable <T> existing,
             Func <T> generator,
