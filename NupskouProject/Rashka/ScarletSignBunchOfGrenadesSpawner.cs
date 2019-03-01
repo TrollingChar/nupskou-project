@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System.Collections.Generic;
+using Microsoft.Xna.Framework;
 using NupskouProject.Core;
 using NupskouProject.Entities;
 using NupskouProject.Math;
@@ -10,9 +11,7 @@ namespace NupskouProject.Rashka {
 
     public class ScarletSignBunchOfGrenadesSpawner : StdEntity {
 
-        private int   N          = _.Difficulty.Choose (18, 30, 36, 42);
-        private XY [] coordinate = new XY[_.Difficulty.Choose (18, 30, 36, 42)];
-        private XY    _p;
+        private XY _p;
 
 
         public ScarletSignBunchOfGrenadesSpawner (XY p) {
@@ -22,24 +21,19 @@ namespace NupskouProject.Rashka {
 
         protected override void Update (int t) {
             var world = _.World;
-            
+
             if (t % 360 != 0) return;
 
-            for (int i = 0; i < N; i++) {
-                coordinate [i] = new XY (-9000, -9000);
+            var list = new List <XY> ();
+            for (int i = 0, n = _.Difficulty.Choose (18, 30, 36, 42); i < n; i++) {
+                list.Add (Danmaku.FarFrom (list, () => _.Random.Point (World.Box), XY.SqrDistance, 3));
             }
 
-            for (int i = 0; i < N; i++)
-            for (int attempt = 0; attempt < 10; attempt++) {
-                var a = _.Random.Point (World.Box);
-                if (Check (a, i)) break;
-            }
-
-            for (int j = 0; j < N; j++) {
+            foreach (var p in list) {
                 world.Spawn (
                     new GrenadeBullet (
                         _p,
-                        (coordinate [j] - _p) / 150,
+                        (p - _p) / 150,
                         Color.Red,
                         Color.Red,
                         5f,
@@ -47,18 +41,6 @@ namespace NupskouProject.Rashka {
                     )
                 );
             }
-
-        }
-
-
-        private bool Check (XY a, int index) {
-            for (int i = 0; i < N; i++) {
-                if (XY.SqrDistance (a, coordinate [i]) < 100) return false;
-            }
-            if (a.Y < World.PlayerBox.Bottom * 0.95) {
-                coordinate [index] = a;
-            }
-            return true;
         }
 
     }
