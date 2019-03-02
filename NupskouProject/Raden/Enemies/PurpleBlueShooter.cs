@@ -7,12 +7,12 @@ using NupskouProject.Util;
 
 namespace NupskouProject.Raden.Enemies {
 
-    public class PurbleBlueShooter : Enemy {
+    public class PurpleBlueShooter : Enemy {
 
         protected override void Update (int t) {
-            if (t % 180 == 0) {
+            if (t % 120 == 0) {
                 foreach (var v in Danmaku.Ring (new XY(_.Random.Angle ()), 60)) {
-                    _.World.Spawn (new LinearPetalBullet(P, v, Color.Magenta, Color.DarkMagenta, 3));
+                    _.World.Spawn (new LinearPetalBullet(P, v * 1f, Color.Magenta, Color.DarkMagenta, 3));
                 }
             }
             if (t % 20 == 0 && _.Player != null && !_.Player.Despawned) {

@@ -13,7 +13,7 @@ namespace NupskouProject.Raden.Revolt2 {
         protected override void Update (int t) {
             var   o  = World.Box.Center;
             float av = Mathf.PI / _.Difficulty.Choose (1200, 800, 1200, 800);
-            int dt = _.Difficulty.Choose (90, 90, 60, 60);
+            int dt = _.Difficulty.Choose (90, 90, 60, 40);
             if (t == 0) {
                 _.World.Spawn (new HugeStar (new XY (o.X, World.Box.Top    + 20), XY.Zero, 0, av));
                 _.World.Spawn (new HugeStar (new XY (o.X, World.Box.Bottom - 20), XY.Zero, 0, av));

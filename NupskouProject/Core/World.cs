@@ -5,6 +5,7 @@ using NupskouProject.Entities;
 using NupskouProject.Hitboxes;
 using NupskouProject.Math;
 using NupskouProject.Raden.Airstrike;
+using NupskouProject.Raden.Enemies;
 using NupskouProject.Raden.Revolt;
 using NupskouProject.Raden.Revolt2;
 using NupskouProject.Raden.TestSpellcard;
@@ -30,7 +31,7 @@ namespace NupskouProject.Core {
         public void Update () {
             if (_.Time == 0) {
                 Spawn (_.Player = new Player (new XY (250, 500)));
-                Spawn(new ScarletSignBunchOfGrenadesSpawner(BossPlace));
+//                Spawn(new ScarletSignBunchOfGrenadesSpawner(BossPlace));
 //                  Spawn(new LinearRoundBullet(new XY(275, 450),new XY(0,0), Color.Red,Color.Red,5 ));
 //                  Spawn (new Stage1 ());
 //                Spawn(new DemomanSignDelayedExplosionSpawner());
@@ -38,20 +39,16 @@ namespace NupskouProject.Core {
 //                Spawn(new LinearPetalBeamBuszzllet(Box.Center, new XY(0,0), Color.Blue, Color.Aqua, 5 ));
                 //Spawn(new SmileSpawner());
             }
- //           if (_.Time == 120) {
- //               Spawn (new Revolt2 ());
+//            if (_.Time == 120) {
+//                Spawn (new Revolt2 ());
 //                Spawn(new LazinessAttackSurvival());
- //           }
+//            }
                 
 
-//                Spawn (new HugeStar (World.Box.Center, XY.Zero, 0, 0));
-//                Spawn (new Airstrike ());
-//                Spawn (new Revolt ());
-//                Spawn (new SunflowerSpawner (Box.Center, 60));
-                /*Spawn (
+                if (_.Time == 0) Spawn (
                     new Clock (
                         i => {
-                            var enemy = new PurbleBlueShooter () {
+                            var enemy = new PurpleBlueShooter () {
                                 HP = 100,
                                 P = new XY (Mathf.Lerp (Box.Left, Box.Right, (i + 1) * 0.25f), Box.Top + 100)
                             };
@@ -60,7 +57,7 @@ namespace NupskouProject.Core {
                         3,
                         60
                     )
-                );*/
+                );
      //           Spawn(new SphereBullets(Box.Center, 125, 8, Mathf.PI / 2.5f));
               //  Spawn(new RashkaOpenerNonspell(Box.Center));
             
