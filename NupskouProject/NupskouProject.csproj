@@ -56,6 +56,7 @@
     <Compile Include="Entities\Bomb\DelayedExplosion.cs" />
     <Compile Include="Entities\Bomb\Projectiles\DDE.cs" />
     <Compile Include="Entities\Bomb\Projectiles\DDEBullet.cs" />
+    <Compile Include="Entities\Bullet.cs" />
     <Compile Include="Entities\Clock.cs" />
     <Compile Include="Entities\Enemy.cs" />
     <Compile Include="Entities\Entity.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Raden\Airstrike\Bomb.cs" />
     <Compile Include="Raden\Airstrike\Bomber.cs" />
     <Compile Include="Raden\Airstrike\Smoke.cs" />
+    <Compile Include="Raden\Bullets\DesignerBullet.cs" />
     <Compile Include="Raden\Bullets\HugeStar.cs" />
     <Compile Include="Raden\Enemies\PurpleBlueShooter.cs" />
     <Compile Include="Raden\Revolt2\Revolt2.cs" />

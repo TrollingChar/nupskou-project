@@ -8,21 +8,12 @@ using Sprite = NupskouProject.Rendering.SpriteInstance;
 
 namespace NupskouProject.Entities {
 
-    public abstract class RoundBullet : StdEntity {
+    public abstract class RoundBullet : Bullet {
 
         protected XY    P;
         protected float R;
         protected Color MainColor, BorderColor;
-        protected bool  grazed = false;
-        public override void OnGrazed(Entity entity)
-        {
-            if (grazed == false)
-            {
-                grazed = true;
-                _.Graze++;
-                Console.WriteLine("Graze ="+_.Graze);
-            }
-        }
+        
 
         public override Hitbox PlayerDamagerHitbox => new CircleHitbox (P, R);
 
