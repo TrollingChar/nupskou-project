@@ -92,6 +92,7 @@
     <Compile Include="Raden\TestSpellcard\AcceleratingRoundBullet.cs" />
     <Compile Include="Raden\TestSpellcard\SqrtRoundBullet.cs" />
     <Compile Include="Raden\TestSpellcard\TestSpellcard.cs" />
+    <Compile Include="Rashka\Bullets\CircularPetalBullet.cs" />
     <Compile Include="Rashka\Bullets\DelayedLinearPetalBullet.cs" />
     <Compile Include="Rashka\Bullets\DelayedLinearRoundBullet.cs" />
     <Compile Include="Rashka\Bullets\DemomanCircle.cs" />

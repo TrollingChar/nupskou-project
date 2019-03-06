@@ -39,32 +39,53 @@ namespace NupskouProject.Core {
 //                Spawn(new DemomanSignWormblasterTheFirst(World.Box.Center));
 //                Spawn(new LinearPetalBeamBuszzllet(Box.Center, new XY(0,0), Color.Blue, Color.Aqua, 5 ));
                 //Spawn(new SmileSpawner());
+                Spawn(
+                    new Clock(
+                        i =>
+                        {
+                            Spawn(
+                                new CircularPetalBullet(
+                                    BossPlace,
+                                    new XY(0 + _.Time),
+                                    Mathf.PI / 360,
+                                    1.5f,
+                                    Color.Red,
+                                    Color.Red,
+                                    5f
+                                )
+                            );
 
-                Spawn (
-                    new Clock (
-                        i => {
-                            Spawn (
-                                new DesignerBullet (
-                                    BossPlace,
-                                    BossPlace + new XY (i * Mathf.phiAngle / 30) * 100,
-                                    60,
-                                    10
-                                )
-                            );
-                            Spawn (
-                                new DesignerBullet (
-                                    BossPlace,
-                                    BossPlace + new XY (-i * Mathf.phiAngle / 30) * 150,
-                                    60,
-                                    10
-                                )
-                            );
                         },
                         int.MaxValue,
-                        1
-                    )
-                );
-            }
+                        5
+                        )
+                        );
+ /*             Spawn (
+                              new Clock (
+                                 i => {
+                                     Spawn (
+                                         new DesignerBullet (
+                                             BossPlace,
+                                             BossPlace + new XY (i * Mathf.phiAngle / 30) * 100,
+                                             60,
+                                             10
+                                         )
+                                     );
+                                     Spawn (
+                                         new DesignerBullet (
+                                             BossPlace,
+                                             BossPlace + new XY (-i * Mathf.phiAngle / 30) * 150,
+                                             60,
+                                             10
+                                         )
+                                     );
+                                 },
+                                 int.MaxValue,
+                                 1
+                             )
+                         );*/
+                     } 
+                     
 //            if (_.Time == 120) {
 //                Spawn (new Revolt2 ());
 //                Spawn(new LazinessAttackSurvival());
