@@ -23,13 +23,13 @@ namespace NupskouProject.Rashka
 
         protected override void Update(int t)
         {
-            if (t % 30 == 0)
+            if (t % 15 == 0)
             {
                 _.World.Spawn(
                     new CircularPetalBullet(
                         P,
                         new XY(0 + Mathf.PI/180*222 * t),
-                        Mathf.PI / 360,
+                        Mathf.PI / 240,
                         1f,
                         Color.Red,
                         Color.Red,
@@ -38,13 +38,13 @@ namespace NupskouProject.Rashka
                 );
               
             }
-            if (t % 30 == 0)
+            if (t % 15 == 0)
             {
                 _.World.Spawn(
                     new CircularPetalBullet(
                         P,
                         new XY(0  + Mathf.PI/180*222 * t),
-                        -Mathf.PI / 360,
+                        -Mathf.PI / 240,
                         1f,
                         Color.Red,
                         Color.Red,
