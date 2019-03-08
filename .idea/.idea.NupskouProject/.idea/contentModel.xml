@@ -104,6 +104,7 @@
             <e p="StoppingLinearRoundBullet.cs" t="Include" />
             <e p="SwordLongPetal.cs" t="Include" />
             <e p="VerticalBounceRoundBullet.cs" t="Include" />
+            <e p="WormBlaster.cs" t="Include" />
           </e>
           <e p="DemomanSignDelayedExplosionSpawner.cs" t="Include" />
           <e p="DemomanSignWormblasterTheFirst.cs" t="Include" />
@@ -114,6 +115,7 @@
             <e p="RashkaOpenerNonspell.cs" t="Include" />
           </e>
           <e p="SmileSpawner.cs" t="Include" />
+          <e p="WormBlasterSpawner.cs" t="Include" />
         </e>
         <e p="Rendering" t="Include">
           <e p="AbstractLayer.cs" t="Include" />

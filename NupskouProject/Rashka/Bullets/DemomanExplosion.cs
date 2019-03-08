@@ -11,7 +11,6 @@ namespace NupskouProject.Rashka.Bullets
     public class DemomanExplosion : StdEntity
     {
         private readonly int _delay;
-        private readonly int _t;
         private  XY    P;
         private float _r ;
 

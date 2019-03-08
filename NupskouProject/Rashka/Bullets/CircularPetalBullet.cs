@@ -9,7 +9,7 @@ namespace NupskouProject.Entities {
     public class CircularPetalBullet : PetalBullet {
 
         private readonly XY _p0;
-        private float _deltaAngle, _progressiveSpeed, _angle;
+        private float _deltaAngle, _progressiveSpeed, _angle, _r, _v;
 
 
 
@@ -27,9 +27,14 @@ namespace NupskouProject.Entities {
 
         protected override void Update (int t)
         {
+            _r = _progressiveSpeed * t;
+            _v = _r * _deltaAngle;
             _angle = _angle + _deltaAngle;
-            V = new XY(_angle).Rotated90CCW() + new XY(_angle).WithLength(_progressiveSpeed); 
-            P = _p0 + new XY(Mathf.Cos(_angle), Mathf.Sin(_angle)) * _progressiveSpeed * t;
+            if (_deltaAngle > 0)
+                V = new XY(_angle).Rotated90CCW() - new XY(_angle).WithLength(_v*_v/_r - _progressiveSpeed);
+            else
+                V = new XY(_angle).Rotated90CCW() + new XY(_angle).WithLength(_v*_v/_r - _progressiveSpeed);
+            P = _p0 + new XY(Mathf.Cos(_angle), Mathf.Sin(_angle)) * _r;
             if (t > 30 && (_p0 - P).Length > 666) {
                 Despawn ();
             }

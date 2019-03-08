@@ -39,27 +39,7 @@ namespace NupskouProject.Core {
 //                Spawn(new DemomanSignWormblasterTheFirst(World.Box.Center));
 //                Spawn(new LinearPetalBeamBuszzllet(Box.Center, new XY(0,0), Color.Blue, Color.Aqua, 5 ));
                 //Spawn(new SmileSpawner());
-                Spawn(
-                    new Clock(
-                        i =>
-                        {
-                            Spawn(
-                                new CircularPetalBullet(
-                                    BossPlace,
-                                    new XY(0 + _.Time),
-                                    Mathf.PI / 360,
-                                    1.5f,
-                                    Color.Red,
-                                    Color.Red,
-                                    5f
-                                )
-                            );
-
-                        },
-                        int.MaxValue,
-                        5
-                        )
-                        );
+Spawn(new WormBlasterSpawner(BossPlace));
  /*             Spawn (
                               new Clock (
                                  i => {
