@@ -22,7 +22,7 @@ namespace NupskouProject.Rashka {
         protected override void Update (int t) {
             var world = _.World;
 
-            if (t % 360 != 0) return;
+            if (t % 480 != 0) return;
 
             var list = new List <XY> ();
             for (int i = 0, n = _.Difficulty.Choose (30, 30, 30, 30); i < n; i++) {

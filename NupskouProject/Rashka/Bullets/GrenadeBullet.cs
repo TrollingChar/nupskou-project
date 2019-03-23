@@ -37,12 +37,12 @@ namespace NupskouProject.Rashka.Bullets {
                 _.World.Spawn (
                     new DelayedLinearPetalBullet (
                         new XY (P.X, P.Y),
-                        v,
+                        v*0.75f,
                         Color.DarkRed,
                         Color.Red,
                         3f,
                         120,
-                        15
+                        21
                     )
                 );
             }
@@ -50,7 +50,7 @@ namespace NupskouProject.Rashka.Bullets {
                 _.World.Spawn (
                     new DelayedLinearPetalBullet (
                         new XY (P.X + v.X * 5, P.Y + v.Y * 5),
-                        v,
+                        v*0.75f,
                         Color.Yellow,
                         Color.Red,
                         3f,
