@@ -34,8 +34,8 @@ namespace NupskouProject.Core {
             if (_.Time == 0) {
                 Spawn (_.Player = new Player (new XY (250, 500)));
 
-Spawn(new WormBlasterSpawner(BossPlace));
-
+//Spawn(new WormBlasterSpawner(BossPlace));
+Spawn(new ScarletSignBunchOfGrenadesSpawner(World.BossPlace));
                      } 
 
 

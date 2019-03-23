@@ -36,12 +36,13 @@ namespace NupskouProject.Rashka.Bullets {
             foreach (var v in Danmaku.Ring (new XY (_random), _.Difficulty.Choose (5, 7, 5, 7))) {
                 _.World.Spawn (
                     new DelayedLinearPetalBullet (
-                        new XY (P.X + v.X * 7, P.Y + v.Y * 7),
+                        new XY (P.X, P.Y),
                         v,
                         Color.DarkRed,
                         Color.Red,
                         3f,
-                        120
+                        120,
+                        15
                     )
                 );
             }
@@ -53,7 +54,7 @@ namespace NupskouProject.Rashka.Bullets {
                         Color.Yellow,
                         Color.Red,
                         3f,
-                        30
+                        120
                     )
                 );
             }

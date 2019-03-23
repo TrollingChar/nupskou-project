@@ -40,7 +40,7 @@ namespace NupskouProject.Rashka
                 foreach (var v1 in line)
                 {
                     _.World.Spawn(
-                        new LinearRoundBullet(
+                        new LinearRoundBullet( // вместо раундбуллета стрелки сделать
                             P,
                             2 * v1,
                             Color.Red,
