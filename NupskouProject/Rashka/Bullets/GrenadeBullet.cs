@@ -46,7 +46,7 @@ namespace NupskouProject.Rashka.Bullets {
                     )
                 );
             }
-            foreach (var v in Danmaku.Ring (new XY (_random), _.Difficulty.Choose (0, 0, 5, 7))) {
+            foreach (var v in Danmaku.Ring (new XY (_random + Mathf.PI/_.Difficulty.Choose (0, 0, 5, 7)), _.Difficulty.Choose (0, 0, 5, 7))) {
                 _.World.Spawn (
                     new DelayedLinearPetalBullet (
                         new XY (P.X + v.X * 5, P.Y + v.Y * 5),
