@@ -30,11 +30,11 @@ namespace NupskouProject.Rashka
             var spray  = Danmaku.Spray (w, Mathf.PI, 20);
             foreach (var v in spray)
             {
-                if (n == 1 || n % 4 == 0)
-                    _bullet = 9;
+                if (n == 1 || n % _.Difficulty.Choose (4, 4, 4, 3) == 0)
+                    _bullet = _.Difficulty.Choose (4, 6, 8, 12);
                 else
 
-                    _bullet = 3;
+                    _bullet = _.Difficulty.Choose (2, 3, 4, 4);
                 
                 var line = Danmaku.Line(v, 0.5f, 1f, _bullet);
                 foreach (var v1 in line)
@@ -63,7 +63,7 @@ namespace NupskouProject.Rashka
             }
 
 
-            if (t % 90 == 0)
+            if (t % _.Difficulty.Choose (120, 120, 120, 90) == 0)
             {
                 _.World.Spawn(new WormBlaster(
                     _.Random.Point (_wormspawn),
