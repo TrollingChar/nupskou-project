@@ -33,59 +33,11 @@ namespace NupskouProject.Core {
         public void Update () {
             if (_.Time == 0) {
                 Spawn (_.Player = new Player (new XY (250, 500)));
-//                Spawn(new ScarletSignBunchOfGrenadesSpawner(BossPlace));
-//                  Spawn (new Stage1 ());
-//                Spawn(new DemomanSignDelayedExplosionSpawner());
-//                Spawn(new DemomanSignWormblasterTheFirst(World.Box.Center));
-//                Spawn(new LinearPetalBeamBuszzllet(Box.Center, new XY(0,0), Color.Blue, Color.Aqua, 5 ));
-                //Spawn(new SmileSpawner());
-Spawn(new WormBlasterSpawner(BossPlace));
- /*             Spawn (
-                              new Clock (
-                                 i => {
-                                     Spawn (
-                                         new DesignerBullet (
-                                             BossPlace,
-                                             BossPlace + new XY (i * Mathf.phiAngle / 30) * 100,
-                                             60,
-                                             10
-                                         )
-                                     );
-                                     Spawn (
-                                         new DesignerBullet (
-                                             BossPlace,
-                                             BossPlace + new XY (-i * Mathf.phiAngle / 30) * 150,
-                                             60,
-                                             10
-                                         )
-                                     );
-                                 },
-                                 int.MaxValue,
-                                 1
-                             )
-                         );*/
-                     } 
-                     
-//            if (_.Time == 120) {
-//                Spawn (new Revolt2 ());
-//                Spawn(new LazinessAttackSurvival());
-//            }
 
-//                if (_.Time == 0) Spawn (
-//                    new Clock (
-//                        i => {
-//                            var enemy = new PurpleBlueShooter () {
-//                                HP = 100,
-//                                P = new XY (Mathf.Lerp (Box.Left, Box.Right, (i + 1) * 0.25f), Box.Top + 100)
-//                            };
-//                            _.World.Spawn (enemy);
-//                        },
-//                        3,
-//                        60
-//                    )
-//                );
-            //           Spawn(new SphereBullets(Box.Center, 125, 8, Mathf.PI / 2.5f));
-            //  Spawn(new RashkaOpenerNonspell(Box.Center));
+Spawn(new WormBlasterSpawner(BossPlace));
+
+                     } 
+
 
             for (int i = 0; i < _entities.Count; i++) {
                 var e = _entities [i];

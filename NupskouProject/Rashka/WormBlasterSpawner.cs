@@ -1,4 +1,6 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System.Collections.Concurrent;
+using System.Runtime.Serialization.Formatters;
+using Microsoft.Xna.Framework;
 using NupskouProject.Core;
 using NupskouProject.Entities;
 using NupskouProject.Math;
@@ -19,40 +21,47 @@ namespace NupskouProject.Rashka
         {
             P = p;
         }
-        
+
+        private void Shoot()
+        {
+            var w = (_.Player.Position - P).Normalized ;
+            var n = 1;
+            int _bullet;
+            var spray  = Danmaku.Spray (w, Mathf.PI, 20);
+            foreach (var v in spray)
+            {
+                if (n == 1 || n % 4 == 0)
+                    _bullet = 9;
+                else
+
+                    _bullet = 3;
+                
+                var line = Danmaku.Line(v, 0.5f, 1f, _bullet);
+                foreach (var v1 in line)
+                {
+                    _.World.Spawn(
+                        new LinearRoundBullet(
+                            P,
+                            2 * v1,
+                            Color.Red,
+                            Color.Red
+                        )
+                        );
+                }
+
+                n++;
+                
+            }
+            
+        }
 
         protected override void Update(int t)
         {
-            if (t % 15 == 0)
+            if (t % 240 == 0)
             {
-                _.World.Spawn(
-                    new CircularPetalBullet(
-                        P,
-                        new XY(0 + Mathf.PI/180*222 * t),
-                        Mathf.PI / 240,
-                        1f,
-                        Color.Red,
-                        Color.Red,
-                        3f
-                    )
-                );
-              
+                Shoot();
             }
-            if (t % 15 == 0)
-            {
-                _.World.Spawn(
-                    new CircularPetalBullet(
-                        P,
-                        new XY(0  + Mathf.PI/180*222 * t),
-                        -Mathf.PI / 240,
-                        1f,
-                        Color.Red,
-                        Color.Red,
-                        3f
-                    )
-                );
-                
-            }
+
 
             if (t % 90 == 0)
             {
