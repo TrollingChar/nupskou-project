@@ -9,6 +9,7 @@ using NupskouProject.Raden.Bullets;
 using NupskouProject.Raden.Enemies;
 using NupskouProject.Raden.Revolt;
 using NupskouProject.Raden.Revolt2;
+using NupskouProject.Raden.SunflowerRockets;
 using NupskouProject.Raden.TestSpellcard;
 using NupskouProject.Rashka;
 using NupskouProject.Rendering;
@@ -21,7 +22,7 @@ namespace NupskouProject.Core {
 
         public static readonly Box Box       = new Box (30, 25, 470, 575);
         public static readonly Box PlayerBox = new Box (50, 45, 450, 555);
-        public static readonly XY BossPlace = new XY (
+        public static readonly XY BossPlace  = new XY (
             0.5f * (Box.Left + Box.Right),
             Mathf.Lerp (Box.Top, Box.Bottom, 0.25f)
         );
@@ -33,11 +34,11 @@ namespace NupskouProject.Core {
         public void Update () {
             if (_.Time == 0) {
                 Spawn (_.Player = new Player (new XY (250, 500)));
+            }
 
-//Spawn(new WormBlasterSpawner(BossPlace));
-Spawn(new ScarletSignBunchOfGrenadesSpawner(World.BossPlace));
-                     } 
-
+            if (_.Time == 120) {
+                
+            }
 
             for (int i = 0; i < _entities.Count; i++) {
                 var e = _entities [i];

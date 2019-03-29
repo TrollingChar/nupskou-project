@@ -16,7 +16,8 @@ namespace NupskouProject.Stages {
                             i => _.World.Spawn(new EnemyMastirStage1Encounter1(
                                 new XY(World.Box.Left, World.Box.Bottom * 0.1f), XY.Right, i % _.Difficulty.Choose (6, 3, 2, 2)  == 0, -1)),
                             12,
-                            //Раден,не забудь уклониться от всех пуль ты ⑨
+                            //а может быть ты
+                            //⑨
                             30,
                             0
                         )

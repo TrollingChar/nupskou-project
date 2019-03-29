@@ -45,17 +45,17 @@ namespace NupskouProject.Raden.Revolt {
             }
 
 //            10 easy 5 normal
-            if (t % 5 == 0) {
-                var spawnPoint = new XY (Mathf.Lerp (World.Box.Left, World.Box.Right, _.Random.Float ()), World.Box.Top);
-                _.World.Spawn (
-                    new LinearRoundBullet (
-                        spawnPoint,
-                        (_.Player.Position - spawnPoint).WithLength (3),
-                        Color.Red,
-                        Color.Red
-                    )
-                );
-            }
+//            if (t % 5 == 0) {
+//                var spawnPoint = new XY (Mathf.Lerp (World.Box.Left, World.Box.Right, _.Random.Float ()), World.Box.Top);
+//                _.World.Spawn (
+//                    new LinearRoundBullet (
+//                        spawnPoint,
+//                        (_.Player.Position - spawnPoint).WithLength (3),
+//                        Color.Red,
+//                        Color.Red
+//                    )
+//                );
+//            }
         }
 
 
@@ -73,18 +73,6 @@ namespace NupskouProject.Raden.Revolt {
         private void SpawnRightHugeStar () {
             _.World.Spawn (new HugeStar (new XY (_rightSpawn, _ySpawn), new XY (0, _v), 0, -_av));
         }
-
-
-/*
-        private void SpawnHugeStars () {
-            float x1 = World.Box.Left + 35;
-            float x2 = World.Box.Right - 35;
-            float y1 = World.Box.Top - HugeStar.Size;
-//            float y2 = World.Box.Bottom + HugeStar.Size;
-            _.World.Spawn (new HugeStar (new XY (x1, y1), 1.5f * XY.Down, 0, +Mathf.PI / 300));
-            _.World.Spawn (new HugeStar (new XY (x2, y1), 1.5f * XY.Down, 0, -Mathf.PI / 300));
-        }
-*/
 
     }
 
