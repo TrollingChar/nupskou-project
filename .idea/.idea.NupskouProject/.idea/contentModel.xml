@@ -9,6 +9,7 @@
         <e p="Core" t="Include">
           <e p="Assets.cs" t="Include" />
           <e p="Game.cs" t="Include" />
+          <e p="Phase.cs" t="Include" />
           <e p="Program.cs" t="Include" />
           <e p="World.cs" t="Include" />
           <e p="_.cs" t="Include" />
@@ -128,8 +129,6 @@
           <e p="TextLayer.cs" t="Include" />
         </e>
         <e p="Stages" t="Include">
-          <e p="Bonus" t="Include" />
-          <e p="Bullets" t="Include" />
           <e p="Enemy" t="Include">
             <e p="CircleEnemyStage1Encounter2.cs" t="Include" />
             <e p="DropperEnemyStage1Encouner3.cs" t="Include" />
@@ -137,6 +136,9 @@
             <e p="SpreadingEnemyStage1Encounter2.cs" t="Include" />
           </e>
           <e p="Stage1.cs" t="Include" />
+          <e p="TestStage" t="Include">
+            <e p="TestStage.cs" t="Include" />
+          </e>
         </e>
         <e p="Util" t="Include">
           <e p="DifficultyExtension.cs" t="Include" />

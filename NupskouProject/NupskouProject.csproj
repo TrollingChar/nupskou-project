@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Core\Assets.cs" />
     <Compile Include="Core\Game.cs" />
+    <Compile Include="Core\Phase.cs" />
     <Compile Include="Core\Program.cs" />
     <Compile Include="Core\World.cs" />
     <Compile Include="Core\_.cs" />
@@ -130,6 +131,7 @@
     <Compile Include="Stages\Enemy\EnemyMastirStage1Encounter1.cs" />
     <Compile Include="Stages\Enemy\SpreadingEnemyStage1Encounter2.cs" />
     <Compile Include="Stages\Stage1.cs" />
+    <Compile Include="Stages\TestStage\TestStage.cs" />
     <Compile Include="Util\DifficultyExtension.cs" />
     <Compile Include="Util\RandomExtension.cs" />
     <Compile Include="Util\Sound.cs" />
@@ -138,10 +140,6 @@
     <None Include="Help\BassNet.chm" />
     <None Include="MonoGame.Framework.dll.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Stages\Bonus" />
-    <Folder Include="Stages\Bullets" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
