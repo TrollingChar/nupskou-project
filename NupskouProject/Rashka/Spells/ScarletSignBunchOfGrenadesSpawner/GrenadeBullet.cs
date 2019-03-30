@@ -2,10 +2,10 @@
 using NupskouProject.Core;
 using NupskouProject.Entities;
 using NupskouProject.Math;
+using NupskouProject.Rashka.Bullets;
 using NupskouProject.Util;
 
-
-namespace NupskouProject.Rashka.Bullets {
+namespace NupskouProject.Rashka.Spells.ScarletSignBunchOfGrenadesSpawner {
 
     public class GrenadeBullet : RoundBullet {
 

@@ -1,14 +1,11 @@
-﻿using System.Collections.Concurrent;
-using System.Runtime.Serialization.Formatters;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using NupskouProject.Core;
 using NupskouProject.Entities;
 using NupskouProject.Math;
 using NupskouProject.Rashka.Bullets;
 using NupskouProject.Util;
 
-
-namespace NupskouProject.Rashka
+namespace NupskouProject.Rashka.Spells.WormBlasterSpawner
 {
     public class WormBlasterSpawner: StdEntity
     {
