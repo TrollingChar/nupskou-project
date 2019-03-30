@@ -23,7 +23,7 @@ namespace NupskouProject.Rashka.Spells.WormBlasterSpawner
             _v = new XY((_.Player.Position -_p).Angle);
             if (t % 3 == 0)
             {
-                _.World.Spawn(new DemomanExplosion
+                _.World.Spawn(new Blast
                     (
                     P+P.Rotated90CW().Normalized*_.Random.Float(-35,35),
                     _.Random.Float(3,10),

@@ -31,7 +31,7 @@ namespace NupskouProject.Rashka
                 _r = _r + 0.9f;
             var world = _.World;
             if (t % 6 == 0)
-                world.Spawn(new DemomanExplosion(new XY(_p.X + _r * Mathf.Cos(_angle), _p.Y + _r * Mathf.Sin(_angle)),
+                world.Spawn(new Blast(new XY(_p.X + _r * Mathf.Cos(_angle), _p.Y + _r * Mathf.Sin(_angle)),
                     _radius,
                     150));
             if (t % 18 == 0)

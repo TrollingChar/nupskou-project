@@ -8,7 +8,7 @@ using Un4seen.Bass.Misc;
 
 namespace NupskouProject.Rashka.Bullets
 {
-    public class DemomanExplosion : StdEntity
+    public class Blast : StdEntity
     {
         private readonly int _delay;
         private  XY    P;
@@ -17,7 +17,7 @@ namespace NupskouProject.Rashka.Bullets
         
 
         
-        public DemomanExplosion (XY p0, float r, int delay) {
+        public Blast (XY p0, float r, int delay) {
             P         = p0;
             _r       = r;
             _delay      = delay;

@@ -12,6 +12,7 @@ using NupskouProject.Raden.Revolt2;
 using NupskouProject.Raden.SunflowerRockets;
 using NupskouProject.Raden.TestSpellcard;
 using NupskouProject.Rashka;
+using NupskouProject.Rashka.Spells.FlashSignBlastRain;
 using NupskouProject.Rendering;
 using NupskouProject.Stages;
 
@@ -34,11 +35,9 @@ namespace NupskouProject.Core {
         public void Update () {
             if (_.Time == 0) {
                 Spawn (_.Player = new Player (new XY (250, 500)));
+                Spawn(new FlashSignBlastRainSpawner());
             }
 
-            if (_.Time == 120) {
-                
-            }
 
             for (int i = 0; i < _entities.Count; i++) {
                 var e = _entities [i];

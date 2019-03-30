@@ -31,7 +31,7 @@ namespace NupskouProject.Rashka.Spells.ScarletSignBunchOfGrenadesSpawner {
 
             _random = _.Random.Angle ();
 
-            _.World.Spawn (new DemomanExplosion (P, 10, 120));
+            _.World.Spawn (new Blast (P, 10, 120));
 
             foreach (var v in Danmaku.Ring (new XY (_random), _.Difficulty.Choose (5, 7, 5, 7))) {
                 _.World.Spawn (

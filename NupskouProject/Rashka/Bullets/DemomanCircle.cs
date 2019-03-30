@@ -52,7 +52,7 @@ namespace NupskouProject.Rashka.Bullets
 
             if (t == _delay)
             {
-                _.World.Spawn(new DemomanExplosion(_p,_r,_delay));
+                _.World.Spawn(new Blast(_p,_r,_delay));
                 Despawn();
             }
         }

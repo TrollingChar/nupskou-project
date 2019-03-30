@@ -95,11 +95,11 @@
         </e>
         <e p="Rashka" t="Include">
           <e p="Bullets" t="Include">
+            <e p="Blast.cs" t="Include" />
             <e p="CircularPetalBullet.cs" t="Include" />
             <e p="DelayedLinearPetalBullet.cs" t="Include" />
             <e p="DelayedLinearRoundBullet.cs" t="Include" />
             <e p="DemomanCircle.cs" t="Include" />
-            <e p="DemomanExplosion.cs" t="Include" />
             <e p="SphereBullets.cs" t="Include" />
             <e p="SphericalRoundBullet.cs" t="Include" />
             <e p="StoppingLinearRoundBullet.cs" t="Include" />
@@ -115,6 +115,10 @@
           </e>
           <e p="SmileSpawner.cs" t="Include" />
           <e p="Spells" t="Include">
+            <e p="FlashSignBlastRain" t="Include">
+              <e p="FlashSignBlastRainSpawner.cs" t="Include" />
+              <e p="LinearBlaster.cs" t="Include" />
+            </e>
             <e p="ScarletSignBunchOfGrenadesSpawner" t="Include">
               <e p="GrenadeBullet.cs" t="Include" />
               <e p="ScarletSignBunchOfGrenadesSpawner.cs" t="Include" />

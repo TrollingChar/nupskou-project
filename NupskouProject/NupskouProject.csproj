@@ -98,7 +98,7 @@
     <Compile Include="Rashka\Bullets\DelayedLinearPetalBullet.cs" />
     <Compile Include="Rashka\Bullets\DelayedLinearRoundBullet.cs" />
     <Compile Include="Rashka\Bullets\DemomanCircle.cs" />
-    <Compile Include="Rashka\Bullets\DemomanExplosion.cs" />
+    <Compile Include="Rashka\Bullets\Blast.cs" />
     <Compile Include="Rashka\Bullets\SphereBullets.cs" />
     <Compile Include="Rashka\Bullets\SphericalRoundBullet.cs" />
     <Compile Include="Rashka\Bullets\StoppingLinearRoundBullet.cs" />
@@ -110,6 +110,8 @@
     <Compile Include="Rashka\SmallSpells\RashkaOpenerNonspell.cs" />
     <Compile Include="Rashka\SmileSpawner.cs" />
     <Compile Include="Rashka\DemomanSignDelayedExplosionSpawner.cs" />
+    <Compile Include="Rashka\Spells\FlashSignBlastRain\LinearBlaster.cs" />
+    <Compile Include="Rashka\Spells\FlashSignBlastRain\FlashSignBlastRainSpawner.cs" />
     <Compile Include="Rashka\Spells\ScarletSignBunchOfGrenadesSpawner\GrenadeBullet.cs" />
     <Compile Include="Rashka\Spells\ScarletSignBunchOfGrenadesSpawner\ScarletSignBunchOfGrenadesSpawner.cs" />
     <Compile Include="Rashka\Spells\WormBlasterSpawner\WormBlaster.cs" />
