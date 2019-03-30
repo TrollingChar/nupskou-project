@@ -10,10 +10,6 @@ namespace NupskouProject.Core {
         public static World           World           = new World ();
         public static int             Time            = 0;
         
-        // todo: public static GameData GameData и в нее убрать вот эти переменные
-        // также rекомендовано заменить LifeCount на Lives и BombCount на Bombs
-
-        
         public static Renderer        Renderer        = new Renderer ();
         public static GameData        GameData;
         public static Assets          Assets          = new Assets ();
