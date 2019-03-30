@@ -15,15 +15,6 @@ namespace NupskouProject.Rashka.Bullets
         private readonly int _delay;
 
 
-        public override void OnGrazed(Entity entity)
-        {
-            if (grazed == false)
-            {
-                grazed = true;
-                _.Graze++;
-            }
-        }
-
 
         public SwordLongPetal(XY p0, float angle, Color mainColor, Color borderColor, float r, int delay)
         {

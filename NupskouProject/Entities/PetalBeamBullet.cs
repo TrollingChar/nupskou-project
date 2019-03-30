@@ -8,22 +8,15 @@ using Sprite = NupskouProject.Rendering.SpriteInstance;
 
 namespace NupskouProject.Entities {
 
-    public abstract class PetalBeamBullet : StdEntity {
+    public abstract class PetalBeamBullet : Bullet {
 
         protected XY    P;
         protected XY    V;
         protected float R;
         protected Color MainColor, BorderColor;
-        protected bool  grazed = false;
         public override void OnGrazed(Entity entity)
         {
-            if (grazed == false)
-            {
-                grazed = true;
-                _.Graze++;
-                Console.WriteLine("Graze ="+_.Graze);
 
-            }
         }
 
 

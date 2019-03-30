@@ -13,7 +13,7 @@ namespace NupskouProject.Entities {
         public override void OnGrazed (Entity entity) {
             if (_grazed) return;
             _grazed = true;
-            _.Graze++;
+            GameData.Graze++;
         }
 
     }
