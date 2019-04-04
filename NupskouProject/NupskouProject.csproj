@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\Assets.cs" />
     <Compile Include="Core\Game.cs" />
     <Compile Include="Core\GameData.cs" />
     <Compile Include="Core\Phase.cs" />

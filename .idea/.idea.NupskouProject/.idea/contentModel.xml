@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$USER_HOME$/.Rider2018.1/system/resharper-host/local/Transient/ReSharperHost/v12/SolutionCaches/_NupskouProject.691011809.00" t="ExcludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/extensions" t="IncludeRecursive" />
+    <e p="$USER_HOME$/.Rider2018.3/system/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/.Rider2018.3/system/resharper-host/local/Transient/ReSharperHost/v183/SolutionCaches/_NupskouProject.1940266572.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="NupskouProject" t="IncludeRecursive">
         <e p="Core" t="Include">
+          <e p="Assets.cs" t="Include" />
           <e p="Game.cs" t="Include" />
           <e p="GameData.cs" t="Include" />
           <e p="Phase.cs" t="Include" />
@@ -40,6 +43,7 @@
         </e>
         <e p="Rendering" t="Include">
           <e p="AbstractLayer.cs" t="Include" />
+          <e p="IRenderable.cs" t="Include" />
           <e p="Layer.cs" t="Include" />
           <e p="Renderer.cs" t="Include" />
           <e p="Sprite.cs" t="Include" />
