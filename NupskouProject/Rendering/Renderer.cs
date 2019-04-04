@@ -1,4 +1,7 @@
-﻿using Microsoft.Xna.Framework.Graphics;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using NupskouProject.Core;
+using NupskouProject.Math;
 
 
 namespace NupskouProject.Rendering {
@@ -31,6 +34,17 @@ namespace NupskouProject.Rendering {
 
         public void End (SpriteBatch batch) {
             batch.Begin ();
+            batch.DrawString (
+                _.Assets.InterfaceText,
+                "ФЕДЯ ЛОХ!\nкак текст крутить",
+                new Vector2 (300),
+                Color.Red,
+                -Mathf.phiAngle,
+                Vector2.Zero, 
+                1,
+                SpriteEffects.None,
+                0
+            );
             foreach (var layer in Layers) {
                 layer.Render (batch);
             }

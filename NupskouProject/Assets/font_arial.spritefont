@@ -17,7 +17,7 @@ with.
     Size is a float value, measured in points. Modify this value to change
     the size of the font.
     -->
-    <Size>12</Size>
+    <Size>36</Size>
 
     <!--
     Spacing is a float value, measured in pixels. Modify this value to change
@@ -41,7 +41,7 @@ with.
     If you uncomment this line, the default character will be substituted if you draw
     or measure text that contains characters which were not included in the font.
     -->
-    <!-- <DefaultCharacter>*</DefaultCharacter> -->
+    <DefaultCharacter>?</DefaultCharacter>
 
     <!--
     CharacterRegions control what letters are available in the font. Every
@@ -52,8 +52,12 @@ with.
     -->
     <CharacterRegions>
       <CharacterRegion>
-        <Start>&#32;</Start>
-        <End>&#126;</End>
+        <Start>&#x20;</Start>
+        <End>&#x7e;</End>
+      </CharacterRegion>
+      <CharacterRegion>
+        <Start>&#x400;</Start>
+        <End>&#x4ff;</End>
       </CharacterRegion>
     </CharacterRegions>
   </Asset>

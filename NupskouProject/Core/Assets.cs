@@ -18,6 +18,7 @@ namespace NupskouProject.Core {
         public Sprite PetalBeam;
         public Sprite RedStar;
         public Sprite UI;
+        
         public SpriteFont InterfaceText;
 
         public Sound Pjiu;              
@@ -34,7 +35,6 @@ namespace NupskouProject.Core {
             Bass.BASS_Init (-1, 44100, BASSInit.BASS_DEVICE_DEFAULT, IntPtr.Zero);
 
             Pjiu = Sound.Load (SoundPrefix + "pjiu.wav", 32);
-            
         }
 
 

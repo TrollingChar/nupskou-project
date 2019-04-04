@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>/home/sanekrash/Gamedev/GAMEZ/nupskou-project/NupskouProject/Assets/circle.png</SourceFile>
-  <SourceTime>2018-09-04T20:18:10+03:00</SourceTime>
-  <DestFile>/home/sanekrash/Gamedev/GAMEZ/nupskou-project/NupskouProject/bin/Debug/Assets/circle.xnb</DestFile>
-  <DestTime>2018-11-29T11:21:29+03:00</DestTime>
+  <SourceFile>/home/trollingchar/rider/NupskouProjects/0.1/NupskouProject/Assets/circle.png</SourceFile>
+  <SourceTime>2018-09-03T20:06:48.869992+03:00</SourceTime>
+  <DestFile>/home/trollingchar/rider/NupskouProjects/0.1/NupskouProject/bin/Debug/Assets/circle.xnb</DestFile>
+  <DestTime>2019-04-04T20:48:26.016868+03:00</DestTime>
   <Importer>TextureImporter</Importer>
-  <ImporterTime>2018-10-13T20:24:59+03:00</ImporterTime>
+  <ImporterTime>2018-07-13T17:17:13.56543+03:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
-  <ProcessorTime>2018-10-13T20:24:59+03:00</ProcessorTime>
+  <ProcessorTime>2018-07-13T17:17:13.56543+03:00</ProcessorTime>
   <Parameters>
     <Key>ColorKeyColor</Key>
     <Value>255,0,255,255</Value>
