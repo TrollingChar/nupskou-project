@@ -35,7 +35,6 @@ namespace NupskouProject.Core {
         public void Update () {
             if (_.Time == 0) {
                 Spawn (_.Player = new Player (new XY (250, 500)));
-                Spawn(new FlashSignBlastRainSpawner());
             }
 
 
