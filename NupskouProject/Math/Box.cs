@@ -17,7 +17,7 @@
 
 
         public bool ContainsPoint (XY p) => p.X >= Left && p.X <= Right
-                                         && p.Y >= Top && p.Y <= Bottom;
+                                                        && p.Y >= Top && p.Y <= Bottom;
 
         public XY Center => 0.5f * new XY (Left + Right, Top + Bottom);
 

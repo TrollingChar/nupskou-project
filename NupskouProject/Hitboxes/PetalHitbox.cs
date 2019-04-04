@@ -44,12 +44,12 @@ namespace NupskouProject.Hitboxes {
                 new Circle (Center2, Radius),
                 other.Circle
             );
- /*           if (result) {
-                Console.WriteLine (new Circle (Center1, Radius));
-                Console.WriteLine (new Circle (Center2, Radius));
-                Console.WriteLine (other.Circle);
-                Console.WriteLine ();
-            }*/
+            /*           if (result) {
+                           Console.WriteLine (new Circle (Center1, Radius));
+                           Console.WriteLine (new Circle (Center2, Radius));
+                           Console.WriteLine (other.Circle);
+                           Console.WriteLine ();
+                       }*/
             return result;
         }
 

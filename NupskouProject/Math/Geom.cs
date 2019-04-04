@@ -28,7 +28,7 @@ namespace NupskouProject.Math {
         public static bool CircleInBox (Circle c, Box b) {
             float r = c.Radius;
             return c.Center.X >= b.Left + r && c.Center.X <= b.Right  - r
-                && c.Center.Y >= b.Top  + r && c.Center.Y <= b.Bottom - r;
+                                            && c.Center.Y >= b.Top  + r && c.Center.Y <= b.Bottom - r;
         }
 
 

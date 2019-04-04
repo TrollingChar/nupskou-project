@@ -52,7 +52,7 @@ namespace NupskouProject.Core {
         protected override void Draw (GameTime gameTime) {
             GraphicsDevice.Clear (new Color(8, 16, 24));
             _.Renderer.Begin ();
-            _.World.Render ();
+  //          _.World.Render ();
             _.Renderer.End (_spriteBatch);
         }
 

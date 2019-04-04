@@ -1,20 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
-using NupskouProject.Entities;
+
 using NupskouProject.Hitboxes;
 using NupskouProject.Math;
-using NupskouProject.Raden.Airstrike;
-using NupskouProject.Raden.Bullets;
-using NupskouProject.Raden.Enemies;
-using NupskouProject.Raden.Revolt;
-using NupskouProject.Raden.Revolt2;
-using NupskouProject.Raden.SunflowerRockets;
-using NupskouProject.Raden.TestSpellcard;
-using NupskouProject.Rashka;
-using NupskouProject.Rashka.Spells.FlashSignBlastRain;
-using NupskouProject.Rendering;
-using NupskouProject.Stages;
+
 
 
 namespace NupskouProject.Core {
@@ -28,17 +18,17 @@ namespace NupskouProject.Core {
             Mathf.Lerp (Box.Top, Box.Bottom, 0.25f)
         );
 
-        private List <Entity> _entities = new List <Entity> ();
-        public  Player        Player { get; private set; }
+     //   private List <Entity> _entities = new List <Entity> ();
+    //    public  Player        Player { get; private set; }
 
 
         public void Update () {
             if (_.Time == 0) {
-                Spawn (_.Player = new Player (new XY (250, 500)));
+            //    Spawn (_.Player = new Player (new XY (250, 500)));
             }
 
 
-            for (int i = 0; i < _entities.Count; i++) {
+     /*       for (int i = 0; i < _entities.Count; i++) {
                 var e = _entities [i];
                 if (!e.Despawned) e.Update ();
             }
@@ -146,7 +136,7 @@ namespace NupskouProject.Core {
                 Hitbox = hitbox;
                 Entity = entity;
             }
-
+*/
         }
 
     }
