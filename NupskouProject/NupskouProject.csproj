@@ -47,7 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\Assets.cs" />
     <Compile Include="Core\Game.cs" />
     <Compile Include="Core\GameData.cs" />
     <Compile Include="Core\Phase.cs" />
@@ -63,7 +62,6 @@
     <Compile Include="Math\ConvexPolygon.cs" />
     <Compile Include="PlayerCharacter.cs" />
     <Compile Include="Rendering\AbstractLayer.cs" />
-    <Compile Include="Rendering\IRenderable.cs" />
     <Compile Include="Rendering\Layer.cs" />
     <Compile Include="Rendering\Renderer.cs" />
     <Compile Include="Rendering\Sprite.cs" />
@@ -75,6 +73,7 @@
     <Compile Include="Math\Mathf.cs" />
     <Compile Include="Math\XY.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rendering\Text.cs" />
     <Compile Include="Rendering\TextLayer.cs" />
     <Compile Include="Util\DifficultyExtension.cs" />
     <Compile Include="Util\RandomExtension.cs" />

@@ -14,6 +14,7 @@ namespace NupskouProject.Rendering {
             throw new System.NotImplementedException ();
 //            batch.DrawString ();
         }
+        
 
     }
 
