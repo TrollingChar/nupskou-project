@@ -63,6 +63,7 @@
     <Compile Include="Math\ConvexPolygon.cs" />
     <Compile Include="PlayerCharacter.cs" />
     <Compile Include="Rendering\AbstractLayer.cs" />
+    <Compile Include="Rendering\IRenderable.cs" />
     <Compile Include="Rendering\Layer.cs" />
     <Compile Include="Rendering\Renderer.cs" />
     <Compile Include="Rendering\Sprite.cs" />

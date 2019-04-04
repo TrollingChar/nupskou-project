@@ -43,6 +43,7 @@
         </e>
         <e p="Rendering" t="Include">
           <e p="AbstractLayer.cs" t="Include" />
+          <e p="IRenderable.cs" t="Include" />
           <e p="Layer.cs" t="Include" />
           <e p="Renderer.cs" t="Include" />
           <e p="Sprite.cs" t="Include" />

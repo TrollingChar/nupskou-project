@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace NupskouProject.Rendering {
 
-    public class SpriteInstance {
+    public class SpriteInstance : IRenderable {
 
         private readonly Texture2D _texture;
         public           Vector2   Position;

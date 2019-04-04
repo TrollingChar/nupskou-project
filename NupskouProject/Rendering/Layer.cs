@@ -6,28 +6,28 @@ namespace NupskouProject.Rendering {
 
     public class Layer : AbstractLayer {
 
-        private List <SpriteInstance> _sprites = new List <SpriteInstance> ();
+        private List <IRenderable> _renderables = new List <IRenderable> ();
 
 
         public override void Clear () {
-            _sprites.Clear ();
+            _renderables.Clear ();
         }
 
 
         public override void Render (SpriteBatch batch) {
-            foreach (var sprite in _sprites) {
-                sprite.Render (batch);
+            foreach (var r in _renderables) {
+                r.Render (batch);
             }
         }
 
 
-        public void Add (SpriteInstance sprite) {
-            _sprites.Add (sprite);
+        public void Add (IRenderable r) {
+            _renderables.Add (r);
         }
 
 
-        public void Add (params SpriteInstance[] sprites) {
-            _sprites.AddRange (sprites);
+        public void Add (params IRenderable[] arr) {
+            _renderables.AddRange (arr);
         }
 
     }
